@@ -1,0 +1,101 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1281" measuredH="795" mockupW="1262" mockupH="795">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="19" y="0" w="1262" h="795" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//www.tim.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Image" x="69" y="109" w="1099" h="133" measuredW="1400" measuredH="315" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.home.logo.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Title" x="518" y="263" w="-1" h="-1" measuredW="345" measuredH="43" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Decoder%20TIMvision</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Paragraph" x="558" y="318" w="598" h="85" measuredW="275" measuredH="80" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Con%20il%20decoder%20TIMvision%20hai%20a%20disposizione%20pi%F9%20di%208.000%20titoli%20tra%20cartoni%2C%20film%2C%20serie%20e%20documentari%20sempre%20on%20demand%20per%20creare%20il%20tuo%20palinsesto%20senza%20interruzioni%20pubblicitarie.%0A%20%0ATramite%20il%20telecomando%20puoi%20mettere%20in%20pausa%20il%20tuo%20film%20preferito%20e%20farlo%20ripartire%20quando%20decidi%20tu%2C%20puoi%20rivedere%20una%20scena%20o%20andare%20avanti.%0A%20%0A%20%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Image" x="54" y="321" w="444" h="317" measuredW="760" measuredH="760" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.prodotti_slider_decoder_timvision_01.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Title" x="509" y="578" w="-1" h="-1" measuredW="353" measuredH="43" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Specifiche%20tecniche</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1250" y="81" w="-1" h="675" measuredW="16" measuredH="100" zOrder="6" locked="false" isInGroup="-1"/>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Link" x="584" y="736" w="-1" h="-1" measuredW="85" measuredH="19" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>2Device.TimDecoder.Configurazione.bottom%26bm%3B2Device.TimDecoder.Configurazione.bottom.bmml%26bm%3B2Device.TimDecoder.Configurazione.bottom.bmml%26bm%3B2Device.TimDecoder.Configurazione.bottom.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22565%2C736%2C650%2C755%22%20href%3D%222Device.TimDecoder.Configurazione.bottom.bmml%22%20alt%3D%222Device.TimDecoder.Configurazione.bottom%22%20id%3D%2230%22/%3E</map>
+        <text>scopri%20di%20pi%F9%20%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Link" x="73" y="256" w="-1" h="-1" measuredW="157" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>TechnicalSupport.TIMdecoder%26bm%3BTechnicalSupport.TIMdecoder.bmml%26bm%3BTechnicalSupport.TIMdecoder.bmml%26bm%3BTechnicalSupport.TIMdecoder.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2254%2C256%2C211%2C275%22%20href%3D%22TechnicalSupport.TIMdecoder.bmml%22%20alt%3D%22TechnicalSupport.TIMdecoder%22%20id%3D%2231%22/%3E</map>
+        <text>%3C%3C%20Torna%20a%20configurazione</text>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::List" x="558" y="627" w="677" h="99" measuredW="100" measuredH="720" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Dimensioni%20%28LxPxA%29%09210%20mm%20x%20210%20mm%20x%2040%20mm%0A%20%0AConfezione%09%09Decoder%20-%20Cavo%20alimentazione%20-%20Cavo%20HDMI%20-%20Telecomando%20universale%20-%20%0A%09%09%09Batterie%20-%20Guida%20rapida%20all%27installazione%0A%20%0AProcessore%09%09Processore%20Intel%20ATOM%20CE%204230%0A%20%0AMemoria%09%09Ram%201%20GByte%20DDR3%0A%20%0AConnettivita%09%09HDMI%201.3%20-%20Video%20Composito%20-%20Uscita%20audio%20ottica%20digitale%20-%20Ethernet%2010/100%20BASE-T%20-%0A%09%09%09%201%20x%20USB%202.0%20%20-%20Connessione%20Wireless%20802.11%20b/g/n%20%282.4GHz%20e%205GHz%29%20-%20Ricevitore%20IR%20%0A%09%09%09integrato%20per%20telecomando%20TIMvision%0A%20%0AFormati%20supportati%09Audio%3A%20MPEG-1%20Layer%20I%2C%20II%202.0%20-%20MPEG-1%20Layer%203%20%28mp3%29%202.0%20-%20MPEG-4%20AA-LC%202.0%20-%0A%09%09%09%20MPEG-4%20AAC-LC%205.1%20-%20MPEG-4%20HE-AAC%205.1%20-%20MPEG-4%20BSAC%202.0%20-%20LPCM%207.1%20-%0A%09%09%09%20WMA9%202.0%20-%20WMA9%20Pro%205.1%0A%20%0A%09%09%09Video%3A%20MPEG-1%20-%20MPEG-2%20-%20MPEG-2@HL%20-%20MPEG-4.2%20ASP@L5%20%28720p%29%20-%20MPEG-4.10%20%0A%09%09%09%28H.264%29%20BP@L3%20MP4@L4.0%20e%20HIP@L4.0%20-%20WMV9%20MP@HL%20-%20SMPTE421%20%28VC-1%29%20MP@HL%20%0A%09%09%09%0A%09%09%09Fotografici%3A%20JPEG%20-%20BMP%20-%20GIF%20-%20TIFF%20-%20PNG%0A%20%0A%20%0AImpostazione%20intuitiva%09Collegamento%20al%20televisore%3A%20Il%20Decoder%20TIMvision%20pu%F2%20essere%20collegato%20al%20%0A%09%09%09televisore%20mediante%20il%20cavo%20HDMI%20oppure%20mediante%20cavo%20analogico%20RCA-SCART%20%0A%09%09%09%28inclusi%20nella%20confezione%29%0A%20%0A%09%09%09Collegamento%20alla%20rete%20ADSL%3A%20Il%20Decoder%20TIMvision%20pu%F2%20essere%20collegato%20%0A%09%09%09alla%20rete%20mediante%20cavo%20Ethernet%20o%20mediante%20connessione%20Wi-Fi.%20Alla%20prima%20%0A%09%09%09accensione%20una%20procedura%20guidata%20ti%20assister%E0%20nella%20prima%20configurazione%20della%20tua%0A%09%09%09%20connessione%0A%20%0A%20%0AModalit%E0%20Video%20PAL%09576p%20-%20720p%20-%201080i%20-%201080p</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Title" x="509" y="425" w="-1" h="-1" measuredW="116" measuredH="43" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Prezzi</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Paragraph" x="558" y="483" w="598" h="53" measuredW="275" measuredH="80" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acquisto%09con%20pagamento%20in%20unica%20soluzione%0949%20%u20AC%0A%20%0ANoleggio%09solo%20per%20i%20clienti%20TIM%20SMART%09%092%20%u20AC/mese</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::LinkBar" x="196" y="84" w="-1" h="-1" measuredW="878" measuredH="19" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Home%20page%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%2CWho%20we%20are.Innovazione%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%2CHighlights%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%2CAssistance%20Services%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%2CMain.Prodotti%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%2CMain.Prom%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%2CMain.SmartLifeServices%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22177%2C86%2C244%2C99%22%20href%3D%22Home%2520page.bmml%22%20alt%3D%22Home%20page%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22262%2C86%2C320%2C99%22%20href%3D%22Who%2520we%2520are.Innovazione.bmml%22%20alt%3D%22Who%20we%20are.Innovazione%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22338%2C86%2C397%2C99%22%20href%3D%22Highlights.bmml%22%20alt%3D%22Highlights%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22415%2C86%2C607%2C99%22%20href%3D%22Assistance%2520Services.bmml%22%20alt%3D%22Assistance%20Services%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22625%2C86%2C738%2C99%22%20href%3D%22Main.Prodotti.bmml%22%20alt%3D%22Main.Prodotti%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22756%2C86%2C887%2C99%22%20href%3D%22Main.Prom.bmml%22%20alt%3D%22Main.Prom%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22905%2C86%2C1055%2C99%22%20href%3D%22Main.SmartLifeServices.bmml%22%20alt%3D%22Main.SmartLifeServices%22%20id%3D%2235%22/%3E</map>
+        <text>Home%20page%2C%20Chi%20siamo%2C%20Highlights%2C%20%20%20%20%20%20%20%20%20Servizi%20di%20Assistenza%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Prodotti%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Promozioni%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Smart%20Life%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::List" x="430" y="103" w="215" h="93" measuredW="100" measuredH="126" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>LineManagement%26bm%3BLineManagement.bmml%26bm%3BLineManagement.bmml%26bm%3BLineManagement.bmml%2CMonitoringCost%26bm%3BMonitoringCost.bmml%26bm%3BMonitoringCost.bmml%26bm%3BMonitoringCost.bmml%2CTechnical%20Support%26bm%3BTechnical%20Support.bmml%26bm%3BTechnical%20Support.bmml%26bm%3BTechnical%20Support.bmml%2CSL%26bm%3BSL.bmml%26bm%3BSL.bmml%26bm%3BSL.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22411%2C106%2C626%2C127%22%20href%3D%22LineManagement.bmml%22%20alt%3D%22LineManagement%22%20id%3D%2236%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22411%2C127%2C626%2C148%22%20href%3D%22MonitoringCost.bmml%22%20alt%3D%22MonitoringCost%22%20id%3D%2236%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22411%2C148%2C626%2C169%22%20href%3D%22Technical%2520Support.bmml%22%20alt%3D%22Technical%20Support%22%20id%3D%2236%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22411%2C169%2C626%2C190%22%20href%3D%22SL.bmml%22%20alt%3D%22SL%22%20id%3D%2236%22/%3E</map>
+        <text>Gestione%20Linea%20e%20servizi%0AControllo%20costi%20e%20pagamenti%0ASupport%20tecnico%20e%20configurazioni%0AContenuti%20e%20Smart%20Life</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::List" x="957" y="103" w="149" h="93" measuredW="100" measuredH="126" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>sls.Tv_ent-tv%26bm%3Bsls.Tv_ent-tv.bmml%26bm%3Bsls.Tv_ent-tv.bmml%26bm%3Bsls.Tv_ent-tv.bmml%2Csls.Benessere%26bm%3Bsls.Benessere.bmml%26bm%3Bsls.Benessere.bmml%26bm%3Bsls.Benessere.bmml%2Csls.homeFamily%26bm%3Bsls.homeFamily.bmml%26bm%3Bsls.homeFamily.bmml%26bm%3Bsls.homeFamily.bmml%2Csls.serviziPersona%26bm%3Bsls.serviziPersona.bmml%26bm%3Bsls.serviziPersona.bmml%26bm%3Bsls.serviziPersona.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22938%2C106%2C1087%2C127%22%20href%3D%22sls.Tv_ent-tv.bmml%22%20alt%3D%22sls.Tv_ent-tv%22%20id%3D%2237%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22938%2C127%2C1087%2C148%22%20href%3D%22sls.Benessere.bmml%22%20alt%3D%22sls.Benessere%22%20id%3D%2237%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22938%2C148%2C1087%2C169%22%20href%3D%22sls.homeFamily.bmml%22%20alt%3D%22sls.homeFamily%22%20id%3D%2237%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22938%2C169%2C1087%2C190%22%20href%3D%22sls.serviziPersona.bmml%22%20alt%3D%22sls.serviziPersona%22%20id%3D%2237%22/%3E</map>
+        <text>TV%20%26%20Entertainment%20%0ASalute%20e%20benessere%20%0ACasa%20e%20Famiglia%20%0AServizi%20alla%20persona%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::List" x="806" y="103" w="147" h="51" measuredW="100" measuredH="126" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Menu.Prom.Devices%26bm%3BMenu.Prom.Devices.bmml%26bm%3BMenu.Prom.Devices.bmml%26bm%3BMenu.Prom.Devices.bmml%2CMenu.prom.smartLife%26bm%3BMenu.prom.smartLife.bmml%26bm%3BMenu.prom.smartLife.bmml%26bm%3BMenu.prom.smartLife.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22787%2C106%2C934%2C127%22%20href%3D%22Menu.Prom.Devices.bmml%22%20alt%3D%22Menu.Prom.Devices%22%20id%3D%2238%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22787%2C127%2C934%2C148%22%20href%3D%22Menu.prom.smartLife.bmml%22%20alt%3D%22Menu.prom.smartLife%22%20id%3D%2238%22/%3E</map>
+        <text>Dispositivi%0ASmartLife%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::List" x="650" y="103" w="152" h="115" measuredW="100" measuredH="126" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Menu.SmartphoneTelefoni%26bm%3BMenu.SmartphoneTelefoni.bmml%26bm%3BMenu.SmartphoneTelefoni.bmml%26bm%3BMenu.SmartphoneTelefoni.bmml%2C%2C%2CMenu.Tv_SmartLiving%26bm%3BMenu.Tv_SmartLiving.bmml%26bm%3BMenu.Tv_SmartLiving.bmml%26bm%3BMenu.Tv_SmartLiving.bmml%2CMenu.Outlet%26bm%3BMenu.Outlet.bmml%26bm%3BMenu.Outlet.bmml%26bm%3BMenu.Outlet.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22631%2C106%2C783%2C127%22%20href%3D%22Menu.SmartphoneTelefoni.bmml%22%20alt%3D%22Menu.SmartphoneTelefoni%22%20id%3D%2239%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22631%2C169%2C783%2C190%22%20href%3D%22Menu.Tv_SmartLiving.bmml%22%20alt%3D%22Menu.Tv_SmartLiving%22%20id%3D%2239%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22631%2C190%2C783%2C211%22%20href%3D%22Menu.Outlet.bmml%22%20alt%3D%22Menu.Outlet%22%20id%3D%2239%22/%3E</map>
+        <text>Smartphone%20e%20Telefoni%0ATablet%20e%20Computer%20*%0AModem%20e%20Networking%20*%0ATV%20e%20Smart%20Living%0AOutlet</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

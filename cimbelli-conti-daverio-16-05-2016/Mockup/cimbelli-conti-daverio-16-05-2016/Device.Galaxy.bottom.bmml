@@ -1,0 +1,93 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1281" measuredH="795" mockupW="1262" mockupH="795">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="19" y="0" w="1262" h="795" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//www.tim.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Title" x="513" y="473" w="-1" h="-1" measuredW="373" measuredH="43" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Smart%20Live%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Image" x="153" y="108" w="368" h="240" measuredW="479" measuredH="305" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <crop>0%2C391%2C1000%2C609</crop>
+        <src>./assets/z.device.sam1.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Image" x="235" y="349" w="60" h="57" measuredW="479" measuredH="500" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.device.sam2.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="313" y="349" w="60" h="57" measuredW="479" measuredH="500" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.device.sam4.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Image" x="388" y="349" w="60" h="57" measuredW="479" measuredH="500" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.device.sam3.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Title" x="513" y="127" w="-1" h="-1" measuredW="353" measuredH="43" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Specifiche%20tecniche</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1250" y="81" w="-1" h="675" measuredW="16" measuredH="100" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <value>100</value>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Link" x="568" y="730" w="-1" h="-1" measuredW="94" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Device.Galaxy%26bm%3BDevice.Galaxy.bmml%26bm%3BDevice.Galaxy.bmml%26bm%3BDevice.Galaxy.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22549%2C730%2C643%2C749%22%20href%3D%22Device.Galaxy.bmml%22%20alt%3D%22Device.Galaxy%22%20id%3D%2230%22/%3E</map>
+        <text>torno%20all%27inizio%20%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::List" x="553" y="179" w="610" h="279" measuredW="100" measuredH="279" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs/>
+        <text>Tecnologia%094G%20cat.9/HSDPA42UMTS/EDGE/GPRS%20Frequenze%20850/900%0AConnettivita%09Wi-Fi%20-%20Bluetooth%20-%20Micro%20USB%20-%20NFC%0AGPS%09%09Integrato%0ADisplay%09%095.5%u201D%2016%20Milioni%20colori%20Touch%0AFotocamera%0912%20Mpixel/Flash%0AMemoria%20Int.%0932GB%0AProcessore%20%09OctaCore%3A%20%28QuadCore%202.3%20Ghz+QuadCore%201.6%20Ghz%29%0AFormato%20SIM%09Nano%0AVideo%20%09%09Video%20Recorder%26Playback%0AMusica%09%09MP3%20Player%0AIn%20dotazione%09Caricabatteria%20-%20Cavo%20Dati%20MicroUSB%20-%20Auricolare%20stereo%20%0ADimensioni%09150%2C9x72%2C6x7%2C7%20mm%0APeso%09%09157%20gr.</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::List" x="553" y="516" w="614" h="69" measuredW="100" measuredH="126" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs/>
+        <text>Pagamenti%20%09%09Tim%20Pagamenti%20ti%20proietta%20nel%20futuro%21%20Con%20l%27innovativa%20tecnologia%20%0A%09%09%09NFC%20potrai%20pagare%20con%20il%20tuo%20smartphone%20in%20modo%20rapido%2C%20semplice%20e%20sicuro.%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Link" x="707" y="558" w="-1" h="-1" measuredW="92" measuredH="19" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Service.Pagamenti_Descrizione%26bm%3BService.Pagamenti_Descrizione.bmml%26bm%3BService.Pagamenti_Descrizione.bmml%26bm%3BService.Pagamenti_Descrizione.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22688%2C558%2C780%2C577%22%20href%3D%22Service.Pagamenti_Descrizione.bmml%22%20alt%3D%22Service.Pagamenti_Descrizione%22%20id%3D%2243%22/%3E</map>
+        <text>vai%20a%20servizio%20%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::LinkBar" x="195" y="81" w="-1" h="-1" measuredW="878" measuredH="19" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Home%20page%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%2CWho%20we%20are.Innovazione%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%2CHighlights%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%2CAssistance%20Services%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%2CMain.Prodotti%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%2CMain.Prom%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%2CMain.SmartLifeServices%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22176%2C83%2C243%2C96%22%20href%3D%22Home%2520page.bmml%22%20alt%3D%22Home%20page%22%20id%3D%2249%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22261%2C83%2C319%2C96%22%20href%3D%22Who%2520we%2520are.Innovazione.bmml%22%20alt%3D%22Who%20we%20are.Innovazione%22%20id%3D%2249%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22337%2C83%2C396%2C96%22%20href%3D%22Highlights.bmml%22%20alt%3D%22Highlights%22%20id%3D%2249%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22414%2C83%2C606%2C96%22%20href%3D%22Assistance%2520Services.bmml%22%20alt%3D%22Assistance%20Services%22%20id%3D%2249%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22624%2C83%2C737%2C96%22%20href%3D%22Main.Prodotti.bmml%22%20alt%3D%22Main.Prodotti%22%20id%3D%2249%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22755%2C83%2C886%2C96%22%20href%3D%22Main.Prom.bmml%22%20alt%3D%22Main.Prom%22%20id%3D%2249%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22904%2C83%2C1054%2C96%22%20href%3D%22Main.SmartLifeServices.bmml%22%20alt%3D%22Main.SmartLifeServices%22%20id%3D%2249%22/%3E</map>
+        <text>Home%20page%2C%20Chi%20siamo%2C%20Highlights%2C%20%20%20%20%20%20%20%20%20Servizi%20di%20Assistenza%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Prodotti%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Promozioni%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Smart%20Life%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Title" x="513" y="599" w="-1" h="-1" measuredW="384" measuredH="43" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Servizi%20di%20assistenza</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::List" x="553" y="642" w="614" h="29" measuredW="100" measuredH="126" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs/>
+        <text>non%20vi%20sono%20servizi%20correlati.</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

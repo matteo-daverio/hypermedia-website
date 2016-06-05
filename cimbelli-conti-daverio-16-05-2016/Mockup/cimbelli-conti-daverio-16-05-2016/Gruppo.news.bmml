@@ -1,0 +1,158 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1301" measuredH="815" mockupW="1262" mockupH="795">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="39" y="20" w="1262" h="795" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//www.tim.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="89" y="129" w="1099" h="133" measuredW="1400" measuredH="315" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.home.logo.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::Title" x="89" y="305" w="-1" h="-1" measuredW="167" measuredH="43" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Il%20Gruppo</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Title" x="609" y="418" w="-1" h="-1" measuredW="101" measuredH="43" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <text>News</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Image" x="500" y="273" w="688" h="84" measuredW="1280" measuredH="247" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.pagamenti.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Title" x="522" y="304" w="-1" h="-1" measuredW="347" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>16777215</color>
+        <size>24</size>
+        <text>Scopri%20il%20gruppo%20Telecom%20Italia</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Image" x="899" y="301" w="246" h="29" measuredW="213" measuredH="29" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/logo-ti.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1259" y="102" w="-1" h="675" measuredW="16" measuredH="100" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::ButtonBar" x="81" y="369" w="1099" h="27" measuredW="607" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Gruppo.Descrizione%26bm%3BGruppo.Descrizione.bmml%26bm%3BGruppo.Descrizione.bmml%26bm%3BGruppo.Descrizione.bmml%2CGruppo.news%26bm%3BGruppo.news.bmml%26bm%3BGruppo.news.bmml%26bm%3BGruppo.news.bmml%2CGruppo.governance%26bm%3BGruppo.governance.bmml%26bm%3BGruppo.governance.bmml%26bm%3BGruppo.governance.bmml%2CGruppo.business%26bm%3BGruppo.business.bmml%26bm%3BGruppo.business.bmml%26bm%3BGruppo.business.bmml%2CGruppo.investitori%26bm%3BGruppo.investitori.bmml%26bm%3BGruppo.investitori.bmml%26bm%3BGruppo.investitori.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2242%2C349%2C248%2C376%22%20href%3D%22Gruppo.Descrizione.bmml%22%20alt%3D%22Gruppo.Descrizione%22%20id%3D%2236%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22248%2C349%2C458%2C376%22%20href%3D%22Gruppo.news.bmml%22%20alt%3D%22Gruppo.news%22%20id%3D%2236%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22458%2C349%2C658%2C376%22%20href%3D%22Gruppo.governance.bmml%22%20alt%3D%22Gruppo.governance%22%20id%3D%2236%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22658%2C349%2C913%2C376%22%20href%3D%22Gruppo.business.bmml%22%20alt%3D%22Gruppo.business%22%20id%3D%2236%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22913%2C349%2C1139%2C376%22%20href%3D%22Gruppo.investitori.bmml%22%20alt%3D%22Gruppo.investitori%22%20id%3D%2236%22/%3E</map>
+        <selectedIndex>1</selectedIndex>
+        <text>%20%20Descrizione%20%20%20%2C%20%20%20%20%20%20%20%20News%20%20%20%20%20%20%20%20%2C%20%20%20Governance%20%20%2C%20Business%20%26%20Mercato%2C%20Per%20gli%20Investitori</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Canvas" x="114" y="480" w="1091" h="46" measuredW="100" measuredH="70" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Label" x="125" y="490" w="-1" h="-1" measuredW="706" measuredH="26" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Telecom%20Italia%20al%20primo%20posto%20nella%20classifica%20Lundquist%20Wikipedia%20Research%202015-2016</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Link" x="1166" y="484" w="-1" h="-1" measuredW="12" measuredH="38" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>-</text>
+        <underline>false</underline>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Canvas" x="114" y="675" w="1091" h="46" measuredW="100" measuredH="70" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="125" y="685" w="-1" h="-1" measuredW="975" measuredH="26" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Telecom%20Italia%20comunica%20che%20Paolo%20Vantellini%20ha%20lasciato%20in%20data%20odierna%20l%u2019incarico%20di%20Direttore%20di%20Business%20Support%20Office</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Link" x="1162" y="679" w="-1" h="-1" measuredW="21" measuredH="38" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>+</text>
+        <underline>false</underline>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Canvas" x="114" y="726" w="1091" h="46" measuredW="100" measuredH="70" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Label" x="125" y="736" w="-1" h="-1" measuredW="319" measuredH="26" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Al%20via%20l%u2019edizione%20di%20PappanoinWeb%202016</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Link" x="1162" y="730" w="-1" h="-1" measuredW="21" measuredH="38" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>+</text>
+        <underline>false</underline>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Canvas" x="113" y="533" w="1092" h="137" measuredW="100" measuredH="70" zOrder="18" locked="false" isInGroup="-1"/>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Paragraph" x="121" y="540" w="1073" h="122" measuredW="275" measuredH="80" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Telecom%20Italia%20ha%20ottenuto%20il%20primo%20posto%20nella%20classifica%20italiana%20Wikipedia%20Research%2C%20lo%20studio%20che%20analizza%20e%20valuta%20la%20completezza%20delle%20voci%20su%20Wikipedia%20delle%20100%20maggiori%20aziende%20del%20nostro%20Paese.%0AGiunta%20alla%20sua%20quarta%20edizione%20in%20Italia%20e%20condotta%20da%20Lundquist%2C%20la%20ricerca%20riconosce%20l%u2019importanza%20delle%20informazioni%20rese%20disponibili%20su%20Wikipedia%2C%20una%20vera%20enciclopedia%20online%20che%20rappresenta%20oggi%20il%20settimo%20sito%20pi%F9%20visitato%20al%20mondo%20e%20il%20sesto%20in%20Italia.%0ATelecom%20Italia%20si%20%E8%20aggiudicata%20la%20prima%20posizione%20con%20una%20percentuale%20di%20soddisfazione%20dei%20criteri%20presi%20in%20considerazione%20pari%20al%2094%25%2C%20seguita%20da%20Eni%20%28percentuale%20dell%u201984%25%29%20e%20da%20Intesa%20Sanpaolo%20%2882%2C8%25%29.%0AIn%20particolare%2C%20la%20valutazione%20si%20basa%20su%2029%20parametri%20che%20considerano%20i%20contenuti%20e%20la%20loro%20modalit%E0%20di%20presentazione%2C%20oltre%20a%20tutti%20gli%20elementi%20che%20facilitano%20e%20arricchiscono%20la%20lettura%20dell%u2019articolo%2C%20quali%20la%20presenza%20di%20foto%20e%20di%20fonti%20affidabili%2C%20attraverso%20cui%20il%20navigatore%20pu%F2%20verificare%20la%20correttezza%20delle%20informazioni%20pubblicate.%0A%20%0AParticolarmente%20apprezzata%20la%20modalit%E0%20innovativa%20di%20Telecom%20Italia%20di%20interagire%20con%20la%20community%20di%20Wikipedia%2C%20in%20collaborazione%20con%20Wikimedia%20Italia%2C%20attraverso%20la%20collaborazione%20di%20studenti%20universitari%2C%20coinvolti%20in%20un%20progetto%20volto%20ad%20arricchire%20le%20voci%20dell%u2019azienda%20e%20del%20settore%2C%20sempre%20nel%20rispetto%20delle%20regole%20di%20Wikipedia.%0A%20%0A%u201CIl%20risultato%20conseguito%20nella%20graduatoria%20elaborata%20da%20Lundquist%20testimonia%20quanto%20sia%20sempre%20pi%F9%20rilevante%20passare%20da%20una%20logica%20di%20comunicazione%20a%20un</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::LinkBar" x="203" y="102" w="-1" h="-1" measuredW="878" measuredH="19" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Home%20page%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%2CWho%20we%20are.Innovazione%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%2CHighlights%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%2CAssistance%20Services%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%2CMain.Prodotti%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%2CMain.Prom%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%2CMain.SmartLifeServices%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22164%2C84%2C231%2C97%22%20href%3D%22Home%2520page.bmml%22%20alt%3D%22Home%20page%22%20id%3D%2248%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22249%2C84%2C307%2C97%22%20href%3D%22Who%2520we%2520are.Innovazione.bmml%22%20alt%3D%22Who%20we%20are.Innovazione%22%20id%3D%2248%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22325%2C84%2C384%2C97%22%20href%3D%22Highlights.bmml%22%20alt%3D%22Highlights%22%20id%3D%2248%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22402%2C84%2C594%2C97%22%20href%3D%22Assistance%2520Services.bmml%22%20alt%3D%22Assistance%20Services%22%20id%3D%2248%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22612%2C84%2C725%2C97%22%20href%3D%22Main.Prodotti.bmml%22%20alt%3D%22Main.Prodotti%22%20id%3D%2248%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22743%2C84%2C874%2C97%22%20href%3D%22Main.Prom.bmml%22%20alt%3D%22Main.Prom%22%20id%3D%2248%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22892%2C84%2C1042%2C97%22%20href%3D%22Main.SmartLifeServices.bmml%22%20alt%3D%22Main.SmartLifeServices%22%20id%3D%2248%22/%3E</map>
+        <text>Home%20page%2C%20Chi%20siamo%2C%20Highlights%2C%20%20%20%20%20%20%20%20%20Servizi%20di%20Assistenza%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Prodotti%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Promozioni%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Smart%20Life%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::List" x="437" y="121" w="215" h="93" measuredW="100" measuredH="126" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>LineManagement%26bm%3BLineManagement.bmml%26bm%3BLineManagement.bmml%26bm%3BLineManagement.bmml%2CMonitoringCost%26bm%3BMonitoringCost.bmml%26bm%3BMonitoringCost.bmml%26bm%3BMonitoringCost.bmml%2CTechnical%20Support%26bm%3BTechnical%20Support.bmml%26bm%3BTechnical%20Support.bmml%26bm%3BTechnical%20Support.bmml%2CSL%26bm%3BSL.bmml%26bm%3BSL.bmml%26bm%3BSL.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22398%2C104%2C613%2C125%22%20href%3D%22LineManagement.bmml%22%20alt%3D%22LineManagement%22%20id%3D%2249%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22398%2C125%2C613%2C146%22%20href%3D%22MonitoringCost.bmml%22%20alt%3D%22MonitoringCost%22%20id%3D%2249%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22398%2C146%2C613%2C167%22%20href%3D%22Technical%2520Support.bmml%22%20alt%3D%22Technical%20Support%22%20id%3D%2249%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22398%2C167%2C613%2C188%22%20href%3D%22SL.bmml%22%20alt%3D%22SL%22%20id%3D%2249%22/%3E</map>
+        <text>Gestione%20Linea%20e%20servizi%0AControllo%20costi%20e%20pagamenti%0ASupport%20tecnico%20e%20configurazioni%0AContenuti%20e%20Smart%20Life</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::List" x="964" y="121" w="149" h="93" measuredW="100" measuredH="126" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>sls.Tv_ent-tv%26bm%3Bsls.Tv_ent-tv.bmml%26bm%3Bsls.Tv_ent-tv.bmml%26bm%3Bsls.Tv_ent-tv.bmml%2Csls.Benessere%26bm%3Bsls.Benessere.bmml%26bm%3Bsls.Benessere.bmml%26bm%3Bsls.Benessere.bmml%2Csls.homeFamily%26bm%3Bsls.homeFamily.bmml%26bm%3Bsls.homeFamily.bmml%26bm%3Bsls.homeFamily.bmml%2Csls.serviziPersona%26bm%3Bsls.serviziPersona.bmml%26bm%3Bsls.serviziPersona.bmml%26bm%3Bsls.serviziPersona.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22925%2C104%2C1074%2C125%22%20href%3D%22sls.Tv_ent-tv.bmml%22%20alt%3D%22sls.Tv_ent-tv%22%20id%3D%2250%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22925%2C125%2C1074%2C146%22%20href%3D%22sls.Benessere.bmml%22%20alt%3D%22sls.Benessere%22%20id%3D%2250%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22925%2C146%2C1074%2C167%22%20href%3D%22sls.homeFamily.bmml%22%20alt%3D%22sls.homeFamily%22%20id%3D%2250%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22925%2C167%2C1074%2C188%22%20href%3D%22sls.serviziPersona.bmml%22%20alt%3D%22sls.serviziPersona%22%20id%3D%2250%22/%3E</map>
+        <text>TV%20%26%20Entertainment%20%0ASalute%20e%20benessere%20%0ACasa%20e%20Famiglia%20%0AServizi%20alla%20persona%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::List" x="813" y="121" w="147" h="51" measuredW="100" measuredH="126" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Menu.Prom.Devices%26bm%3BMenu.Prom.Devices.bmml%26bm%3BMenu.Prom.Devices.bmml%26bm%3BMenu.Prom.Devices.bmml%2CMenu.prom.smartLife%26bm%3BMenu.prom.smartLife.bmml%26bm%3BMenu.prom.smartLife.bmml%26bm%3BMenu.prom.smartLife.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22774%2C104%2C921%2C125%22%20href%3D%22Menu.Prom.Devices.bmml%22%20alt%3D%22Menu.Prom.Devices%22%20id%3D%2251%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22774%2C125%2C921%2C146%22%20href%3D%22Menu.prom.smartLife.bmml%22%20alt%3D%22Menu.prom.smartLife%22%20id%3D%2251%22/%3E</map>
+        <text>Dispositivi%0ASmartLife%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::List" x="657" y="121" w="152" h="115" measuredW="100" measuredH="126" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Menu.SmartphoneTelefoni%26bm%3BMenu.SmartphoneTelefoni.bmml%26bm%3BMenu.SmartphoneTelefoni.bmml%26bm%3BMenu.SmartphoneTelefoni.bmml%2C%2C%2CMenu.Tv_SmartLiving%26bm%3BMenu.Tv_SmartLiving.bmml%26bm%3BMenu.Tv_SmartLiving.bmml%26bm%3BMenu.Tv_SmartLiving.bmml%2CMenu.Outlet%26bm%3BMenu.Outlet.bmml%26bm%3BMenu.Outlet.bmml%26bm%3BMenu.Outlet.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22618%2C104%2C770%2C125%22%20href%3D%22Menu.SmartphoneTelefoni.bmml%22%20alt%3D%22Menu.SmartphoneTelefoni%22%20id%3D%2252%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22618%2C167%2C770%2C188%22%20href%3D%22Menu.Tv_SmartLiving.bmml%22%20alt%3D%22Menu.Tv_SmartLiving%22%20id%3D%2252%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22618%2C188%2C770%2C209%22%20href%3D%22Menu.Outlet.bmml%22%20alt%3D%22Menu.Outlet%22%20id%3D%2252%22/%3E</map>
+        <text>Smartphone%20e%20Telefoni%0ATablet%20e%20Computer%20*%0AModem%20e%20Networking%20*%0ATV%20e%20Smart%20Living%0AOutlet</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Link" x="89" y="274" w="-1" h="-1" measuredW="125" measuredH="19" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Who%20we%20are.Innovazione%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2250%2C254%2C175%2C273%22%20href%3D%22Who%2520we%2520are.Innovazione.bmml%22%20alt%3D%22Who%20we%20are.Innovazione%22%20id%3D%2253%22/%3E</map>
+        <text>%3C%3C%20Vai%20%20a%20%22Chi%20siamo%22</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

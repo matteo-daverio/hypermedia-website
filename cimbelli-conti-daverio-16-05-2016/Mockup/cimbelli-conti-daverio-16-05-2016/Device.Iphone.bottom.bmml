@@ -1,0 +1,93 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1281" measuredH="795" mockupW="1262" mockupH="795">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="19" y="0" w="1262" h="795" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//www.tim.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Paragraph" x="534" y="116" w="466" h="68" measuredW="275" measuredH="80" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%09%0A%09%24645.99</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Image" x="159" y="107" w="368" h="225" measuredW="760" measuredH="434" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <crop>0%2C429%2C1000%2C571</crop>
+        <src>./assets/z.device.iph2.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Image" x="239" y="327" w="60" h="57" measuredW="760" measuredH="760" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.device.iph1.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="317" y="327" w="60" h="57" measuredW="760" measuredH="760" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.device.iph3.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Image" x="392" y="327" w="60" h="57" measuredW="479" measuredH="500" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.device.sam3.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Title" x="527" y="168" w="-1" h="-1" measuredW="353" measuredH="43" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Specifiche%20tecniche</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1250" y="81" w="-1" h="675" measuredW="16" measuredH="100" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Link" x="569" y="725" w="-1" h="-1" measuredW="94" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Device.Iphone%26bm%3BDevice.Iphone.bmml%26bm%3BDevice.Iphone.bmml%26bm%3BDevice.Iphone.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22550%2C725%2C644%2C744%22%20href%3D%22Device.Iphone.bmml%22%20alt%3D%22Device.Iphone%22%20id%3D%2230%22/%3E</map>
+        <text>torno%20all%27inizio%20%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Title" x="527" y="470" w="-1" h="-1" measuredW="366" measuredH="43" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Smart%20Life%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::List" x="569" y="218" w="598" h="244" measuredW="100" measuredH="237" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Display%09%09%09Display%20Retina%20HD%20da%204%2C7%22%20%28diagonale%29%20con%20risoluzione%20di%201334x750%20pixel%0A%09%09%093D%20Touch%0AProcessore%09%09Chip%20A9%20con%20coprocessore%20di%20movimento%20M9%20integrato%0AFotocamera%09%09Fotocamera%20iSight%20da%2012%20megapixel%20con%20Focus%20Pixels%2C%20True%20Tone%20Flash%20%0A%09%09%09e%20Live%20Photos%0ARegistrazione%20video%09Registrazione%20video%204K%20a%2030%20fps%2C%20moviola%20%281080p%29%20a%20120%20fps%0AVideocamera%09%09Videocamera%20FaceTime%20HD%20con%20Retina%20Flash%20%28foto%20da%205MP%29%0ASensori%09%09%09Touch%20ID%20di%20seconda%20generazione%0AConnettivita%09%094G%20LTE%20Advanced1%20e%20Wi-Fi%20802.11a/b/g/n/ac%20con%20tecnologia%20MIMO%0ASistemaOperativo%09iOS%209%20e%20iCloud%0AColori%09%09%09Colori%3A%20argento%2C%20oro%2C%20grigio%20siderale%2C%20oro%20rosa%09</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::List" x="569" y="518" w="614" h="32" measuredW="100" measuredH="126" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs/>
+        <text>Non%20ci%20sono%20servizi%20correlati.</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::LinkBar" x="179" y="83" w="-1" h="-1" measuredW="878" measuredH="19" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Home%20page%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%2CWho%20we%20are.Innovazione%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%2CHighlights%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%2CAssistance%20Services%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%2CMain.Prodotti%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%2CMain.Prom%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%2CMain.SmartLifeServices%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22160%2C85%2C227%2C98%22%20href%3D%22Home%2520page.bmml%22%20alt%3D%22Home%20page%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22245%2C85%2C303%2C98%22%20href%3D%22Who%2520we%2520are.Innovazione.bmml%22%20alt%3D%22Who%20we%20are.Innovazione%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22321%2C85%2C380%2C98%22%20href%3D%22Highlights.bmml%22%20alt%3D%22Highlights%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22398%2C85%2C590%2C98%22%20href%3D%22Assistance%2520Services.bmml%22%20alt%3D%22Assistance%20Services%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22608%2C85%2C721%2C98%22%20href%3D%22Main.Prodotti.bmml%22%20alt%3D%22Main.Prodotti%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22739%2C85%2C870%2C98%22%20href%3D%22Main.Prom.bmml%22%20alt%3D%22Main.Prom%22%20id%3D%2235%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22888%2C85%2C1038%2C98%22%20href%3D%22Main.SmartLifeServices.bmml%22%20alt%3D%22Main.SmartLifeServices%22%20id%3D%2235%22/%3E</map>
+        <text>Home%20page%2C%20Chi%20siamo%2C%20Highlights%2C%20%20%20%20%20%20%20%20%20Servizi%20di%20Assistenza%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Prodotti%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Promozioni%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Smart%20Life%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Title" x="527" y="599" w="-1" h="-1" measuredW="384" measuredH="43" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Servizi%20di%20assistenza</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::List" x="569" y="642" w="614" h="55" measuredW="100" measuredH="126" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs/>
+        <text>iPhone%20Mail%20%09%09Configurazione%20mail%20su%20iPhone%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Link" x="722" y="671" w="-1" h="-1" measuredW="92" measuredH="19" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>TechnicalSupport.iPhoneMail%26bm%3BTechnicalSupport.iPhoneMail.bmml%26bm%3BTechnicalSupport.iPhoneMail.bmml%26bm%3BTechnicalSupport.iPhoneMail.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22703%2C671%2C795%2C690%22%20href%3D%22TechnicalSupport.iPhoneMail.bmml%22%20alt%3D%22TechnicalSupport.iPhoneMail%22%20id%3D%2240%22/%3E</map>
+        <text>vai%20a%20servizio%20%3E</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

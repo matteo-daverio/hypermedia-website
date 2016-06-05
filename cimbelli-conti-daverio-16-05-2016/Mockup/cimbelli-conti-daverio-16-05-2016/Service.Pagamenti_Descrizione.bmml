@@ -1,0 +1,122 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1294" measuredH="795" mockupW="1262" mockupH="795">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="32" y="0" w="1262" h="795" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//www.tim.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Image" x="69" y="109" w="1099" h="133" measuredW="1400" measuredH="315" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.home.logo.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Title" x="95" y="291" w="-1" h="-1" measuredW="272" measuredH="43" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>TIM%20Pagamenti</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Paragraph" x="61" y="443" w="372" h="284" measuredW="275" measuredH="80" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tim%20Pagamenti%20ti%20proietta%20nel%20futuro%21%20Con%20l%27innovativa%20tecnologia%20NFC%20potrai%20pagare%20con%20il%20tuo%20smartphone%20in%20modo%20rapido%2C%20semplice%20e%20sicuro.%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Title" x="532" y="393" w="-1" h="-1" measuredW="440" measuredH="43" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Caratteristiche%20Tecniche</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Paragraph" x="539" y="466" w="581" h="210" measuredW="275" measuredH="80" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>NFC%20%28Near%20Field%20Communication%29%20%E8%20una%20tecnologia%20che%20fornisce%20connettivit%E0%20wireless%20a%20corto%20raggio.%20L%u2019NFC%20consente%20il%20%u201Ccolloquio%u201D%20in%20modo%20sicuro%20tra%20il%20telefono%20ed%20un%20POS%20abilitato%20durante%20un%u2019operazione%20di%20pagamento%20contactless%2C%20ovvero%20quelle%20transazioni%20che%20avvengono%20semplicemente%20avvicinando%20lo%20strumento%20di%20pagamento%20%28una%20carta%20o%2C%20come%20nel%20nostro%20caso%2C%20un%20telefono%29%20al%20POS%2C%20senza%20necessit%E0%20di%20inserimento%20all%u2019interno%20del%20lettore.%20La%20tecnologia%20NFC%20garantisce%20transazioni%20criptate%20secondo%20i%20requisiti%20di%20sicurezza%20di%20banche%20e%20circuiti%20di%20pagamento.%20I%20dati%20della%20tua%20carta%20di%20credito%20sono%20memorizzati%20in%20modo%20sicuro%20sulla%20tua%20SIM.%20Questa%20particolare%20modalit%E0%20di%20pagamento%20viene%20solitamente%20definita%20Mobile%20Proximity%20Payment.</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::ButtonBar" x="61" y="349" w="1099" h="27" measuredW="288" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Service.Pagamenti_Descrizione%26bm%3BService.Pagamenti_Descrizione.bmml%26bm%3BService.Pagamenti_Descrizione.bmml%26bm%3BService.Pagamenti_Descrizione.bmml%2CService.Pagamenti_attivazione%26bm%3BService.Pagamenti_attivazione.bmml%26bm%3BService.Pagamenti_attivazione.bmml%26bm%3BService.Pagamenti_attivazione.bmml%2CService.Pagamenti_FAQ%26bm%3BService.Pagamenti_FAQ.bmml%26bm%3BService.Pagamenti_FAQ.bmml%26bm%3BService.Pagamenti_FAQ.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2229%2C349%2C402%2C376%22%20href%3D%22Service.Pagamenti_Descrizione.bmml%22%20alt%3D%22Service.Pagamenti_Descrizione%22%20id%3D%2234%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22402%2C349%2C940%2C376%22%20href%3D%22Service.Pagamenti_attivazione.bmml%22%20alt%3D%22Service.Pagamenti_attivazione%22%20id%3D%2234%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22940%2C349%2C1126%2C376%22%20href%3D%22Service.Pagamenti_FAQ.bmml%22%20alt%3D%22Service.Pagamenti_FAQ%22%20id%3D%2234%22/%3E</map>
+        <text>Descrizione%20%2C%20Attivazione%20e%20regole%2C%20FAQ</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Title" x="69" y="390" w="-1" h="-1" measuredW="132" measuredH="43" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Offerta</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Image" x="480" y="253" w="675" h="84" measuredW="1280" measuredH="247" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.pagamenti.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Image" x="1060" y="253" w="86" h="81" measuredW="207" measuredH="177" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.phone_hand.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Title" x="495" y="257" w="-1" h="-1" measuredW="151" measuredH="35" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16777215</color>
+        <size>32</size>
+        <text>Pagamenti</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="495" y="302" w="-1" h="-1" measuredW="526" measuredH="22" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16777215</color>
+        <size>14</size>
+        <text>Con%20TIM%20Wallet%20puoi%20utilizzare%20il%20tuo%20smartphone%20per%20pagare%20in%20tutti%20i%20negozi%20abilitati</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Link" x="69" y="247" w="-1" h="-1" measuredW="314" measuredH="19" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>sls.serviziPersona%26bm%3Bsls.serviziPersona.bmml%26bm%3Bsls.serviziPersona.bmml%26bm%3Bsls.serviziPersona.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2237%2C247%2C351%2C266%22%20href%3D%22sls.serviziPersona.bmml%22%20alt%3D%22sls.serviziPersona%22%20id%3D%2240%22/%3E</map>
+        <text>%3C%3C%20Vai%20a%20%22Smart%20Life%20Services%20-%20Servizi%20Alla%20Persona%22</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Image" x="95" y="513" w="300" h="229" measuredW="287" measuredH="198" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/z.phone_noCard.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::LinkBar" x="179" y="83" w="-1" h="-1" measuredW="878" measuredH="19" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Home%20page%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%2CWho%20we%20are.Innovazione%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%2CHighlights%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%2CAssistance%20Services%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%2CMain.Prodotti%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%2CMain.Prom%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%2CMain.SmartLifeServices%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22147%2C85%2C214%2C98%22%20href%3D%22Home%2520page.bmml%22%20alt%3D%22Home%20page%22%20id%3D%2243%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22232%2C85%2C290%2C98%22%20href%3D%22Who%2520we%2520are.Innovazione.bmml%22%20alt%3D%22Who%20we%20are.Innovazione%22%20id%3D%2243%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22308%2C85%2C367%2C98%22%20href%3D%22Highlights.bmml%22%20alt%3D%22Highlights%22%20id%3D%2243%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22385%2C85%2C577%2C98%22%20href%3D%22Assistance%2520Services.bmml%22%20alt%3D%22Assistance%20Services%22%20id%3D%2243%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22595%2C85%2C708%2C98%22%20href%3D%22Main.Prodotti.bmml%22%20alt%3D%22Main.Prodotti%22%20id%3D%2243%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22726%2C85%2C857%2C98%22%20href%3D%22Main.Prom.bmml%22%20alt%3D%22Main.Prom%22%20id%3D%2243%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22875%2C85%2C1025%2C98%22%20href%3D%22Main.SmartLifeServices.bmml%22%20alt%3D%22Main.SmartLifeServices%22%20id%3D%2243%22/%3E</map>
+        <text>Home%20page%2C%20Chi%20siamo%2C%20Highlights%2C%20%20%20%20%20%20%20%20%20Servizi%20di%20Assistenza%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Prodotti%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Promozioni%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Smart%20Life%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::List" x="413" y="102" w="215" h="93" measuredW="100" measuredH="126" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>LineManagement%26bm%3BLineManagement.bmml%26bm%3BLineManagement.bmml%26bm%3BLineManagement.bmml%2CMonitoringCost%26bm%3BMonitoringCost.bmml%26bm%3BMonitoringCost.bmml%26bm%3BMonitoringCost.bmml%2CTechnical%20Support%26bm%3BTechnical%20Support.bmml%26bm%3BTechnical%20Support.bmml%26bm%3BTechnical%20Support.bmml%2CSL%26bm%3BSL.bmml%26bm%3BSL.bmml%26bm%3BSL.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22381%2C105%2C596%2C126%22%20href%3D%22LineManagement.bmml%22%20alt%3D%22LineManagement%22%20id%3D%2244%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22381%2C126%2C596%2C147%22%20href%3D%22MonitoringCost.bmml%22%20alt%3D%22MonitoringCost%22%20id%3D%2244%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22381%2C147%2C596%2C168%22%20href%3D%22Technical%2520Support.bmml%22%20alt%3D%22Technical%20Support%22%20id%3D%2244%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22381%2C168%2C596%2C189%22%20href%3D%22SL.bmml%22%20alt%3D%22SL%22%20id%3D%2244%22/%3E</map>
+        <text>Gestione%20Linea%20e%20servizi%0AControllo%20costi%20e%20pagamenti%0ASupport%20tecnico%20e%20configurazioni%0AContenuti%20e%20Smart%20Life</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::List" x="940" y="102" w="149" h="93" measuredW="100" measuredH="126" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>sls.Tv_ent-tv%26bm%3Bsls.Tv_ent-tv.bmml%26bm%3Bsls.Tv_ent-tv.bmml%26bm%3Bsls.Tv_ent-tv.bmml%2Csls.Benessere%26bm%3Bsls.Benessere.bmml%26bm%3Bsls.Benessere.bmml%26bm%3Bsls.Benessere.bmml%2Csls.homeFamily%26bm%3Bsls.homeFamily.bmml%26bm%3Bsls.homeFamily.bmml%26bm%3Bsls.homeFamily.bmml%2Csls.serviziPersona%26bm%3Bsls.serviziPersona.bmml%26bm%3Bsls.serviziPersona.bmml%26bm%3Bsls.serviziPersona.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22908%2C105%2C1057%2C126%22%20href%3D%22sls.Tv_ent-tv.bmml%22%20alt%3D%22sls.Tv_ent-tv%22%20id%3D%2245%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22908%2C126%2C1057%2C147%22%20href%3D%22sls.Benessere.bmml%22%20alt%3D%22sls.Benessere%22%20id%3D%2245%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22908%2C147%2C1057%2C168%22%20href%3D%22sls.homeFamily.bmml%22%20alt%3D%22sls.homeFamily%22%20id%3D%2245%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22908%2C168%2C1057%2C189%22%20href%3D%22sls.serviziPersona.bmml%22%20alt%3D%22sls.serviziPersona%22%20id%3D%2245%22/%3E</map>
+        <text>TV%20%26%20Entertainment%20%0ASalute%20e%20benessere%20%0ACasa%20e%20Famiglia%20%0AServizi%20alla%20persona%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::List" x="789" y="102" w="147" h="51" measuredW="100" measuredH="126" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Menu.Prom.Devices%26bm%3BMenu.Prom.Devices.bmml%26bm%3BMenu.Prom.Devices.bmml%26bm%3BMenu.Prom.Devices.bmml%2CMenu.prom.smartLife%26bm%3BMenu.prom.smartLife.bmml%26bm%3BMenu.prom.smartLife.bmml%26bm%3BMenu.prom.smartLife.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22757%2C105%2C904%2C126%22%20href%3D%22Menu.Prom.Devices.bmml%22%20alt%3D%22Menu.Prom.Devices%22%20id%3D%2246%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22757%2C126%2C904%2C147%22%20href%3D%22Menu.prom.smartLife.bmml%22%20alt%3D%22Menu.prom.smartLife%22%20id%3D%2246%22/%3E</map>
+        <text>Dispositivi%0ASmartLife%20Services</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::List" x="633" y="102" w="152" h="115" measuredW="100" measuredH="126" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Menu.SmartphoneTelefoni%26bm%3BMenu.SmartphoneTelefoni.bmml%26bm%3BMenu.SmartphoneTelefoni.bmml%26bm%3BMenu.SmartphoneTelefoni.bmml%2C%2C%2CMenu.Tv_SmartLiving%26bm%3BMenu.Tv_SmartLiving.bmml%26bm%3BMenu.Tv_SmartLiving.bmml%26bm%3BMenu.Tv_SmartLiving.bmml%2CMenu.Outlet%26bm%3BMenu.Outlet.bmml%26bm%3BMenu.Outlet.bmml%26bm%3BMenu.Outlet.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22601%2C105%2C753%2C126%22%20href%3D%22Menu.SmartphoneTelefoni.bmml%22%20alt%3D%22Menu.SmartphoneTelefoni%22%20id%3D%2247%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22601%2C168%2C753%2C189%22%20href%3D%22Menu.Tv_SmartLiving.bmml%22%20alt%3D%22Menu.Tv_SmartLiving%22%20id%3D%2247%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22601%2C189%2C753%2C210%22%20href%3D%22Menu.Outlet.bmml%22%20alt%3D%22Menu.Outlet%22%20id%3D%2247%22/%3E</map>
+        <text>Smartphone%20e%20Telefoni%0ATablet%20e%20Computer%20*%0AModem%20e%20Networking%20*%0ATV%20e%20Smart%20Living%0AOutlet</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

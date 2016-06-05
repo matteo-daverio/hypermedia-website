@@ -1,0 +1,43 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1283" measuredH="795" mockupW="1262" mockupH="795">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="21" y="0" w="1262" h="795" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//www.tim.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1250" y="81" w="-1" h="675" measuredW="16" measuredH="100" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Link" x="232" y="737" w="-1" h="-1" measuredW="94" measuredH="19" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>TechnicalSupport.iPhoneMail%26bm%3BTechnicalSupport.iPhoneMail.bmml%26bm%3BTechnicalSupport.iPhoneMail.bmml%26bm%3BTechnicalSupport.iPhoneMail.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22211%2C737%2C305%2C756%22%20href%3D%22TechnicalSupport.iPhoneMail.bmml%22%20alt%3D%22TechnicalSupport.iPhoneMail%22%20id%3D%2230%22/%3E</map>
+        <text>torno%20all%27inizio%20%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Paragraph" x="232" y="278" w="958" h="438" measuredW="275" measuredH="80" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tocca%20l%27opzione%20Aggiungi%20account%20Mail%0Acompila%20i%20campi%20con%20i%20tuoi%20dati%20della%20casella%20di%20posta%20Alice%3A%0ANome%3A%20inserisci%20un%20nome%20a%20tua%20scelta%3B%0AIndirizzo%3A%20il%20tuo%20indirizzo%20completo%20del%20dominio%20@alice.it%3B%0APassword%3A%20digita%20la%20tua%20password%20di%20posta%3B%0ADescrizione%3A%20inserisci%20un%20nome%20per%20specificare%20questo%20account%20%28Alice%2C%20Casa%2C%20Ufficio%2C%20...%29.%0Atocca%20infine%20il%20tasto%20Salva.%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0AL%27iPhone%20nei%20passaggi%20successivi%20verifica%20automaticamente%20l%27esistenza%20dell%27account%20e%20il%20corretto%20funzionamento%20dei%20server%20di%20posta%20in%20entrata%20ed%20in%20uscita%3A%0A%20%0APer%20accedere%20alla%20casella%20di%20posta%20tocca%20l%27icona%20Mail%20dal%20menu%20principale%20e%20seleziona%20il%20tuo%20account.%0A%20%0AN.B.%20iPhone%20configura%20in%20automatico%20la%20tua%20casella%20alice%20secondo%20il%20protocollo%20IMAPche%20permette%20di%20mantenere%20sincronizzata%20la%20tua%20mail%20con%20il%20server%20di%20posta%3B%20in%20questo%20modo%20anche%20l%27eliminazione%20dei%20tuoi%20messaggi%20dal%20server%20avviene%20solo%20quando%20effettui%20la%20cancellazione%20da%20iPhone.%20Ti%20consigliamo%20di%20mantenere%20questa%20impostazione.%0ASe%20hai%20necessit%E0%20di%20configurare%20la%20mail%20su%20protocollo%20POP3%20clicca%20sotto%20su%20%27Configurazione%20POP3%27%0ASe%20trovi%20comunque%20difficolt%E0%20nella%20configurazione%2C%20ti%20informiamo%20che%20%E8%20disponibile%20il%20nostro%20servizio%20di%20assistenza%20a%20pagamento%20SOS%20PC%3A%20il%20personale%20tecnico%20concorder%E0%20un%20intervento%20personalizzato%20per%20configurare%20in%20maniera%20ottimale%20il%20tuo%20iPhone.</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Image" x="232" y="108" w="495" h="160" measuredW="500" measuredH="182" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <crop>0%2C431%2C1000%2C482</crop>
+        <src>./assets/mail_2.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Image" x="232" y="401" w="313" h="138" measuredW="350" measuredH="170" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <crop>0%2C0%2C1000%2C800</crop>
+        <src>./assets/mail_3.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::LinkBar" x="183" y="81" w="-1" h="-1" measuredW="878" measuredH="19" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Home%20page%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%26bm%3BHome%20page.bmml%2CWho%20we%20are.Innovazione%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%26bm%3BWho%20we%20are.Innovazione.bmml%2CHighlights%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%26bm%3BHighlights.bmml%2CAssistance%20Services%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%26bm%3BAssistance%20Services.bmml%2CMain.Prodotti%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%26bm%3BMain.Prodotti.bmml%2CMain.Prom%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%26bm%3BMain.Prom.bmml%2CMain.SmartLifeServices%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml%26bm%3BMain.SmartLifeServices.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22162%2C83%2C229%2C96%22%20href%3D%22Home%2520page.bmml%22%20alt%3D%22Home%20page%22%20id%3D%2246%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22247%2C83%2C305%2C96%22%20href%3D%22Who%2520we%2520are.Innovazione.bmml%22%20alt%3D%22Who%20we%20are.Innovazione%22%20id%3D%2246%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22323%2C83%2C382%2C96%22%20href%3D%22Highlights.bmml%22%20alt%3D%22Highlights%22%20id%3D%2246%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22400%2C83%2C592%2C96%22%20href%3D%22Assistance%2520Services.bmml%22%20alt%3D%22Assistance%20Services%22%20id%3D%2246%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22610%2C83%2C723%2C96%22%20href%3D%22Main.Prodotti.bmml%22%20alt%3D%22Main.Prodotti%22%20id%3D%2246%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22741%2C83%2C872%2C96%22%20href%3D%22Main.Prom.bmml%22%20alt%3D%22Main.Prom%22%20id%3D%2246%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22890%2C83%2C1040%2C96%22%20href%3D%22Main.SmartLifeServices.bmml%22%20alt%3D%22Main.SmartLifeServices%22%20id%3D%2246%22/%3E</map>
+        <text>Home%20page%2C%20Chi%20siamo%2C%20Highlights%2C%20%20%20%20%20%20%20%20%20Servizi%20di%20Assistenza%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Prodotti%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Promozioni%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20Smart%20Life%20Services</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
