@@ -1,0 +1,48 @@
+/**** CSS shared between every page ****/
+
+
+/* set the footer in black mode */
+#footer {
+	background-color: #333;
+	color: #CCC;
+	border-top-color: rgba(0,0,0,0.2);
+}
+
+/* set style of main menu */
+
+/* here the css of the menu? or leave in the style.css */
+
+
+
+/* COMMENT TODO */
+ .ei-title h2,
+ .ei-title h3,
+ .ei-title h2 span,
+ .ei-title h3 span {
+	color: #EEE !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+}
+
+.slider-caption,
+.slider-caption h2 {
+	color: #EEE;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+}
+
+/* Dispositivi es Iphone 6s
+-----------------------------------------------------------------*/
+
+/* Device Description before the unordered list*/
+.device-desc p { 
+    text-align: left;
+}
+
+/* light the 
+.pro-type span {
+    border:1px solid #0099e5;
+	border-top:0;
+    font-weight: 600;
+    padding: 5px 12px;
+	line-height:1;
+	display:inline-block;
+}
