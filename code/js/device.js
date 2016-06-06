@@ -32,6 +32,7 @@ $("document").ready(function(){
     ajaxGallery(id);
     ajaxDescription(id);
     ajaxSpecificationsList(id);
+    ajaxSmartLifeServices(id);
     
     
     
@@ -160,6 +161,37 @@ function ajaxSpecificationsList(id){
 }
 
 
+function ajaxSmartLifeServices(id){
+    
+    $.ajax({
+        method: "GET",
+        //dataType: "json", //type of data
+        crossDomain: true,
+        url: "db/sql_device.php", //Relative or absolute path to file.php file
+        data: {id: id, query:'sls'},
+        success: function(response) { 
+            
+            //parse the json and get an array where the index is the row and the .User is the name of the column
+            var resultArray = $.parseJSON(response);
+            
+            for(var i = 0; i < resultArray.length; i++){
+   
+                //sls list
+                var specList = buildSlsList(resultArray[i].id, resultArray[i].titolo);
+                document.getElementById("slsListDiv").appendChild(specList);
+            }
+            
+        },
+        error: function(request,error)
+        {
+            console.log(request+":"+error);
+        }
+    });
+    
+    
+}
+
+
 
 /*********************************************************************/
 /**************  HELPER FUNTIONS FOR AJAX REQUESTS   *****************/
@@ -282,6 +314,24 @@ function buildDescription(descrizione){
     descrizioneP.innerHTML = descrizione;
     
     return descrizioneP;
+}
+
+function buildSlsList(id, titolo){
+    
+    var spanElementExternal = document.createElement("SPAN");
+    var aElement = document.createElement("A");
+    var spanElementInternal = document.createElement("SPAN");
+    
+    spanElementExternal.setAttribute("class", "posted_in");
+    aElement.setAttribute("href","sls.html?id=" + id);//MIRKO
+    aElement.setAttribute("rel","tag");
+    spanElementInternal.setAttribute("style", "padding-left:10px");
+    spanElementInternal.innerHTML = "Vai a " + titolo;
+    
+    aElement.appendChild(spanElementInternal);
+    spanElementExternal.appendChild(aElement);
+    
+    return spanElementExternal;
 }
 
 

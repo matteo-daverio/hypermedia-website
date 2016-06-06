@@ -62,5 +62,17 @@ if($_GET['query'] === 'specification'){
     return;
 }
 
+/***************************************************************/
+/*************  Load Sls query *****************************/
+/***************************************************************/
+
+if($_GET['query'] === 'sls'){
+    
+    $finalQuery = "SELECT sls.id, sls.titolo FROM device_sls RIGHT JOIN sls ON device_sls.id_sls = sls.id WHERE sls.id =" . $id;
+        $result = $db -> query($finalQuery);  
+        while($row = mysqli_fetch_assoc($result))
+            $test[] = $row; 
+        echo json_encode($test);
+}
 
 ?>

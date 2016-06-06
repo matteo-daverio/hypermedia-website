@@ -14,7 +14,7 @@ $query = $db -> quote($_GET['query']);
 $category = $db -> quote($_GET['categoria']);
 $filter = '';
 
-$where = "WHERE categoria= " . $category;
+//$where = "WHERE categoria= " . $category;
 
 if (strcmp($category, "'all_devices'") == 0){
     $where = performQueryall_devices($where, $category);
@@ -26,7 +26,6 @@ if(isset($_GET['filter']) && !empty($_GET['filter'])){
     //Qui andiamo ad elaborare le informazioni del filter
     $filter = buildQuery($_GET['filter'], $db);
 }
-
 
 if (strcmp($query, "'gridProducts'") == 0){
     if($filter === ''){
@@ -203,6 +202,7 @@ function buildQuery($filter, $db){
     
     if(strcmp($orderingPreference, "") != 0){
         $query = $query . $orderingPreference;
+        echo $query;
     }
     
     return $query;
@@ -264,15 +264,14 @@ function buildSafeOrderingPreferencesSubQuery($left, $rightArray, $db){
     }else if (strcmp($rightArray[0], "1") == 0){ //1 is the most sold
         $subQuery = ' ORDER BY piuVenduto DESC';
         return $subQuery;
+    }else{
+        return $subQuery;
     }
-    
-    return $subQuery;
 }
 
 //Data una tupla del tipo [prezzo:min;max] questo metodo filtra il contenuto e li mette in OR e forma una sottoquery 
 function buildSafePriceSubQuery($left, $rightArray, $db){
     $subQuery = 'prezzo BETWEEN ' . $db -> quote($rightArray[0]) . " AND " . $db -> quote($rightArray[1]);
-    
     return $subQuery;
 }
 
