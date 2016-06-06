@@ -36,10 +36,25 @@ $("document").ready(function(){
             //parse the json and get an array
             var res = $.parseJSON(response);
             fillPage(res[0].titolo,res[0].img_land);
-            
             fillDescriptionFields(res[0].des_offerta,res[0].des_img, res[0].des_specifiche,res[0].promozione);
-            
             fillActivationFields(res[0].act_act, res[0].act_img, res[0].act_timricorda,res[0].promozione);
+            setLinkDeviceWithIntermediatePage(res[0].act_device_correlati_nome, res[0].act_device_correlati_link);
+        },
+        error: function(request,error){
+            console.log(request+":"+error);
+        }
+    });
+    //get the list of devices for the activation
+    $.ajax({
+        method: "GET",
+        //dataType: "json", //type of data
+        crossDomain: true,
+        url: "db/sql_sls.php", //Relative or absolute path to file.php file
+        data: {id:id , devices:true},
+        success: function(response) {
+            //parse the json and get an array
+            var arrayRes = $.parseJSON(response);
+            generateLinksForDevices(arrayRes);
         },
         error: function(request,error){
             console.log(request+":"+error);
@@ -87,6 +102,44 @@ function fillActivationFields(act_act,act_img,act_timricorda,promozione){
     $("#sls_act_act").html(act_act);
     $("#sls_act_img").attr("src", act_img);
     $("#sls_act_ricorda").html(act_timricorda);
+}
+
+//if the device for this service are a group , there is a link to an intermediate page
+function setLinkDeviceWithIntermediatePage(act_device_correlati_nome,act_device_correlati_link){
+    if(act_device_correlati_nome != null || act_device_correlati_link != null){
+        //hide the default message
+        $("#sls_no_device").hide();
+        
+        //<br><a href="url">&#10095; Tutti gli iPhone</a>
+        var linkIntemedio = document.createElement("A");
+        linkIntemedio.setAttribute("href",act_device_correlati_link);
+        linkIntemedio.innerHTML = act_device_correlati_nome;
+         $("#sls_list_devices").append(linkIntemedio);
+    }
+}
+
+//for each device correlated to this service generate a link in the activation section
+function generateLinksForDevices(arrayRes){
+    if ( arrayRes.length > 0){
+        //hide the default message
+        $("#sls_no_device").hide();
+    }
+    //for each item add to the container
+    for (i = 0; i < arrayRes.length; i++) {
+        $("#sls_list_devices").append(document.createElement("BR"));
+        $("#sls_list_devices").append(buildLinkDevice(arrayRes[i].nome,arrayRes[i].id));
+    }
+}
+
+
+//build the link obj of the single device for this smart life service
+function buildLinkDevice(nome,id){
+    console.log(nome); //TODO remove
+    console.log(id);
+    var linkSingleDevice = document.createElement("A");
+    linkSingleDevice.setAttribute("href","page.device.html?id=" + id);
+    linkSingleDevice.innerHTML =  "&#10095; " + nome;
+    return linkSingleDevice; 
 }
 
 

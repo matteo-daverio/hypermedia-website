@@ -1,4 +1,3 @@
-
 //receive the parameter from the caller and do an asyn ajax get request with par type
 function asyncAjaxRequestSls(type){
     //async ajax request
@@ -74,6 +73,7 @@ function addDivImg(id,title,img,promozione){
         
     var imgElement = document.createElement("IMG"); 
     imgElement.setAttribute("src",img);
+    imgElement.setAttribute("class","img-rounded");
     imgElement.setAttribute("alt",title);
     
     var aElement = document.createElement("A");
@@ -143,9 +143,4 @@ EXAMPLE of the built item
 </div>
 
 */
-       
-       
-       
-       
-       
        
