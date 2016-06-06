@@ -20,7 +20,6 @@ var idNumberFilterListMostraSolo = 0;
 
 //async ajax request
 $("document").ready(function(){
-
     
 //select the right text in the menu
 $('#menu_prodotti').addClass('current');
@@ -32,7 +31,7 @@ $('#menu_prodotti').addClass('current');
                      "modem_networking"    : "Modem e Networking",
                      "tv_smart_living"     : "Tv e Smart Living",
                      "outlet"              : "Outlet",
-                     "all_devices"          : "Promozioni"
+                     "all_devices"         : "Promozioni"
                    } 
     
     var parametersMap = getParameters();
@@ -49,11 +48,12 @@ $('#menu_prodotti').addClass('current');
     
     setPageTitle(titleForThePage);
     
+    loadCookieInfoOrderingPreferences("orderingForm");
+    
     ajaxGridProduct(phpFile, categoria, filter);
     
     ajaxFilterComponents(phpFile, categoria);
-    
-    loadCookieInfoOrderingPreferences("orderingForm");
+     
 });
 
 //Helper function to dispatch all the ajax calls for the Filter's Components
@@ -71,10 +71,31 @@ function ajaxFilterComponents(phpFile, categoria){
 /************************   AJAX REQUESTS   **************************/
 /*********************************************************************/
 
+function helperOrderingNotSpecifiedIntoTheFilter(filter){
+    
+    var arrayIndexChildActive = getActiveIndexInCookieForThisFatherId("orderingForm");
+    var indexSelected = arrayIndexChildActive[0];
+    
+    if(indexSelected === undefined){
+        return;
+    }
+    
+    if(filter.indexOf("orderingForm") < 0){
+        if(filter === '' && indexSelected !== undefined){
+            filter = "[orderingPreference:" + indexSelected + "]";
+        }
+    }
+    
+    return filter
+}
 
 /*****************   AJAX GRID PRODUCT REQUESTS   ********************/
 
 function ajaxGridProduct(phpFile, categoria, filter){
+    
+    filter = helperOrderingNotSpecifiedIntoTheFilter(filter);
+    
+    console.log(filter);
     
     $.ajax({
         method: "GET",
@@ -89,6 +110,7 @@ function ajaxGridProduct(phpFile, categoria, filter){
             
             if ( resultArray === null ){
                 alert("Nessun Prodotto disponibile");
+                return;
             }
             
             //Add the html for each device that basically is a row

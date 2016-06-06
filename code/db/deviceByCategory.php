@@ -14,7 +14,7 @@ $query = $db -> quote($_GET['query']);
 $category = $db -> quote($_GET['categoria']);
 $filter = '';
 
-//$where = "WHERE categoria= " . $category;
+$where = "WHERE categoria= " . $category;
 
 if (strcmp($category, "'all_devices'") == 0){
     $where = performQueryall_devices($where, $category);
@@ -43,7 +43,9 @@ if (strcmp($query, "'gridProducts'") == 0){
         }
         
     }else{
-        $finalQuery = "SELECT * FROM device " . $where . " AND " . $filter;
+        
+        $finalQuery = "SELECT * FROM device ". $where . $filter;
+ 
         $result = $db -> query($finalQuery);  
         while($row = mysqli_fetch_assoc($result))
             $test[] = $row; 
@@ -199,10 +201,10 @@ function buildQuery($filter, $db){
     $arraySubQueryClean = cleanFromEmptyOptions($arraySubQuery);
     
     $query = putConditionsInAnd($arraySubQueryClean);
+
     
     if(strcmp($orderingPreference, "") != 0){
         $query = $query . $orderingPreference;
-        echo $query;
     }
     
     return $query;
@@ -216,7 +218,7 @@ function putConditionsInAnd($arraySubQuery){
     for ($i = 0; $i < count($arraySubQuery); $i++) {
         
         if ($i == 0){
-            $query = '(' . $arraySubQuery[$i] . ')';
+            $query = ' AND (' . $arraySubQuery[$i] . ')';
         }else{
             $query = $query . " AND " . '(' .$arraySubQuery[$i] . ")";
         }
@@ -262,6 +264,9 @@ function buildSafeOrderingPreferencesSubQuery($left, $rightArray, $db){
         $subQuery = ' ORDER BY nuovo DESC';
         return $subQuery;
     }else if (strcmp($rightArray[0], "1") == 0){ //1 is the most sold
+        $subQuery = ' ORDER BY promo DESC';
+        return $subQuery;
+    } else if (strcmp($rightArray[0], "2") == 0){ //1 is the most sold
         $subQuery = ' ORDER BY piuVenduto DESC';
         return $subQuery;
     }else{
@@ -271,7 +276,7 @@ function buildSafeOrderingPreferencesSubQuery($left, $rightArray, $db){
 
 //Data una tupla del tipo [prezzo:min;max] questo metodo filtra il contenuto e li mette in OR e forma una sottoquery 
 function buildSafePriceSubQuery($left, $rightArray, $db){
-    $subQuery = 'prezzo BETWEEN ' . $db -> quote($rightArray[0]) . " AND " . $db -> quote($rightArray[1]);
+    $subQuery = '(prezzo BETWEEN ' . $db -> quote($rightArray[0]) . " AND " . $db -> quote($rightArray[1]). ") OR ( promo = ". "'1'" . ' AND prezzoScontato BETWEEN ' . $db -> quote($rightArray[0]) . " AND " . $db -> quote($rightArray[1]) . ")";
     return $subQuery;
 }
 

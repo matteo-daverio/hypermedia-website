@@ -1283,7 +1283,7 @@ a.load-more:hover {
 	width: 10px;
 	z-index: 2;
 }
-.range-slider input.submit ,.range-slider.text-bg label{
+.range-slider.text-bg label{
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 30px;
@@ -1292,6 +1292,18 @@ a.load-more:hover {
 	background: #fff;
 	padding: 2px 15px 0 15px;
 }
+
+.range-slider input.submit{
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 30px;
+	text-transform: uppercase;
+	border: 0;
+	background: #55acee;
+    color: aliceblue;
+	padding: 2px 15px 0 15px;
+}
+
 .range-slider.text-bg label {
 	float: left;
 	margin: 0;

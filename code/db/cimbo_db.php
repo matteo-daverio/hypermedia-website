@@ -71,13 +71,13 @@ if($resultQuery === true){
 
 $sqlInsert = "INSERT INTO device (id, nome, categoria, sottoCategoria, gridImagePath, promo, nuovo, piuVenduto, compraSubito, aRate, noleggio, marca, prezzo, prezzoScontato, descrizione) VALUES 
 ('1', 'Iphone6s', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/iPhone6s1.png',
- '1', '0', '1', '0', '1', '0', 'Apple', '820.00', '800.00', 'iPhone 6s mantiene tutte le caratteristiche che hanno reso straordinaria la generazione precedente di iPhone, e le spingono a un livello ancora pi&ugrave; avanzato. Viene realizzato in alluminio serie 7000, la lega pi&ugrave; robusta mai utilizzata per un iPhone. Il suo display Retina HD &egrave; fatto del vetro pi&ugrave; resistente che uno smartphone abbia mai avuto.') ,
+ '0', '0', '1', '1', '1', '0', 'Apple', '820.00', '800.00', 'iPhone 6s mantiene tutte le caratteristiche che hanno reso straordinaria la generazione precedente di iPhone, e le spingono a un livello ancora pi&ugrave; avanzato. Viene realizzato in alluminio serie 7000, la lega pi&ugrave; robusta mai utilizzata per un iPhone. Il suo display Retina HD &egrave; fatto del vetro pi&ugrave; resistente che uno smartphone abbia mai avuto.') ,
  ('2', 'Samsung Galaxy S7 Edge', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/samsungGalaxyS7Edge1.png',
- '0', '1', '0', '0', '1', '1', 'Samsung', '820.00', '800.00', 'Caratteristiche:') ,
+ '0', '1', '0', '1', '1', '1', 'Samsung', '820.00', '800.00', 'Caratteristiche:') ,
  ('3', 'Huawei P9 Plus', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/huaweiP9Plus1.png',
- '0', '0', '0', '0', '1', '1', 'Huawei', '749.90', '650.00', 'Caratteristiche:'),
+ '1', '0', '0', '0', '1', '1', 'Huawei', '749.90', '650.00', 'Caratteristiche:'),
  ('4', 'Cordless Facile Maxi', 'smartphone_telefoni', 'telefoni', 'images/grid200x276/cordlessFacileMaxi1.png',
- '0', '0', '0', '0', '1', '1', 'Tim', '35.90', '29.95', 'Caratteristiche:'),
+ '0', '0', '0', '1', '1', '1', 'Tim', '35.90', '29.95', 'Caratteristiche:'),
  ('5', 'IPad Air 2', 'tablet_computer', 'tablet', 'images/grid200x276/ipadAir2_1.png',
  '0', '1', '1', '0', '1', '1', 'Apple', '520.00', '450.00', 'Caratteristiche:'),
  ('6', 'Decoder TIMvision', 'tv_smart_living', 'smart living', 'images/grid200x276/decoderTimVision.png',
