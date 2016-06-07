@@ -85,11 +85,11 @@ $sqlInsert = "INSERT INTO device (id, nome, categoria, sottoCategoria, gridImage
  ('7', 'Samsung Smart TV 50  + Soundbar con TIMvision', 'tv_smart_living', 'tv', 'images/grid200x276/samsungSmartTv.png',
  '0', '1', '1', '0', '1', '1', 'Samsung', '936.00', '850.00', 'Caratteristiche:'),
  ('8', 'Samsung Galaxy TabPro S 12', 'tablet_computer', 'computer', 'images/grid200x276/samsungGalaxyTabProS12_1.png',
- '0', '1', '1', '0', '1', '1', 'Samsung', '1299,90', '850.00', 'Caratteristiche:'),
+ '0', '1', '1', '0', '1', '1', 'Samsung', '1299.90', '850.00', 'Caratteristiche:'),
  ('9', 'Olivetti My Way', 'outlet', 'outlet', 'images/grid200x276/olivettiMyWay.png',
- '1', '0', '1', '0', '0', '0', 'Olivetti', '49,00', '19.00', 'Caratteristiche:'),
+ '1', '0', '1', '0', '0', '0', 'Olivetti', '49.00', '19.00', 'Caratteristiche:'),
  ('10', 'Modem ADSL Wi-Fi', 'modem_networking', 'modem', 'images/grid200x276/modemAdsl.png',
- '0', '1', '1', '0', '0', '0', 'Tim', '69,00', '59.00', 'Caratteristiche:')";
+ '0', '1', '1', '0', '0', '0', 'Tim', '69.00', '59.00', 'Caratteristiche:')";
 
 
 
