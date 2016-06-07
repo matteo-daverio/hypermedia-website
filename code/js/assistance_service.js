@@ -17,7 +17,6 @@ $("document").ready(function() {
         url: "db/sql_page_assistance.php", //Relative or absolute path to file.php file
         data: {Id: id},
         success: function (response) { 
-            console.log(response);
             //parse the json and get an array where the index is the row and the .User is the name of the column
             var resultArray = $.parseJSON(response);
             
@@ -63,7 +62,15 @@ function buildPageElement(description) {
 function buildLinkElement(link) {
     var linkElement = document.createElement("DIV");
     linkElement.setAttribute("style", "padding-left:20px;");
-    linkElement.innerHTML = "Nessun dispositivo";
+    console.log(link);
+    if (link==='0') {
+        linkElement.innerHTML = "Nessun dispositivo";
+    } else {
+        var to = document.createElement("A");
+        to.setAttribute("href", link);
+        to.innerHTML = "Vai ai dispositivi";
+        linkElement.appendChild(to);
+    }  
     return linkElement;
 }
 
