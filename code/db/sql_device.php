@@ -75,4 +75,17 @@ if($_GET['query'] === 'sls'){
         echo json_encode($test);
 }
 
+/***************************************************************/
+/*************  Load Assistace query *****************************/
+/***************************************************************/
+
+if($_GET['query'] === 'assistance'){
+    
+    $finalQuery = "SELECT page_assistance.Id, page_assistance.Title FROM device_assistance RIGHT JOIN page_assistance ON device_assistance.id_assistance = page_assistance.Id WHERE device_assistance.id_device =" . $id;
+        $result = $db -> query($finalQuery);  
+        while($row = mysqli_fetch_assoc($result))
+            $test[] = $row; 
+        echo json_encode($test);
+}
+
 ?>

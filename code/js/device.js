@@ -33,7 +33,7 @@ $("document").ready(function(){
     ajaxDescription(id);
     ajaxSpecificationsList(id);
     ajaxSmartLifeServices(id);
-    
+    ajaxAssistanceServices(id);
     
     
 });
@@ -191,6 +191,35 @@ function ajaxSmartLifeServices(id){
     
 }
 
+function ajaxAssistanceServices(id){
+    
+    $.ajax({
+        method: "GET",
+        //dataType: "json", //type of data
+        crossDomain: true,
+        url: "db/sql_device.php", //Relative or absolute path to file.php file
+        data: {id: id, query:'assistance'},
+        success: function(response) { 
+            
+            //parse the json and get an array where the index is the row and the .User is the name of the column
+            var resultArray = $.parseJSON(response);
+            
+            for(var i = 0; i < resultArray.length; i++){
+   
+                //sls list
+                var assistanceList = buildAssistanceList(resultArray[i].Id, resultArray[i].Title);
+                document.getElementById("serviziAssistenzaListDiv").appendChild(assistanceList);
+            }
+            
+        },
+        error: function(request,error)
+        {
+            console.log(request+":"+error);
+        }
+    });
+    
+    
+}
 
 
 /*********************************************************************/
@@ -324,6 +353,24 @@ function buildSlsList(id, titolo){
     
     spanElementExternal.setAttribute("class", "posted_in");
     aElement.setAttribute("href","sls.html?id=" + id);//MIRKO
+    aElement.setAttribute("rel","tag");
+    spanElementInternal.setAttribute("style", "padding-left:10px");
+    spanElementInternal.innerHTML = "Vai a " + titolo;
+    
+    aElement.appendChild(spanElementInternal);
+    spanElementExternal.appendChild(aElement);
+    
+    return spanElementExternal;
+}
+
+function buildAssistanceList(id, titolo){
+    
+    var spanElementExternal = document.createElement("SPAN");
+    var aElement = document.createElement("A");
+    var spanElementInternal = document.createElement("SPAN");
+    
+    spanElementExternal.setAttribute("class", "posted_in");
+    aElement.setAttribute("href","page.assistance.html?Id=" + id);//MIRKO
     aElement.setAttribute("rel","tag");
     spanElementInternal.setAttribute("style", "padding-left:10px");
     spanElementInternal.innerHTML = "Vai a " + titolo;

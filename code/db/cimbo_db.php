@@ -15,7 +15,7 @@ $db = new SecureDB();
 
 // sql to create table
 $sql = 
-    "DROP TABLE device, immaginiDevice, specificheDevice, device_sls";
+    "DROP TABLE device, immaginiDevice, specificheDevice, device_sls, device_assistance";
 
 $resultQuery = $db -> query($sql);
 //handle it
@@ -312,11 +312,50 @@ if($resultQueryInsert1 === true){
     echo "Errore nell inserimento dei dati nella tabella device_sls" . "<br>" . "<br>";
 }
 
+/*********************************************************************/
+/*********************  TABELLA device_assistance   *******************/
+/*********************************************************************/
+
+
+// sql to create table
+$sql = 
+    "CREATE TABLE device_assistance (
+                            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                            id_device INT(6) NOT NULL,
+                            id_assistance INT(6) NOT NULL
+                            )";
+
+
+$resultQuery = $db -> query($sql);
+//handle it
+
+if($resultQuery === true){
+    echo "Tablella device_assistance costruita correttamente" . "<br>" . "<br>";    
+}else{
+    echo "Errore costruzione tabella device_assistance" . "<br>" . "<br>";
+}
+
+$sqlInsert1 = "INSERT INTO device_assistance 
+(id,
+id_device,
+id_assistance) VALUES(
+'1',
+'1',
+'11'),
+('2',
+'5',
+'11'
+)";
+
+
+$resultQueryInsert1 = $db -> query($sqlInsert1);
 
 
 
-
-
-
+if($resultQueryInsert1 === true){
+    echo "Inseriento tuple in device_assistance avvenuto correttamente" . "<br>" . "<br>";    
+}else{
+    echo "Errore nell inserimento dei dati nella tabella device_assistance" . "<br>" . "<br>";
+}
 
 ?>
