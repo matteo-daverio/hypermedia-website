@@ -201,7 +201,7 @@ h6 {
 	color: #444;
 	font-weight: 600;
 	line-height: 1.5;
-	margin: 0 0 30px 0;
+	margin: 0 0 0px 0;
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -553,8 +553,9 @@ span.middot {
 	left: 0;
 }
 
+/* TODO delete 
 .magnific-max-width .mfp-content { max-width: 800px; }
-
+*/
 
 /* ----------------------------------------------------------------
 	Sections
@@ -642,7 +643,7 @@ body.stretched .container-fullwidth {
 	display: block;
 	position: relative;
 	margin-right: 4%;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	float: left;
 }
 

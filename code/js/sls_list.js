@@ -8,29 +8,17 @@ $("document").ready(function(){ $('#menu_smartlife').addClass('current');});
 
 //get the pars
 var parametersMap = getParameters();
-//select the type of sls 
+//select the category of sls 
 var categ = parametersMap['categoria'];
 
-//change the title in the page based on the category
-$("#sls_list_title").text(getTitleFromCategory(categ));
-$("#sls_list_bartitle").text(getTitleFromCategory(categ));
-
-function getTitleFromCategory(categ){
-    if(categ === "tv_entertainment"){
-        return "Tv & Entertainment";    //TODO check if don't need special char
-    }else if(categ === "salute_benessere"){
-        return "Salute & Benessere";
-    }else if(categ === "casa_famiglia"){
-        return "Casa e Famiglia";
-    }else if(categ === "servizi_persona"){
-        return "Servizi alla persona";
-    }else
-        return "Nome categoria non esistente."
-}
 
 //load the shared js file to do an ajax request and fill the page with the result
 $.getScript('js/sls_shared.js', function()
 {
+    //change the title in the page based on the category
+    $("#sls_list_title").text(getTitlePageFromCategory(categ,false));
+    $("#sls_list_bartitle").text(getTitlePageFromCategory(categ,true));
+    
     //do the async request for all the smart life services filtered by the category
     asyncAjaxRequestSls(categ);
 });

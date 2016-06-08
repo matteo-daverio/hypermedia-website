@@ -1,5 +1,31 @@
+/**
+*  shared function for all the page of smart life services
+*/
+
+
+//get the title of the page base on the category 
+//long : if true add "Smart Life" at start of the string
+function getTitlePageFromCategory(categ,long){
+    var tit = "";
+    if(long){
+     tit = "Smart Life - ";
+    }
+    if(categ === "tv_entertainment"){
+        tit += "Tv & Entertainment";    //TODO check if don't need special char
+    }else if(categ === "salute_benessere"){
+        tit += "Salute & Benessere";
+    }else if(categ === "casa_famiglia"){
+        tit += "Casa e Famiglia";
+    }else if(categ === "servizi_persona"){
+        tit += "Servizi alla persona";
+    }else
+        tit += "Categoria non esistente."
+    return tit;
+}
+
+
 //receive the parameter from the caller and do an asyn ajax get request with par type
-function asyncAjaxRequestSls(type){
+function asyncAjaxRequestSls(categ){
     //async ajax request
     $("document").ready(function(){
         $.ajax({
@@ -7,7 +33,7 @@ function asyncAjaxRequestSls(type){
             //dataType: "json", //type of data
             crossDomain: true,
             url: "db/sql_sls.php", //Relative or absolute path to file.php file
-            data: {type:type},
+            data: {categoria:categ},
             success: function(response) {
                 //parse the json and get an array
                 var arrayRes = $.parseJSON(response);

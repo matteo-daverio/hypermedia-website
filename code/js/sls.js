@@ -35,7 +35,7 @@ $("document").ready(function(){
         success: function(response) {
             //parse the json and get an array
             var res = $.parseJSON(response);
-            fillPage(res[0].titolo,res[0].img_land);
+            fillPage(res[0].titolo,res[0].categoria, res[0].img_land);
             fillDescriptionFields(res[0].des_offerta,res[0].des_img, res[0].des_specifiche,res[0].promozione);
             fillActivationFields(res[0].act_act, res[0].act_img, res[0].act_timricorda,res[0].promozione);
             setLinkDeviceWithIntermediatePage(res[0].act_device_correlati_nome, res[0].act_device_correlati_link);
@@ -80,8 +80,14 @@ $("document").ready(function(){
     });
 });
 
-function fillPage(titolo,pathImg){
-    $("#sls_title").html(titolo);
+function fillPage(titolo,categoria,pathImg){
+    //load the shared js with common function
+    $.getScript('js/sls_shared.js', function()
+    {
+        //change the title in the page based on the category
+        $("#sls_context_title").text(getTitlePageFromCategory(categoria,true));
+    });
+    $("#sls_product_title").html(titolo);
     $("#sls_img").attr("src", pathImg);
 }
 
