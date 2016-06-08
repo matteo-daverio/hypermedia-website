@@ -156,7 +156,7 @@ function buildQuery($filter, $db){
         
         $right = preg_split("/\]/", $option[1])[0];
         
-        $rightArray = preg_split("/;/", $right);
+        $rightArray = preg_split("/\|/", $right);
         
         if (checkLeft($left)){
             

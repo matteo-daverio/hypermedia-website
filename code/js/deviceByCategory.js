@@ -8,10 +8,7 @@ $("#footer").load("shared-footer.html");
 var categoria;
 
 //when the filter is created at each activable row is added an incremental id to haldle the retrive fase
-var idNumberFilterListMarca = 0;
-var idNumberFilterListCategoria = 0;
-var idNumberFilterListAcquisto = 0;
-var idNumberFilterListMostraSolo = 0;
+
 
 
 /*********************************************************************/
@@ -40,30 +37,36 @@ $('#menu_prodotti').addClass('current');
     
     var titleForThePage = titleMap[categoria];
     
-    var filter = '';
+    var filter;
     
     if( parametersMap['filter'] !== undefined){
         filter = decodeURI(parametersMap['filter']);
+    }else{
+        filter = getCookie(categoria);
     }
+    
+    
+    
     
     setPageTitle(titleForThePage);
     
     loadCookieInfoOrderingPreferences("orderingForm");
     
-    ajaxGridProduct(phpFile, categoria, filter);
+    ajaxFilterComponents(phpFile, categoria, filter);
     
-    ajaxFilterComponents(phpFile, categoria);
+    ajaxGridProduct(phpFile, categoria, filter);
      
 });
 
 //Helper function to dispatch all the ajax calls for the Filter's Components
-function ajaxFilterComponents(phpFile, categoria){
+function ajaxFilterComponents(phpFile, categoria, filter){
+    
      //TODO
-    ajaxBrandFilter(phpFile, categoria);
-    ajaxBuyModeFilter(phpFile, categoria);
-    ajaxShowOnlyFilter(phpFile, categoria);
-    ajaxCategoryFilter(phpFile, categoria);
-    ajaxMaxPriceFilter(phpFile, categoria);
+    ajaxBrandFilter(phpFile, categoria, filter);
+    ajaxCategoryFilter(phpFile, categoria, filter);
+    ajaxBuyModeFilter(phpFile, categoria, filter);
+    ajaxShowOnlyFilter(phpFile, categoria, filter); 
+    ajaxMaxPriceFilter(phpFile, categoria, filter);
     
 }
 
@@ -77,7 +80,7 @@ function helperOrderingNotSpecifiedIntoTheFilter(filter){
     var indexSelected = arrayIndexChildActive[0];
     
     if(indexSelected === undefined){
-        return;
+        return filter;
     }
     
     if(filter.indexOf("orderingForm") < 0){
@@ -94,8 +97,6 @@ function helperOrderingNotSpecifiedIntoTheFilter(filter){
 function ajaxGridProduct(phpFile, categoria, filter){
     
     filter = helperOrderingNotSpecifiedIntoTheFilter(filter);
-    
-    console.log(filter);
     
     $.ajax({
         method: "GET",
@@ -127,7 +128,7 @@ function ajaxGridProduct(phpFile, categoria, filter){
 }
 
 
-function ajaxBrandFilter(phpFile, categoria){
+function ajaxBrandFilter(phpFile, categoria, filter){
     
     $.ajax({
         method: "GET",
@@ -145,8 +146,7 @@ function ajaxBrandFilter(phpFile, categoria){
                 addNewBrand(resultArray[i].marca, resultArray[i].numero);
             }
             
-        loadCookieInfo('brandListFilter');
-        
+            loadBrandSelectionsFromCookies(filter);
         },
         error: function(request,error)
         {
@@ -160,7 +160,7 @@ function ajaxBrandFilter(phpFile, categoria){
 
 
 
-function ajaxBuyModeFilter(phpFile, categoria){
+function ajaxBuyModeFilter(phpFile, categoria, filter){
     
     $.ajax({
         method: "GET",
@@ -174,9 +174,11 @@ function ajaxBuyModeFilter(phpFile, categoria){
             var resultArray = $.parseJSON(response);
             
             //Add the buyMode option in the right filter box
-            addBuyMode(resultArray[0].compraloSubitoNumero, resultArray[0].aRateNumero, resultArray[0].aNoleggioNumero);
+            addBuyMode(resultArray[0].compraloSubitoNumero, resultArray[0].aRateNumero, resultArray[0].aNoleggioNumero, filter);
             
-            loadCookieInfo('buyMode');
+            
+            
+            
         },
         error: function(request,error)
         {
@@ -187,7 +189,7 @@ function ajaxBuyModeFilter(phpFile, categoria){
 }
 
 
-function ajaxShowOnlyFilter(phpFile, categoria){
+function ajaxShowOnlyFilter(phpFile, categoria, filter){
     
      $.ajax({
         method: "GET",
@@ -201,9 +203,8 @@ function ajaxShowOnlyFilter(phpFile, categoria){
             var resultArray = $.parseJSON(response);
                  
             //Add the ahowMode option in the right filter box
-            addShowMode(resultArray[0].novitaNumero, resultArray[0].promoNumero);
+            addShowMode(resultArray[0].novitaNumero, resultArray[0].promoNumero, filter);
             
-            loadCookieInfo('showMode');
         },
         error: function(request,error)
         {
@@ -214,7 +215,7 @@ function ajaxShowOnlyFilter(phpFile, categoria){
 }
 
 
-function ajaxCategoryFilter(phpFile, categoria){
+function ajaxCategoryFilter(phpFile, categoria, filter){
     
     $.ajax({
         method: "GET",
@@ -231,7 +232,7 @@ function ajaxCategoryFilter(phpFile, categoria){
             
             //Make no sense to have a filter for only one category
             if(resultArray.length === 1){
-                var child = document.getElementById("specificCategoryDiv");
+                var child = document.getElementById("sottoCategoria");
                 document.getElementById("fatherFilterElements").removeChild(child);
                 return;
             }
@@ -240,7 +241,7 @@ function ajaxCategoryFilter(phpFile, categoria){
                 addNewCategory(resultArray[i].nomeCategoria);
             }
             
-            loadCookieInfo('specificCategory');
+            loadCategorySelectionsFromCookies(filter);
         
         },
         error: function(request,error)
@@ -251,7 +252,7 @@ function ajaxCategoryFilter(phpFile, categoria){
 }
 
 
-function ajaxMaxPriceFilter(phpFile, categoria){
+function ajaxMaxPriceFilter(phpFile, categoria, filter){
     
     $.ajax({
         method: "GET",
@@ -273,7 +274,9 @@ function ajaxMaxPriceFilter(phpFile, categoria){
             $("#slider-range").slider("option","max", maxPrice);
             $("#slider-range").slider("values", [0, maxPrice]);
             
-            setSliderCookie();
+            
+            setSliderCookie(filter);
+            
             
         },
         error: function(request,error)
@@ -296,8 +299,7 @@ function addNewCategory(nomeCategoria){
         
     var liElement = document.createElement("LI");
     liElement.setAttribute("onClick", "javascript:selectFilterRow(this)");
-    liElement.setAttribute("id", idNumberFilterListCategoria);
-    idNumberFilterListCategoria++;
+    liElement.setAttribute("id", nomeCategoria);
     
   
     var aElement = document.createElement("A");
@@ -309,30 +311,34 @@ function addNewCategory(nomeCategoria){
     
     liElement.appendChild(aElement);
     
-    document.getElementById("specificCategory").appendChild(liElement);
+    document.getElementById("sottoCategoria").appendChild(liElement);
 
 }
 
 
-function addShowMode(novitaNumero, promoNumero){
+function addShowMode(novitaNumero, promoNumero, filter){
     
     helperAddShowMode("Novità", novitaNumero);
+    loadCookieOneParameter("Novità", "nuovo", filter);
     
     helperAddShowMode("Promo", promoNumero);
-
+    loadCookieOneParameter("Promo", "promo", filter);
+    
 }
 
 
-function addBuyMode(compraloSubitoNumero, aRateNumero, aNoleggioNumero){
+function addBuyMode(compraloSubitoNumero, aRateNumero, aNoleggioNumero, filter){
 
     
         
     helperAddBuyMode("Compralo Subito", compraloSubitoNumero);
+    loadCookieOneParameter("Compralo Subito", "compraSubito", filter); 
     
-    helperAddBuyMode("A RATE", aRateNumero);
-      
-    helperAddBuyMode("NOLEGGIO", aNoleggioNumero);
+    helperAddBuyMode("A Rate", aRateNumero);
+    loadCookieOneParameter("A Rate", "aRate", filter); 
     
+    helperAddBuyMode("Noleggio", aNoleggioNumero);
+    loadCookieOneParameter("Noleggio", "noleggio", filter);
 }
 
 
@@ -340,8 +346,7 @@ function addNewBrand(marca, numero){
     
     var liElement = document.createElement("LI");
     liElement.setAttribute("onClick", "javascript:selectFilterRow(this)");
-    liElement.setAttribute("id", idNumberFilterListMarca);
-    idNumberFilterListMarca++;
+    liElement.setAttribute("id", marca);
     
     var aElement = document.createElement("A");
     
@@ -357,7 +362,7 @@ function addNewBrand(marca, numero){
     
     liElement.appendChild(aElement);
     
-    document.getElementById("brandListFilter").appendChild(liElement);
+    document.getElementById("marca").appendChild(liElement);
     
 }
 
@@ -502,8 +507,8 @@ function buildPrizeElement(promo, nuovo, prezzo, prezzoScontato) {
 function helperAddShowMode(name,number){
     var liElement = document.createElement("LI");
     liElement.setAttribute("onClick", "javascript:selectFilterRow(this)");
-    liElement.setAttribute("id", idNumberFilterListMostraSolo);
-    idNumberFilterListMostraSolo++;
+    liElement.setAttribute("id", name);
+    
     var aElement = document.createElement("A");
     
     //TODO
@@ -525,8 +530,8 @@ function helperAddBuyMode(nome,numero){
     
     var liElement = document.createElement("LI");
     liElement.setAttribute("onClick", "javascript:selectFilterRow(this)");
-    liElement.setAttribute("id", idNumberFilterListAcquisto);   
-    idNumberFilterListAcquisto++;
+    liElement.setAttribute("id", nome);   
+
         var aElement = document.createElement("A");
     
         //TODO
@@ -542,6 +547,7 @@ function helperAddBuyMode(nome,numero){
         liElement.appendChild(aElement);
         
         document.getElementById("buyMode").appendChild(liElement);
+    
     
 }
 
@@ -577,7 +583,7 @@ function collectOptions(nome, id){
             var opzione = $(listOption[i].children[0]).clone().children().remove().end().text();
             
             if( j > 0){
-                query += ";" + opzione;
+                query += "|" + opzione;
             }else{
                 query += opzione;
             }   
@@ -635,24 +641,19 @@ function selectFilterRow(element){
     var where = element.parentElement.getAttribute('id');
     if (element.getAttribute("class") === 'active'){
         element.removeAttribute("class");
-        
-        removeFromCookie(where, element.getAttribute("id"));
+        setCookie(categoria, createFilterStringFromTheStateOfTheFilter(), 1);
         return;
     }
     element.setAttribute("class","active");
-    addToCookie(where, element.getAttribute("id"));
+    setCookie(categoria, createFilterStringFromTheStateOfTheFilter(), 1);
 }
 
-//CHECK THE FILTER STATUS AND BUILD THE QUERY TO SUBMIT
-function submitQueryWithFilterOptions(){
-    
+function createFilterStringFromTheStateOfTheFilter(){
     //Salva i valori dello slider in un cookie ad hoc
     var minMax = getMinMaxValueSlider();
-    setCookie(categoria + "_prezzo", minMax[0] + "-" + minMax[1], 1);
     
-    
-    var queryMarca = collectOptions("marca", "brandListFilter");
-    var queryCategoria = collectOptions("sottoCategoria", "specificCategory");
+    var queryMarca = collectOptions("marca", "marca");
+    var queryCategoria = collectOptions("sottoCategoria", "sottoCategoria");
     
     //The extra parameter is for the index of the child to consider
     var queryCompraSubito = collectOptions2("compraSubito", "buyMode", "0");
@@ -673,7 +674,18 @@ function submitQueryWithFilterOptions(){
     //Takes out the empty options
     var query = cleanFilterQuery(queryFilter);
     
-    window.location.href = "deviceByCategory.html?categoria=" + categoria + "&filter=" + query;
+    return query;
+    
+}
+
+//CHECK THE FILTER STATUS AND BUILD THE QUERY TO SUBMIT
+function submitQueryWithFilterOptions(){
+    
+    var query = createFilterStringFromTheStateOfTheFilter();
+    
+    setCookie(categoria,query,1);
+    
+    window.location.href = "deviceByCategory.html?categoria=" + categoria;
 }
 
 
@@ -725,7 +737,7 @@ function queryPrezzoOption(){
     var min = minMax[0];
     var max = minMax[1];
     
-    var query = "[prezzo:" + min + ";" + max + "]";
+    var query = "[prezzo:" + min + "|" + max + "]";
     
     return query;
     
@@ -754,6 +766,7 @@ function validateOrderingForm(element){
 /*********************************************************************/
 
 function setCookie(cname, cvalue, exdays) {
+    
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
@@ -775,41 +788,6 @@ function getCookie(cname) {
     }
     return "";
 } 
-
-//Remove a preference from the cookie!
-function removeFromCookie(where, id){
-        var currentCookie = getCookie(categoria);
-    
-        var substring1 = "|"+ where + ":" + id+"|";
-        var substring2 = "|"+ where + ":" + id;
-        var substring3 = where + ":" + id + "|";
-        var substring4 = where + ":" + id;
-        
-        
-        if(currentCookie.indexOf(substring1) > -1){
-            currentCookie = currentCookie.replace(substring1, '|');
-        }else if (currentCookie.indexOf(substring2) > -1){
-            currentCookie = currentCookie.replace(substring2, '');
-        }else if (currentCookie.indexOf(substring3) > -1){
-            currentCookie = currentCookie.replace(substring3, '');
-        }else if (currentCookie.indexOf(substring4) > -1){
-            currentCookie = currentCookie.replace(substring4, '');
-        }
-    
-        setCookie(categoria,currentCookie,1);
-}
-
-//Add a new preference to cookie!
-function addToCookie(where, id){
-        var currentCookie = getCookie(categoria);
-        if (currentCookie.length == 0){
-           currentCookie = where + ":" + id; 
-        }else{
-            currentCookie = currentCookie + '|' + where + ":" + id;
-        }
-        
-        setCookie(categoria,currentCookie,1);
-}
 
 function getActiveIndexInCookieForThisFatherId(fatherId){
     var currentCookie = getCookie(categoria);
@@ -833,65 +811,89 @@ function getActiveIndexInCookieForThisFatherId(fatherId){
     }
     
     return activeIndexArray;
-
-}
-
-//Set to active the preferences on the filter (except for the price)
-function loadCookieInfo(fatherId){
-    
-    var arrayIndexChildActive = getActiveIndexInCookieForThisFatherId(fatherId);
-    
-    var fatherElement = document.getElementById(fatherId);
-    
-    var arrayChildren = fatherElement.children;
-    
-    for ( var i = 0; i < arrayIndexChildActive.length; i++){
-        var index = arrayIndexChildActive[i];
-        arrayChildren[index].setAttribute("class","active");
-    }
-    
 }
 
 //restore the position of the slider
-function setSliderCookie(){
-    var cookie = getCookie(categoria + "_prezzo");
-    if(cookie === ''){
+function setSliderCookie(filter){
+
+    if(filter.indexOf("prezzo") < 0){
         return;
     }
 
-    cookie = cookie.split("-");
-    $( "#amount" ).val( "" + cookie[0] + " - " + cookie[1]);
-    $("#slider-range").slider("values", [cookie[0],cookie[1]]);
+    var minMax = filter.split("[prezzo:")[1].split(']')[0];
+    
+    filter = minMax.split("|");
+    
+    $( "#amount" ).val( "" + filter[0] + " - " + filter[1]);
+    $("#slider-range").slider("values", [filter[0],filter[1]]);
 }
 
 function addSafeOrderingPreferencesToCookies(element){
+    
     var formElement = document.getElementById("orderingForm");
     var selectedOption = formElement.selectedIndex;
     
-    for (var i = 0; i < formElement.children.length; i++){
-        removeFromCookie('orderingForm',i);
-    }
+    var cookie = getCookie(categoria);
     
-    addToCookie('orderingForm',selectedOption);
+    if(cookie.indexOf("orderingPreference") > -1){
+        var substring = "[orderingPreference:" + cookie.split("[orderingPreference:")[1].split("]")[0] + "]";
+        
+        cookie = cookie.replace(substring,"[orderingPreference:" + selectedOption +"]");
+    }
     
 }
 
 function loadCookieInfoOrderingPreferences(idOrderingForm){
-    var arrayIndexChildActive = getActiveIndexInCookieForThisFatherId(idOrderingForm);
     
-    var selectElement = document.getElementById(idOrderingForm);
-    //Per come aggiungo questa informazione ai coockies ho la certezza che io abbia una sola opzione per la checkbox
+    var cookie = getCookie(categoria);
+    var selectedIndex = 0;
     
-    indexSelected = arrayIndexChildActive[0];
-    
-    if(indexSelected === undefined){
-        return;
+    if (cookie.indexOf("orderingPreference") > -1){
+        selectedIndex = cookie.split("[orderingPreference:")[1].split("]")[0];
     }
     
-    $("#" + idOrderingForm + ' option')[indexSelected].selected = true;;
+    $("#" + idOrderingForm + ' option')[selectedIndex].selected = true;
     
 }
 
+function loadCategorySelectionsFromCookies(filter){
+    
+    var listId = "sottoCategoria";
+    
+    if (filter.indexOf(listId) > -1){
+        var paramListId = filter.split("[" + listId +":")[1].split(']')[0].split('|');
+    
+        for (var i = 0; i < paramListId.length; i++){
+            var liElement = document.getElementById(paramListId[i]).setAttribute("class","active");
+        }
+    }
+
+}
+
+function loadBrandSelectionsFromCookies(filter){
+    
+    var listId = "marca";
+    
+    if (filter.indexOf(listId) > -1){//TODO
+        var paramListId = filter.split("[" + listId +":")[1].split(']')[0].split('|');
+    
+        for (var i = 0; i < paramListId.length; i++){
+            var liElement = document.getElementById(paramListId[i]).setAttribute("class","active");
+        }
+    }
+
+}
+
+function loadCookieOneParameter(id, param, filter){
+    
+    if (filter.indexOf(param) > -1){
+        var paramListId = filter.split("[" + param +":")[1].split(']')[0];
+    
+        var liElement = document.getElementById(id).setAttribute("class","active");
+        
+    }
+    
+}
 
 
 /*********************************************************************/

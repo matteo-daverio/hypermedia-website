@@ -76,6 +76,11 @@
 								<div class="sidebar-title">
 									<h4>Filtro</h4>
 								</div>
+                                <div class="range-slider text-bg">
+								    <form action="javascript:submitQueryWithFilterOptions()" method="get">
+										<input class="submit" type="submit" value="Filtra">
+									</form>
+								</div>
 							</div>
 							<div class="s-side-text">
 								<div class="sidebar-title">
@@ -84,7 +89,6 @@
 								<div class="range-slider text-bg clearfix">
 									<form action="javascript:submitQueryWithFilterOptions()" method="get">
 										<label><input type="text" id="amount" readonly /></label>
-										<input class="submit floatright" type="submit" value="Cerca">
 										<div id="slider-range"></div>
 									</form>
 								</div>
@@ -94,7 +98,7 @@
 									<h4>Marca</h4>
 								</div>
 								<div class="facturer text-bg">
-									<ul id="brandListFilter">
+									<ul id="marca">
 									<!--	<li><a href="#">Apple <span class="floatright">12</span></a></li>
 										<li><a href="#">Samsung <span class="floatright">25</span></a></li>
 										<li><a href="#">Microsoft <span class="floatright">65</span></a></li>
@@ -109,7 +113,7 @@
 									<h4>Categoria</h4>
 								</div>
 								<div  class="facturer text-bg">
-									<ul id="specificCategory">
+									<ul id="sottoCategoria">
 									<!--	<li><a href="#">Tablet</a></li>
 										<li><a href="#">Computer</a></li>  Dynamic now!-->
 									</ul>  

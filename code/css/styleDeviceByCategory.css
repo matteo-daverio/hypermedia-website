@@ -1250,8 +1250,9 @@ a.load-more:hover {
     padding: 20px 0;
 }
 .sidebar-title {margin-bottom: 10px;}
+
 .text-bg,.sidebar-title{background: #f8f8f8 none repeat scroll 0 0;}
-.text-bg{padding:30px 15px;}
+.text-bg{padding:10px 15px;}
 
 .ui-slider-horizontal {
 	background: #ccc none repeat scroll 0 0;
@@ -1302,13 +1303,15 @@ a.load-more:hover {
 	background: #55acee;
     color: aliceblue;
 	padding: 2px 15px 0 15px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .range-slider.text-bg label {
 	float: left;
 	margin: 0;
 	padding: 0;
-	width: 55%;
+	width: 100%;
 }
 .range-slider input#amount {
 	border: 0 none;
@@ -1318,9 +1321,11 @@ a.load-more:hover {
 	text-align: center;
 	width: 100%;
 }
-.range-slider.text-bg label, .range-slider.text-bg input.submit {
+
+.range-slider.text-bg label, .range-slider.text-bg input.submit{
     margin-bottom: 10px;
 }
+
 .ui-slider-horizontal{clear: both;}
 .text-bg a {
     background: #fff none repeat scroll 0 0;
@@ -1461,7 +1466,7 @@ header.pages-header {position: unset;}
 
 /***********************Added css ********************/
 li.active a{
-    background: #0099e5;
-    border-color: #0099e5;
+    background: #55acee;
+    border-color: #55acee;
     color: #fff;
 }

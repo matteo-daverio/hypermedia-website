@@ -174,12 +174,7 @@ function ajaxSmartLifeServices(id){
             //parse the json and get an array where the index is the row and the .User is the name of the column
             var resultArray = $.parseJSON(response);
             
-            for(var i = 0; i < resultArray.length; i++){
-   
-                //sls list
-                var specList = buildSlsList(resultArray[i].id, resultArray[i].titolo);
-                document.getElementById("slsListDiv").appendChild(specList);
-            }
+           generateLinksForDevices(resultArray, "#device-no-sls", "#slsListDiv", "sls.html?id=");
             
         },
         error: function(request,error)
@@ -204,12 +199,8 @@ function ajaxAssistanceServices(id){
             //parse the json and get an array where the index is the row and the .User is the name of the column
             var resultArray = $.parseJSON(response);
             
-            for(var i = 0; i < resultArray.length; i++){
-   
-                //sls list
-                var assistanceList = buildAssistanceList(resultArray[i].Id, resultArray[i].Title);
-                document.getElementById("serviziAssistenzaListDiv").appendChild(assistanceList);
-            }
+            generateLinksForDevices(resultArray, "#device-no-assistance", "#serviziAssistenzaListDiv", "page.assistance.html?Id=");
+
             
         },
         error: function(request,error)
@@ -345,41 +336,33 @@ function buildDescription(descrizione){
     return descrizioneP;
 }
 
-function buildSlsList(id, titolo){
-    
-    var spanElementExternal = document.createElement("SPAN");
-    var aElement = document.createElement("A");
-    var spanElementInternal = document.createElement("SPAN");
-    
-    spanElementExternal.setAttribute("class", "posted_in");
-    aElement.setAttribute("href","sls.html?id=" + id);//MIRKO
-    aElement.setAttribute("rel","tag");
-    spanElementInternal.setAttribute("style", "padding-left:10px");
-    spanElementInternal.innerHTML = "Vai a " + titolo;
-    
-    aElement.appendChild(spanElementInternal);
-    spanElementExternal.appendChild(aElement);
-    
-    return spanElementExternal;
+
+
+//for each device correlated to this service generate a link in the activation section
+function generateLinksForDevices(arrayRes, idNoService, idDiv, page){
+    if ( arrayRes.length > 0){
+        //hide the default message
+        $(idNoService).hide();
+    }
+    //for each item add to the container
+    for (i = 0; i < arrayRes.length; i++) {
+        $(idDiv).append(document.createElement("BR"));
+        $(idDiv).append(buildLinkDevice(arrayRes[i].titolo,arrayRes[i].id, page));
+    }
 }
 
-function buildAssistanceList(id, titolo){
-    
-    var spanElementExternal = document.createElement("SPAN");
-    var aElement = document.createElement("A");
-    var spanElementInternal = document.createElement("SPAN");
-    
-    spanElementExternal.setAttribute("class", "posted_in");
-    aElement.setAttribute("href","page.assistance.html?Id=" + id);//MIRKO
-    aElement.setAttribute("rel","tag");
-    spanElementInternal.setAttribute("style", "padding-left:10px");
-    spanElementInternal.innerHTML = "Vai a " + titolo;
-    
-    aElement.appendChild(spanElementInternal);
-    spanElementExternal.appendChild(aElement);
-    
-    return spanElementExternal;
+
+//build the link obj of the single device for this smart life service
+function buildLinkDevice(nome, id, page){
+    console.log(nome); //TODO remove
+    console.log(id);
+    var linkSingleDevice = document.createElement("A");
+    linkSingleDevice.setAttribute("href", page + id);
+    linkSingleDevice.innerHTML =  "&#10095; " + nome;
+    return linkSingleDevice; 
 }
+
+
 
 
 
@@ -413,8 +396,6 @@ function setDynamicLink(categoria){
     linkElement.innerHTML = "Vai a " + titleMap[categoria];
     
 }
-
-
 
 
 
