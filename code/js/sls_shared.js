@@ -77,19 +77,18 @@ function handleResult(arrayRes){
     for (i = 0; i < arrayRes.length; i++) {
         console.log(arrayRes[i].promozione);
         //TODO if not all service is define check here and set button "disabled" 
-        var newItem = createItem(arrayRes[i].id,arrayRes[i].titolo,arrayRes[i].promozione, arrayRes[i].des_offerta,arrayRes[i].des_img);
-        console.log(newItem);
+        var newItem = createItem(arrayRes[i].id,arrayRes[i].titolo,arrayRes[i].promozione,arrayRes[i].attivabile, arrayRes[i].des_offerta,arrayRes[i].img_pres);
         $("#sls_list").append(newItem);
     }
 }
 
 
 //create the main div
-function createItem(id,title,promozione,desciption,img){
+function createItem(id,title,promozione,attivabile,desciption,img){
     var divElement = document.createElement("DIV"); 
     divElement.setAttribute("class","product clearfix");
     divElement.appendChild(addDivImg(id,title,img,promozione));
-    divElement.appendChild(addDivProduct(id,title,desciption));
+    divElement.appendChild(addDivProduct(id,title,attivabile,desciption));
     
     return divElement;
 }
@@ -124,7 +123,7 @@ function addDivImg(id,title,img,promozione){
 }
 
 //create the div with the info of the product
-function addDivProduct(id,title,desciption){
+function addDivProduct(id,title,attivabile,desciption){
     
     var h3Element = document.createElement("H3"); 
     h3Element.setAttribute("class","product-title" );
@@ -135,8 +134,10 @@ function addDivProduct(id,title,desciption){
     
     var buttonElement = document.createElement("BUTTON");
     buttonElement.setAttribute("class","btn btn-primary btn-lg" );
-    //buttonElement.setAttribute("disabled","");
     buttonElement.innerHTML = "Scopri";
+    if( attivabile === "0"){
+        buttonElement.setAttribute("disabled","");
+    }
     
     var aElement = document.createElement("A");
     aElement.setAttribute("href","sls.html?id=" + id  );

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 05, 2016 at 07:39 PM
+-- Generation Time: Jun 08, 2016 at 06:17 PM
 -- Server version: 5.7.12-0ubuntu1
 -- PHP Version: 7.0.4-7ubuntu2.1
 
@@ -39,11 +39,15 @@ CREATE TABLE `sls_faq` (
 --
 
 INSERT INTO `sls_faq` (`id`, `id_sls`, `faq_title`, `faq_content`) VALUES
-(0, 0, 'FAQ title 0', 'FAQ content 0'),
-(1, 0, 'title 2', 'bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla'),
-(3, 2, 'test', 'test content'),
-(4, 4, 'Title sls 4', 'Content sls 4'),
-(5, 1, 'Title sls 1', 'Content sls 1');
+(0, 4, 'Il servizio ha scadenza?', 'No, una volta attivato non vi è una scadenza, sarà dunque possibile usufruire del servizio finche rimarrai in possesso di un dispositivo abilitato.'),
+(0, 4, 'È possibile ricevere rimborsi in caso di problemi?', 'In generale non abbiamo una politica di "soddisfatto o rimborsato" ma ogni caso verrà valutato a sè.'),
+(1, 0, 'Chi può scegliere TIMTag', 'L\'offerta è valida per i clienti ricaricabili, residenti nel territorio italiano e che ne fruiscano per scopi estranei alla loro eventuale attività imprenditoriale o professionale.'),
+(2, 0, 'Cosa succede se recedo anticipatamente dall\'offerta TIMTag?', 'Il cliente potrà recedere in qualsiasi momento dall\'offerta chiamando il Servizio Clienti 119. A seguito del predetto recesso la TIM Card rimarrà attiva ed il cliente potrà continuare a fruire del relativo servizio telefonico ricaricabile. '),
+(3, 0, 'Quale garanzia hanno i prodotti presenti Pack TIM Tag?', 'I prodotti commercializzati da TIM sono assistiti, per il periodo di vigenza della garanzia, direttamente dai costruttori tramite i loro Centri di Assistenza. Le condizioni di garanzia sono contenute all\'interno della confezione contenente il Modem Internet.\r\n'),
+(4, 2, 'Quanto dura la garanzia?', ' La garanzia per vizi e/o difetti e/o malfunzionamenti decorre dalla consegna del Prodotto, \r\nha una validità di 2 (due) anni e \r\nviene \r\nassicurata da TIM\r\n, anche avvalendosi di \r\nsoggetti  terzi  da  essa  inca\r\nricati,  nell’ambito  del  territorio  italiano. '),
+(5, 2, 'È possibile dismettere il servizio?', ' Il Cliente, in conformità alle disposizioni normative in materia di contratti a distanza e di contratti negoziati \r\nfuori dai locali commerciali, può esercitare anche il diritto di \r\nrecesso  nelle  forme  e  modalità  prev\r\niste  dagli\r\n  articoli  52  e  seguenti  del  D.Lgs  206/2005.'),
+(6, 1, 'TODO', 'TODO'),
+(7, 1, 'TODO', 'TODO');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

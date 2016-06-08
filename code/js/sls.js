@@ -22,10 +22,10 @@ function setDynamicGoBack(){
         $("#sls_goto").html("Vai ai servizi <b>Casa e famiglia</b>");
         $("#sls_goto").attr("href","javascript:history.back()");
     }else if(contains(previous_url,"sls_list.html?categoria=servizi_persona") === true){
-        $("#sls_goto").html("Vai ai servizi <b>Servizi alla persona</b>");
+        $("#sls_goto").html("Vai ai <b>Servizi alla persona</b>");
         $("#sls_goto").attr("href","javascript:history.back()");
     }else if(contains(previous_url,"promozione_sls.html") === true){
-        $("#sls_goto").html("Vai al device in promozione");
+        $("#sls_goto").html("Vai ai <b>Servizi in promozione</b>");
         $("#sls_goto").attr("href","javascript:history.back()");
     }else if(contains(previous_url,"device.html") === true){
         $("#sls_goto").html("Vai al device precedente");
@@ -70,8 +70,8 @@ $("document").ready(function(){
             //parse the json and get an array
             var res = $.parseJSON(response);
             fillPage(res[0].titolo,res[0].categoria, res[0].img_land);
-            fillDescriptionFields(res[0].des_offerta,res[0].des_img, res[0].des_specifiche,res[0].promozione);
-            fillActivationFields(res[0].act_act, res[0].act_img, res[0].act_timricorda,res[0].promozione);
+            fillDescriptionFields(res[0].des_offerta,res[0].img_prod, res[0].des_specifiche,res[0].promozione);
+            fillActivationFields(res[0].act_act, res[0].img_prod, res[0].act_timricorda,res[0].promozione);
             setLinkDeviceWithIntermediatePage(res[0].act_device_correlati_nome, res[0].act_device_correlati_link);
         },
         error: function(request,error){
