@@ -1,3 +1,4 @@
+
 //// the following 3 rows are shared in the js of each page with different parameters
 //load the shared menu 
 $("#header").load("shared-menu.html");
@@ -6,6 +7,39 @@ $("#footer").load("shared-footer.html");
 //when page is complete select the current item of the menu
 $("document").ready(function(){ $('#menu_smartlife').addClass('current');}); 
 
+
+//set the name and the url of the previous visited page
+setDynamicGoBack();
+function setDynamicGoBack(){
+    var previous_url = document.referrer;
+    if (contains(previous_url,"sls_list.html?categoria=tv_entertainment") === true){
+        $("#sls_goto").html("Vai ai servizi <b>Tv & Entertainment</b>");
+        $("#sls_goto").attr("href", "javascript:history.back()");
+    }else if(contains(previous_url,"sls_list.html?categoria=salute_benessere") === true){
+        $("#sls_goto").html("Vai ai servizi <b>Salute e benessere</b>");
+        $("#sls_goto").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"sls_list.html?categoria=casa_famiglia") === true){
+        $("#sls_goto").html("Vai ai servizi <b>Casa e famiglia</b>");
+        $("#sls_goto").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"sls_list.html?categoria=servizi_persona") === true){
+        $("#sls_goto").html("Vai ai servizi <b>Servizi alla persona</b>");
+        $("#sls_goto").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"promozione_sls.html") === true){
+        $("#sls_goto").html("Vai al device in promozione");
+        $("#sls_goto").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"device.html") === true){
+        $("#sls_goto").html("Vai al device precedente");
+        $("#sls_goto").attr("href","javascript:history.back()");
+    }else { //set default link if 
+        $("#sls_goto").html("Vai a tutti i servizi");
+        $("#sls_goto").attr("href", "menu.sls.html"); 
+    }
+}
+
+//check if str contain sub_str
+function contains(str,sub_str){
+   return (str.indexOf(sub_str) > -1);
+}
 
 //allow to change the class of the manu in the smart life service menu
 var selector = '.nav li';

@@ -76,6 +76,7 @@ function handleResult(arrayRes){
     //for each item add to the container
     for (i = 0; i < arrayRes.length; i++) {
         console.log(arrayRes[i].promozione);
+        //TODO if not all service is define check here and set button "disabled" 
         var newItem = createItem(arrayRes[i].id,arrayRes[i].titolo,arrayRes[i].promozione, arrayRes[i].des_offerta,arrayRes[i].des_img);
         console.log(newItem);
         $("#sls_list").append(newItem);
@@ -134,6 +135,7 @@ function addDivProduct(id,title,desciption){
     
     var buttonElement = document.createElement("BUTTON");
     buttonElement.setAttribute("class","btn btn-primary btn-lg" );
+    //buttonElement.setAttribute("disabled","");
     buttonElement.innerHTML = "Scopri";
     
     var aElement = document.createElement("A");
