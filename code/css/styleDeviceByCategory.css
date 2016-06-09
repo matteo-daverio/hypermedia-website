@@ -705,6 +705,7 @@ i.pe-7s-back {transform: rotateY(-180deg);}
 .single-product {
 	overflow: hidden;
 	position: relative;
+    text-align: center;
 }
 .tooltip > .tooltip-inner ,.single-blog .actions-btn > span{text-transform: uppercase;}
 .tooltip > .tooltip-inner {

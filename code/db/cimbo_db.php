@@ -89,7 +89,13 @@ $sqlInsert = "INSERT INTO device (id, nome, categoria, sottoCategoria, gridImage
  ('9', 'Olivetti My Way', 'outlet', 'outlet', 'images/grid200x276/olivettiMyWay.png',
  '1', '0', '1', '0', '0', '0', 'Olivetti', '49.00', '19.00', 'Caratteristiche:'),
  ('10', 'Modem ADSL Wi-Fi', 'modem_networking', 'modem', 'images/grid200x276/modemAdsl.png',
- '0', '1', '1', '0', '0', '0', 'Tim', '69.00', '59.00', 'Caratteristiche:')";
+ '0', '1', '1', '0', '0', '0', 'Tim', '69.00', '59.00', 'Caratteristiche:'),
+ ('11', 'Polar Loop Activity Tracker', 'tv_smart_living', 'bracciali', 'images/grid200x276/polarLoop1.png',
+ '0', '0', '1', '0', '0', '0', 'Polar', '99.90', '89.00', 'Caratteristiche:'),
+ ('12', 'Sony Smart Band Fifa Edition', 'tv_smart_living', 'bracciali', 'images/grid200x276/smartBandSony1.png',
+ '1', '0', '1', '0', '0', '0', 'Sony', '79.90', '49.00', 'Caratteristiche:'),
+ ('13', 'Tim Tag', 'tv_smart_living', 'smart_living', 'images/grid200x276/timTag1.png',
+ '1', '0', '1', '0', '0', '0', 'Tim', '129.90', '120.00', 'Caratteristiche:')";
 
 
 
@@ -164,7 +170,13 @@ frontImagePath) VALUES(
 ('9','Olivetti My Way',
 'images/dispositivi/olivettiMyWay1.png'),
 ('10','Modem ADSL Wi-Fi',
-'images/dispositivi/modemAdsl1.png')";
+'images/dispositivi/modemAdsl1.png'),
+('11','Polar Loop Activity Tracker',
+'images/dispositivi/polarLoop1.png'),
+('12','Sony Smart Band Fifa Edition',
+'images/dispositivi/smartBandSony1.png'),
+('13','Tim Tag',
+'images/dispositivi/timTag1.png')";
 
 $sqlInsert3 = 
 "INSERT INTO immaginiDevice 
@@ -251,7 +263,19 @@ $sqlInsert = "INSERT INTO specificheDevice (id, titolo, dettaglio) VALUES
 ('10', 'Navigazione:', ' senza fili pi&ugrave; veloce'),
 ('10', 'Connessione:', ' Connessione possibile con pi&ugrave; dispositivi'), 
 ('10', 'Connettivit&agrave;:', ' Stampa via Bluetooth'),
-('10', 'Risparmio energetico:', ' Funzione Eco per risparmio energetico')
+('10', 'Risparmio energetico:', ' Funzione Eco per risparmio energetico'),
+('11', 'Misura l’attivit&agrave; fisica:', ' 24h/24 - 7gg/7'),
+('11', 'Conta passi', ''), 
+('11', 'Calcola le calorie consumate', ''),
+('11', 'Monitoraggio attivit&agrave; del sonno', ''),
+('11', 'Definisce obiettivi giornalieri personalizzati.', ''),
+('12', 'Conta passi', ''), 
+('12', 'Calcola le calorie consumate', ''),
+('12', 'Monitoraggio attivit&agrave; del sonno', ''), 
+('13', 'Resistente all’acqua', ''),
+('13', 'Fornisce allarmi di movimento', ''),
+('13', 'Batteria di lunga durata', ''),
+('13', 'Dimensioni:', ' 49 x 47 x 17 mm')
 ";
 
          
@@ -292,14 +316,13 @@ if($resultQuery === true){
 $sqlInsert1 = "INSERT INTO device_sls 
 (id,
 id_device,
-id_sls) VALUES(
-'1',
-'7',
-'2'),
-('2',
-'7',
-'0'
-)";
+id_sls) VALUES
+('1','13','0'),
+('2','11','4'),
+('3','12','4'),
+('4','6','2'),
+('5','7','2'),
+('6','14','1')";
 
 
 $resultQueryInsert1 = $db -> query($sqlInsert1);

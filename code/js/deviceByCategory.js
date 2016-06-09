@@ -116,7 +116,8 @@ function ajaxGridProduct(phpFile, categoria, filter){
             
             //Add the html for each device that basically is a row
             for(i = 0; i < resultArray.length ; i++){
-                addNewDevice(resultArray[i].id, resultArray[i].nome, resultArray[i].promo, resultArray[i].nuovo, resultArray[i].prezzo, resultArray[i].prezzoScontato, resultArray[i].gridImagePath, categoria);
+                
+                divRow = addNewDevice(resultArray[i].id, resultArray[i].nome, resultArray[i].promo, resultArray[i].nuovo, resultArray[i].prezzo, resultArray[i].prezzoScontato, resultArray[i].gridImagePath, categoria);
             }
         
         },
@@ -369,13 +370,14 @@ function addNewBrand(marca, numero){
 
 
 function addNewDevice(id, nome, promo, nuovo, prezzo, prezzoScontato, gridImagePath, categoria){
+    
     var divElementMain = document.createElement("DIV"); 
     
     divElementMain.setAttribute("class","col-xs-12 col-sm-6 col-md-4");
 
     divElementMain.appendChild(buildDivElement(id, nome, promo, nuovo, prezzo, prezzoScontato, gridImagePath, categoria));
     
-    $("#grid").append(divElementMain);
+    document.getElementById("grid").appendChild(divElementMain);
 }
 
 function buildDivElement(id, nome, promo, nuovo, prezzo, prezzoScontato, gridImagePath, categoria) {
@@ -441,7 +443,7 @@ function buildDivProductImage(id, nome, gridImagePath, categoria) {
     var aElement = document.createElement("A");
     var imgElement = document.createElement("IMG");
     
-    aElement.setAttribute("href", "page.device.html?id=" + id + "&" + "categoria=" + categoria);
+    aElement.setAttribute("href", "page.device.html?id=" + id);
     imgElement.setAttribute("src", gridImagePath);
     imgElement.setAttribute("height", "270");
     imgElement.setAttribute("alt", nome);
@@ -473,7 +475,7 @@ function buildNome(id,nome, categoria) {
     var pElement = document.createElement("P");
     var aElement = document.createElement("A");
     
-    aElement.setAttribute("href","page.device.html?id=" + id + "&" + "categoria=" + categoria);
+    aElement.setAttribute("href","page.device.html?id=" + id);
     aElement.innerHTML = nome;
     
     pElement.appendChild(aElement);

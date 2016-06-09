@@ -24,9 +24,6 @@ $("document").ready(function(){
         console.log("id nulo!");
         return;
     }
-     
-    
-    setDynamicLink(categoria);
     
     
     ajaxGallery(id);
@@ -38,6 +35,47 @@ $("document").ready(function(){
     
 });
 
+
+/*********************************************************************/
+/************************   DYNAMIC GO BACK   ************************/
+/*********************************************************************/
+
+
+//set the name and the url of the previous visited page
+setDynamicGoBack();
+function setDynamicGoBack(){
+    var previous_url = document.referrer;
+    if (contains(previous_url,"deviceByCategory.html?categoria=smartphone_telefoni") === true){
+        $("#VaiALink").html("Vai a <b>Smartphone e Telefoni</b>");
+        $("#VaiALink").attr("href", "javascript:history.back()");
+    }else if(contains(previous_url,"deviceByCategory.html?categoria=tablet_computer") === true){
+        $("#VaiALink").html("Vai a <b>Tablet e Computer</b>");
+        $("#VaiALink").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"deviceByCategory.html?categoria=modem_networking") === true){
+        $("#VaiALink").html("Vai a <b>Modem e Networking</b>");
+        $("#VaiALink").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"deviceByCategory.html?categoria=tv_smart_living") === true){
+        $("#VaiALink").html("Vai a <b>Tv e Smart Living</b>");
+        $("#VaiALink").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"deviceByCategory.html?categoria=outlet") === true){
+        $("#VaiALink").html("Vai a <b>Outlet</b>");
+        $("#VaiALink").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"sls.html") === true){
+        $("#VaiALink").html("Vai allo SmartLife precedente");
+        $("#VaiALink").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"assistance_services.html") === true){
+        $("#VaiALink").html("Vai al servizio di assistenza precedente");
+        $("#VaiALink").attr("href","javascript:history.back()");
+    }else { //set default link if 
+        $("#VaiALink").html("Vai a tutti i servizi");
+        $("#VaiALink").attr("href", "prodotti.html"); 
+    }
+}
+
+//check if str contain sub_str
+function contains(str,sub_str){
+   return (str.indexOf(sub_str) > -1);
+}
 
 
 
@@ -376,28 +414,6 @@ function buildSpecList(titolo, dettaglio){
     
     return liElement;
 }
-
-
-/***************  Dynamic Link   ***************/
-
-function setDynamicLink(categoria){
-    
-    var titleMap = { "smartphone_telefoni" : "Smartphone e Telefoni" ,
-                     "tablet_computer"     : "Tablet e Computer",
-                     "modem_networking"    : "Modem e Networking",
-                     "tv_smart_living"     : "Tv e Smart Living",
-                     "outlet"              : "Outlet"
-                   } 
-    
-    var linkElement = document.getElementById("VaiALink");
-    
-    linkElement.setAttribute("href", "deviceByCategory.html?categoria=" + categoria);
-    
-    linkElement.innerHTML = "Vai a " + titleMap[categoria];
-    
-}
-
-
 
 
 /*********************************************************************/
