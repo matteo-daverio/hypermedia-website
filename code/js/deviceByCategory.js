@@ -4,6 +4,11 @@ $("#header").load("shared-menu.html");
 //load the shared footer
 $("#footer").load("shared-footer.html");
 
+
+//select the right text in the menu
+$("document").ready(function(){ $('#menu_prodotti').addClass('current');});
+
+
 //Define the dynamic environment in which we are working
 var categoria;
 
@@ -15,12 +20,8 @@ var categoria;
 /******************   AJAX REQUESTS DISPATCHER   *********************/
 /*********************************************************************/
 
-//async ajax request
-$("document").ready(function(){
-    
-//select the right text in the menu
-$('#menu_prodotti').addClass('current');
-    
+
+
     var phpFile = "db/deviceByCategory.php";
     
     var titleMap = { "smartphone_telefoni" : "Smartphone e Telefoni" ,
@@ -55,8 +56,6 @@ $('#menu_prodotti').addClass('current');
     ajaxFilterComponents(phpFile, categoria, filter);
     
     ajaxGridProduct(phpFile, categoria, filter);
-     
-});
 
 //Helper function to dispatch all the ajax calls for the Filter's Components
 function ajaxFilterComponents(phpFile, categoria, filter){
@@ -895,6 +894,40 @@ function loadCookieOneParameter(id, param, filter){
         
     }
     
+}
+
+/*********************************************************************/
+/************************   DYNAMIC GO BACK   ************************/
+/*********************************************************************/
+
+
+//set the name and the url of the previous visited page
+var parametersMap = getParameters();
+    
+    filter = parametersMap['filter'];
+
+//In this case the page has been called by the menu
+if(filter != undefined){
+    setDynamicGoBack();
+}
+
+function setDynamicGoBack(){
+    var previous_url = document.referrer;
+    if(contains(previous_url,"sls.html") === true){
+        $("#dynamic_link").html("Vai allo Smart Life precedente");
+        $("#dynamic_link").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"assistance_services.html") === true){
+        $("#dynamic_link").html("Vai al servizio di assistenza precedente");
+        $("#dynamic_link").attr("href","javascript:history.back()");
+    }else { //set default link if 
+        $("#dynamic_link").html("Vai a tutti i servizi");
+        $("#dynamic_link").attr("href", "prodotti.html"); 
+    }
+}
+
+//check if str contain sub_str
+function contains(str,sub_str){
+   return (str.indexOf(sub_str) > -1);
 }
 
 

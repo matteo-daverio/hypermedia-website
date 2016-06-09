@@ -61,7 +61,7 @@ function setDynamicGoBack(){
         $("#VaiALink").html("Vai a <b>Outlet</b>");
         $("#VaiALink").attr("href","javascript:history.back()");
     }else if(contains(previous_url,"sls.html") === true){
-        $("#VaiALink").html("Vai allo SmartLife precedente");
+        $("#VaiALink").html("Vai allo Smart Life precedente");
         $("#VaiALink").attr("href","javascript:history.back()");
     }else if(contains(previous_url,"assistance_services.html") === true){
         $("#VaiALink").html("Vai al servizio di assistenza precedente");
