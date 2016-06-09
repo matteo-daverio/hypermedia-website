@@ -102,13 +102,15 @@ function addDivImg(id,title,img,promozione){
     imgElement.setAttribute("class","img-rounded");
     imgElement.setAttribute("alt",title);
     
+    /* remove comment if you want the link on the image
     var aElement = document.createElement("A");
     aElement.setAttribute("href","sls.html?id=" + id );
     aElement.appendChild(imgElement);
+    */
     
     var divElement = document.createElement("DIV"); 
     divElement.setAttribute("class","product-image");
-    divElement.appendChild(aElement);
+    divElement.appendChild(imgElement);
     
     //if the element if in promotion
     if(promozione === "1"){
@@ -118,7 +120,6 @@ function addDivImg(id,title,img,promozione){
         
         divElement.appendChild(divPromoElement);
     }
-    
     return divElement;
 }
 
