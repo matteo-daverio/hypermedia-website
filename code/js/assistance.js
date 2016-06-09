@@ -3,9 +3,22 @@
 $("#header").load("shared-menu.html");
 //load the shared footer
 $("#footer").load("shared-footer.html");
-//when page is complete select the current item of the menu
-$("document").ready(function(){ $('#menu_assistenza').addClass('current');});
 
+
+
+
+
+function placeFooter() {
+    $('#footer').css({ 'margin-top': 0 });
+    var windowH = $(window).height();
+    var wrapperH = $('#header').height() + $('#page_title').height() + $('#content').height();
+    if( windowH > wrapperH ) {
+        $('#footer').css({ 'margin-top': ( windowH - wrapperH ) });        
+    }
+    //when page is complete select the current item of the menu
+    $("document").ready(function(){ $('#menu_assistenza').addClass('current');});
+    
+}
 
 
 
@@ -87,6 +100,7 @@ $("document").ready(function() {
             
             $("#assistance_content").append(contentElement);
             buildPage(resultArray[0].Service);
+            placeFooter();
         },
         error: function(request,error) {
             console.log(request+":"+error);

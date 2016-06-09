@@ -3,25 +3,20 @@
 $("#header").load("shared-menu.html");
 //load the shared footer
 $("#footer").load("shared-footer.html");
-//when page is complete select the current item of the menu
-$("document").ready(function(){ $('#menu_highlights').addClass('current');}); 
-
-
-//set the right size of the slider so that the footer is hidden right after the window bottom when the page is resized TODO, refix
-jQuery(window).resize(function () {
-   var windowHeight = $(window).height();
-var headerHeight = $('#header').height();
-$("#slider").attr("data-height-lg", windowHeight - headerHeight);
-});
 
 
 
 
+// position the footer in the end of the page
 function placeFooter() {
-    //set the right size of the slider so that the footer is hidden right after the window bottom
-    var windowHeight = $(window).height();
-    var headerHeight = $('#header').height();
-    $("#slider").attr("data-height-lg", windowHeight - headerHeight -200);
+    $('#footer').css({ 'margin-top': 0 });
+    var windowH = $(window).height();
+    var wrapperH = $('#header').height() + $('#page_title').height() + $('#content').height();
+    if( windowH > wrapperH ) {
+        $('#footer').css({ 'margin-top': ( windowH - wrapperH ) });        
+    }
+    //when page is complete select the current item of the menu
+    $("document").ready(function(){ $('#menu_highlights').addClass('current');}); 
 }
 
 
@@ -51,6 +46,7 @@ $("document").ready(function() {
             
             buildPage(resultArray[0].Title, description, link);
             placeFooter();
+            
         },
         error: function(request,error) {
             console.log(request+":"+error);
