@@ -5,8 +5,7 @@ $("#header").load("shared-menu.html");
 //load the shared footer
 $("#footer").load("shared-footer.html");
 //when page is complete select the current item of the menu
-$("document").ready(function(){ 
-    $('#menu_smartlife').addClass('current');});
+$("document").ready(function(){ $('#menu_smartlife').addClass('current');});
 
 //set the name and the url of the previous visited page
 setDynamicGoBack();
