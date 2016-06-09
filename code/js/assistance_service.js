@@ -6,6 +6,39 @@ $("#footer").load("shared-footer.html");
 
 
 
+
+//set the name and the url of the previous visited page
+setDynamicGoBack();
+function setDynamicGoBack(){
+    var previous_url = document.referrer;
+    if (contains(previous_url,"assistance_services.html?Id=1") === true){
+        $("#ass_goto").html("Vai a <b>Gestione Linea e Servizi</b>");
+        $("#ass_goto").attr("href", "javascript:history.back()");
+    }else if(contains(previous_url,"assistance_services.html?Id=2") === true){
+        $("#ass_goto").html("Vai a <b>Controllo Costi e Pagamenti</b>");
+        $("#ass_goto").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"assistance_services.html?Id=3") === true){
+        $("#ass_goto").html("Vai a <b>Supporto Tecnico e Configurazione</b>");
+        $("#ass_goto").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"assistance_services.html?Id=4") === true){
+        $("#ass_goto").html("Vai a <b>Contenuti e Smart Life</b>");
+        $("#ass_goto").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"device.html") === true){
+        $("#ass_goto").html("Vai al device precedente");
+        $("#ass_goto").attr("href","javascript:history.back()");
+    }else { //set default link if 
+        $("#ass_goto").html("Vai a <b>Servizi di Assistenza</b>");
+        $("#ass_goto").attr("href", "menu.assistenza.html"); 
+    }
+}
+
+//check if str contain sub_str
+function contains(str,sub_str){
+   return (str.indexOf(sub_str) > -1);
+}
+
+
+// calculate the position of the footer
 function placeFooter() {
     $('#footer').css({ 'margin-top': 0 });
     var windowH = $(window).height();
