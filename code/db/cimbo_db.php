@@ -43,7 +43,7 @@ if($resultQuery === true){
 $sql = 
     "CREATE TABLE device (
                             id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                            nome VARCHAR(150) NOT NULL,
+                            nome VARCHAR(35) NOT NULL,
                             categoria VARCHAR(150) NOT NULL,
                             sottoCategoria VARCHAR(150),
                             gridImagePath VARCHAR(300) NOT NULL,
@@ -82,7 +82,7 @@ $sqlInsert = "INSERT INTO device (id, nome, categoria, sottoCategoria, gridImage
  '0', '1', '1', '0', '1', '1', 'Apple', '520.00', '450.00', 'Caratteristiche:'),
  ('6', 'Decoder TIMvision', 'tv_smart_living', 'smart living', 'images/grid200x276/decoderTimVision.png',
  '0', '1', '1', '0', '1', '1', 'Tim', '49.00', '40.00', 'Con il decoder TIMvision hai a disposizione pi&ugrave; di 8.000 titoli tra cartoni, film, serie e documentari sempre on demand per creare il tuo palinsesto senza interruzioni pubblicitarie. Puoi goderti la visione anche su Smart TV, su timvision.it e su app TIMvision per Smartphone, Tablet e PC, utilizzando le credenziali scelte al momento della registrazione al servizio TIMvision.'),
- ('7', 'Samsung Smart TV 50  + Soundbar con TIMvision', 'tv_smart_living', 'tv', 'images/grid200x276/samsungSmartTv.png',
+ ('7', 'Samsung Smart TV 50', 'tv_smart_living', 'tv', 'images/grid200x276/samsungSmartTv.png',
  '0', '1', '1', '0', '1', '1', 'Samsung', '936.00', '850.00', 'Caratteristiche:'),
  ('8', 'Samsung Galaxy TabPro S 12', 'tablet_computer', 'computer', 'images/grid200x276/samsungGalaxyTabProS12_1.png',
  '0', '1', '1', '0', '1', '1', 'Samsung', '1299.90', '850.00', 'Caratteristiche:'),
@@ -361,14 +361,11 @@ if($resultQuery === true){
 $sqlInsert1 = "INSERT INTO device_assistance 
 (id,
 id_device,
-id_assistance) VALUES(
-'1',
-'1',
-'11'),
-('2',
-'5',
-'11'
-)";
+id_assistance) VALUES
+('1','1','11'),
+('2','5','12'),
+('3','2','13'),
+('4','3','13')";
 
 
 $resultQueryInsert1 = $db -> query($sqlInsert1);

@@ -237,7 +237,7 @@ function ajaxAssistanceServices(id){
             //parse the json and get an array where the index is the row and the .User is the name of the column
             var resultArray = $.parseJSON(response);
             
-            generateLinksForDevices(resultArray, "#device-no-assistance", "#serviziAssistenzaListDiv", "page.assistance.html?Id=");
+            generateLinksForDevices2(resultArray, "#device-no-assistance", "#serviziAssistenzaListDiv", "page.assistance.html?Id=");
 
             
         },
@@ -389,11 +389,23 @@ function generateLinksForDevices(arrayRes, idNoService, idDiv, page){
     }
 }
 
+//for each device correlated to this service generate a link in the activation section MATTEO DB NAME TITLE
+function generateLinksForDevices2(arrayRes, idNoService, idDiv, page){
+    if ( arrayRes.length > 0){
+        //hide the default message
+        $(idNoService).hide();
+    }
+    
+    //for each item add to the container
+    for (i = 0; i < arrayRes.length; i++) {
+        $(idDiv).append(document.createElement("BR"));
+        $(idDiv).append(buildLinkDevice(arrayRes[i].Title,arrayRes[i].Id, page));
+    }
+}
+
 
 //build the link obj of the single device for this smart life service
 function buildLinkDevice(nome, id, page){
-    console.log(nome); //TODO remove
-    console.log(id);
     var linkSingleDevice = document.createElement("A");
     linkSingleDevice.setAttribute("href", page + id);
     linkSingleDevice.innerHTML =  "&#10095; " + nome;

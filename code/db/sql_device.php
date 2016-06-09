@@ -67,8 +67,8 @@ if($_GET['query'] === 'specification'){
 /***************************************************************/
 
 if($_GET['query'] === 'sls'){
-    
-    $finalQuery = "SELECT sls.id, sls.titolo FROM device_sls RIGHT JOIN sls ON device_sls.id_sls = sls.id WHERE sls.id =" . $id;
+
+    $finalQuery = "SELECT sls.id, sls.titolo FROM device_sls RIGHT JOIN sls ON device_sls.id_sls = sls.id WHERE device_sls.id_device =" . $id;
         $result = $db -> query($finalQuery);  
         while($row = mysqli_fetch_assoc($result))
             $test[] = $row; 
