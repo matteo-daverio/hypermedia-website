@@ -10151,7 +10151,7 @@ blockquote.pull-right {
 .owl-carousel.owl-loading {
 	display:block;
 	min-height: 100px;
-	background: url('images/preloader.gif') no-repeat center center
+	background: url('../../images/supporto/preloader.gif') no-repeat center center
 }
 
 .owl-carousel .owl-refresh .owl-item { display:none }
@@ -10940,7 +10940,7 @@ label.error { display: none !important; }
 /* Fancy Title - Bottom Short Border
 -----------------------------------------------------------------*/
 
-.fancy-title.title-dotted-border { background: url('images/icons/dotted.png') repeat-x center; }
+.fancy-title.title-dotted-border { background: url('../../images/supporto/dotted.png') repeat-x center; }
 
 
 /* Sub Heading
@@ -11263,7 +11263,7 @@ body:not(.device-touch) #gotoTop {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: url("images/preloader.gif") center center no-repeat #FFF;
+	background: url("../../images/supporto/preloader.gif") center center no-repeat #FFF;
 }
 
 .preloader2 { background-color: transparent; }

@@ -1,0 +1,227 @@
+::selection {  /* Selects the portion of an element that is selected by a user  */
+	background: #0099E5;
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #0099E5; /* Firefox */
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-webkit-selection {
+	background: #0099E5; /* Safari */
+	color: #FFF;
+	text-shadow: none;
+}
+
+:active,
+:focus { outline: none !important; }
+
+body {
+	line-height: 1.5;
+	color: #555;
+	font-family: 'Lato', sans-serif;
+}
+
+a {
+	text-decoration: none !important;
+	color: #0099E5;
+}
+
+a:hover { color: #222; }
+
+a img { border: none; }
+
+img { max-width: 100%; }
+
+dl, dt, dd, ol, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+p,
+pre,
+ul,
+ol,
+dl,
+dd,
+blockquote,
+address,
+table,
+fieldset,
+form { margin-bottom: 10px; }
+
+.center { text-align: center !important; }
+
+
+
+/* ----------------------------------------------------------------
+	Basic Layout Styles
+-----------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #444;
+	font-weight: 600;
+	line-height: 1.5;
+	margin: 0 0 0px 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+h4 { font-size: 18px; }
+
+h4 { font-weight: 600; }
+
+
+
+/* ----------------------------------------------------------------
+	Columns & Grids
+-----------------------------------------------------------------*/
+
+.postcontent { width: 860px; }
+.postcontent.bothsidebar { width: 580px; }
+.sidebar { width: 240px; }
+.col_full { width: 100%; }
+.col_half { width: 48%; }
+.col_one_third { width: 30.63%; }
+.col_two_third { width: 65.33%; }
+.col_one_fourth { width: 22%; }
+.col_three_fourth { width: 74%; }
+.col_one_fifth { width: 16.8%; }
+.col_two_fifth { width: 37.6%; }
+.col_three_fifth { width: 58.4%; }
+.col_four_fifth { width: 79.2%; }
+.col_one_sixth { width: 13.33%; }
+.col_five_sixth { width: 82.67%; }
+body.stretched .container-fullwidth {
+	position: relative;
+	padding: 0 60px;
+	width: 100%;
+}
+
+.postcontent,
+.sidebar,
+.col_full,
+.col_half,
+.col_one_third,
+.col_two_third,
+.col_three_fourth,
+.col_one_fourth,
+.col_one_fifth,
+.col_two_fifth,
+.col_three_fifth,
+.col_four_fifth,
+.col_one_sixth,
+.col_five_sixth {
+	display: block;
+	position: relative;
+	margin-right: 4%;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.col_full {
+	clear: both;
+	float: none;
+	margin-right: 0;
+}
+
+.col_last {
+	margin-right: 0 !important;
+	clear: right;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------
+	Page Title
+-----------------------------------------------------------------*/
+
+#page-title {
+	position: relative;
+	padding: 20px 0;
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #EEE;
+}
+
+#page-title .container {
+    position: relative;
+}
+
+#page-title h1 {
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #333;
+	font-size: 28px;
+}
+
+
+
+/* ----------------------------------------------------------------
+	Fancy Title
+-----------------------------------------------------------------*/
+
+/* Justify Border Title */
+
+.fancy-title {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.fancy-title h4 {
+	position: relative;
+	display: inline-block;
+	background-color: #FFF;
+	padding-right: 15px;
+	margin-bottom: 0;
+}
+
+.fancy-title h4 { padding-right: 10px; }
+
+/* Fancy Title - Center Align */
+
+.title-center { text-align: center; }
+
+.title-center h4 { padding: 0 10px; }
+
+/* Fancy Title - Bottom Short Border */
+
+.fancy-title.title-dotted-border { background: url('../images/supporto/dotted.png') repeat-x center; }
+
+
+
+
+/* ----------------------------------------------------------------
+	Content
+-----------------------------------------------------------------*/
+
+#content {
+	position: relative;
+	overflow: hidden;
+	background-color: #FFF;
+}
+
+#content p { line-height: 1.8; }
+
+.content-wrap {                     /*** position and padding for the content ***/
+	position: relative;
+	padding: 10px 0;
+}
+
+.content-wrap-small {
+	position: relative;
+	padding: 20px 0;
+}
+
+#content .container { position: relative; }

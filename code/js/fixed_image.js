@@ -5,18 +5,6 @@ jQuery(document).ready(function () {
         jQuery(".img-rounded").css("display", "none");
     } else {
         jQuery(".img-rounded").css("display", "inline");
-        
-        // if it's visible, calculate the position of the image to be fixed on screen, if it is in the page
-        if ($('*').hasClass('fixed_position_image')) {
-            var screen_height = jQuery(window).height();
-            var height = jQuery(".fixed_position_image").height();
-            var width = jQuery(".fixed_position_image").width();    
-            var p = jQuery( ".fixed_position_image" );
-            var position = p.position();
-            jQuery(".img-rounded").css("position", "fixed");
-            jQuery(".img-rounded").css("left", p.offset().left + "px");
-            jQuery(".img-rounded").css("width", width + "px");
-        }
     }
 });
 
@@ -25,17 +13,5 @@ jQuery(window).resize(function () {
         jQuery(".img-rounded").css("display", "none");
     } else {
         jQuery(".img-rounded").css("display", "inline");
-        
-        // if it's visible, calculate the position of the image to be fixed on screen
-        if ($('*').hasClass('fixed_position_image')) {
-            var screen_height = jQuery(window).height();
-            var height = jQuery(".fixed_position_image").height();
-            var width = jQuery(".fixed_position_image").width();    
-            var p = jQuery( ".fixed_position_image" );
-            var position = p.position();
-            jQuery(".img-rounded").css("position", "fixed");
-            jQuery(".img-rounded").css("left", p.offset().left + "px");
-            jQuery(".img-rounded").css("width", width + "px");
-        }
     }
 });
