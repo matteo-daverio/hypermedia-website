@@ -10,8 +10,11 @@
 	<link rel="stylesheet" href="css/libraries/google-fonts.css" type="text/css" />
     
     <link rel="stylesheet" href="css/libraries/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="css/libraries/style.css" type="text/css" />
+    
+    <link rel="stylesheet" href="css/assistance.css" type="text/css" />
+    <link rel="stylesheet" href="css/header.css" type="text/css" />
     <link rel="stylesheet" href="css/shared.css" type="text/css" />
+    
     <link rel="stylesheet" href="css/libraries/font-icons.css" type="text/css" />
     <link rel="stylesheet" href="css/libraries/animate.css" type="text/css" />
     <link rel="stylesheet" href="css/libraries/magnific-popup.css" type="text/css" />
@@ -50,7 +53,7 @@
                     <div class="col-xs-12 text-center">
                         <div id="assistance_title" class="pages-title-text">
                             <!-- Title -->
-                            <ol class="breadcrumb">
+                            <ol class="dynamic-link">
                                 <a href="menu.assistenza.html" class="more-link">Vai a <b>Servizi di Assistenza</b></a>
                             </ol>
                         </div>
@@ -92,43 +95,39 @@
                                     Non hai trovato ciò che cercavi?
                                 </span>
                                 <div class="center">
-                                    <a href="#contattaci" data-lightbox="inline" class="button button-large button-rounded">Contattaci</a>
+                                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contattaci">Contattaci</button>
                                 </div>
 				            </div>
 				        </div>
                     </div>
 
                     <!-- Modal -->
-					<div class="modal1 mfp-hide subscribe-widget" id="contattaci">
-						<div id="contact-form-overlay" class="clearfix">
-
-                            <div class="fancy-title title-dotted-border">
-                                <h3>Contattaci</h3>
-                            </div>
-
-                            <div class="contact-widget">
-
-                                <div class="contact-form-result"></div>
-
-                                <!-- Contact Form
-                                ============================================= -->
-                                <form class="nobottommargin" id="template-contactform" name="template-contactform" novalidate="novalidate">
-
-                                    <div class="col_half">
+                    
+					<div class="modal fade" id="contattaci" tabindex="-1" role="dialog" aria-labelledby="contatto" aria-hidden="true">
+						<div class="modal-dialog">
+                            <div class="modal-body">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="fancy-title title-dotted-border">
+                                            <h3>Contattaci</h3>
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="col_half">
                                         <label>Nome <small>*</small></label>
-                                        <input type="text" value="" class="sm-form-control required" aria-required="true">
+                                        <input type="text" value="" class="form-control" aria-required="true">
                                     </div>
 
                                     <div class="col_half col_last">
                                         <label>Email <small>*</small></label>
-                                        <input type="email" name="email" value="" class="required email sm-form-control" aria-required="true">
+                                        <input type="email" name="email" value="" class="email form-control" aria-required="true">
                                     </div>
 
                                     <div class="clear"></div>
 
                                     <div class="col_full">
                                         <label>Servizio</label>
-                                        <select class="sm-form-control">
+                                        <select class="form-control">
                                             <option>-- Selezionane uno --</option>
                                             <option>Gestione Linea e Servizi</option>
                                             <option>Controllo Costi e Pagamenti</option>
@@ -141,20 +140,20 @@
 
                                     <div class="col_full">
                                         <label>Messaggio <small>*</small></label>
-                                        <textarea class="required sm-form-control" name="messaggio" rows="5" cols="27" aria-required="true"></textarea>
+                                        <textarea class="form-control" name="messaggio" rows="5" cols="27" aria-required="true"></textarea>
                                     </div>
-
+                                        
                                     <div class="col_full hidden">
-                                        <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control">
+                                        <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control">
                                     </div>
 
-                                    <div class="col_full">
-                                        <button class="button button-3d nomargin">Invia messaggio</button>
                                     </div>
-
-                                </form>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+								        <button type="submit" class="btn btn-primary" data-dismiss="modal">Invia messaggio</button>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
 					</div>
 
