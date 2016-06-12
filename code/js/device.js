@@ -63,11 +63,11 @@ function setDynamicGoBack(){
     }else if(contains(previous_url,"sls.html") === true){
         $("#VaiALink").html("Vai allo Smart Life precedente");
         $("#VaiALink").attr("href","javascript:history.back()");
-    }else if(contains(previous_url,"assistance_services.html") === true){
-        $("#VaiALink").html("Vai al servizio di assistenza precedente");
+    }else if(contains(previous_url,"page.assistance.html") === true){
+        $("#VaiALink").html("Vai al Servizio di Assistenza precedente");
         $("#VaiALink").attr("href","javascript:history.back()");
     }else { //set default link if 
-        $("#VaiALink").html("Vai a tutti i servizi");
+        $("#VaiALink").html("Vai a tutti i Prodotti");
         $("#VaiALink").attr("href", "prodotti.html"); 
     }
 }
@@ -139,13 +139,16 @@ function ajaxDescription(id){
               
             //Device Name
             document.getElementById("deviceTitle").innerHTML = resultArray[0].nome;
+            document.getElementById("page_title").innerHTML = resultArray[0].nome;
             
             //The little square that says if the device is in promo or new
             var newPromoDiv = buildDivPromoNewTipo(resultArray[0].promo, resultArray[0].nuovo);
             $(".product-image").append(newPromoDiv);
     
             //Price
-            var priceIns = buildPrezzo(resultArray[0].prezzo, resultArray[0].promo, resultArray[0].prezzoScontato);
+            var priceIns = buildPrezzo(
+            resultArray[0].prezzo, resultArray[0].promo, resultArray[0].prezzoScontato, resultArray[0].noleggio, resultArray[0].prezzoANoleggio,
+            resultArray[0].aRate, resultArray[0].prezzoARate );
     
     
             //Device Description
@@ -302,7 +305,7 @@ function buildSlide(nome, imagePath) {
     aElement.setAttribute("title", nome);
     
     var imgElement = document.createElement("IMG");
-    
+
     imgElement.setAttribute("src", imagePath);
     imgElement.setAttribute("alt", nome);
     
@@ -344,11 +347,43 @@ function buildDivPromoNewTipo(promo,nuovo) {
 }
 
 
-function buildPrezzo(prezzo, promo, prezzoScontato) {
+function buildPrezzo(prezzo, promo, prezzoScontato, noleggio, prezzoANoleggio, aRate, prezzoARate) {
     
-    var divElement = document.getElementById("divPrezzo");
+    var rowId = "prezzoNoleggioARate";
+    
+    var numberOfOptionsAvailable = 1;
+    
+    if(noleggio === '1'){
+        numberOfOptionsAvailable++;
+    }
+    
+    if( aRate === '1'){
+        numberOfOptionsAvailable++;
+    }
+    
+    var bootstrapClassAttribute;
+    
+    switch (numberOfOptionsAvailable) {
+    case 1:
+        bootstrapClassAttribute = 'product-price';
+        break;
+    case 2:
+        bootstrapClassAttribute = "product-price col-xs-12 col-sm-6 col-md-4";
+        break;
+    case 3:
+        bootstrapClassAttribute = "product-price col-xs-12 col-sm-6 col-md-5";
+        break;
+    } 
+    
     
     if ( promo === '1'){
+        var divElement = document.createElement("DIV");
+        divElement.setAttribute("class",bootstrapClassAttribute);
+        var hElement = document.createElement("H2");
+        hElement.innerHTML = "Prezzo";
+        
+        divElement.appendChild(hElement);
+        
         var delElement = document.createElement("DEL");
         delElement.innerHTML = prezzo + "&euro;" + "&nbsp; " + "&nbsp;";
         divElement.appendChild(delElement);
@@ -357,12 +392,62 @@ function buildPrezzo(prezzo, promo, prezzoScontato) {
         prezzoIns.innerHTML = prezzoScontato + "&euro;";
     
         divElement.appendChild(prezzoIns);
+        
+        document.getElementById("prezzoNoleggioARate").appendChild(divElement);
     }else{
+        var divElement = document.createElement("DIV");
+        divElement.setAttribute("class",bootstrapClassAttribute);
+        
+        var hElement = document.createElement("H2");
+        hElement.innerHTML = "Prezzo";
+        
+        divElement.appendChild(hElement);
+        
         var prezzoIns = document.createElement("INS");
         prezzoIns.innerHTML = prezzo + "&euro;";
     
         divElement.appendChild(prezzoIns);  
-    }    
+        
+        document.getElementById("prezzoNoleggioARate").appendChild(divElement);
+    }  
+    
+    if( noleggio === '1'){
+        
+        var divElement = document.createElement("DIV");
+        divElement.setAttribute("class",bootstrapClassAttribute);
+        
+        var hElement = document.createElement("H2");
+        hElement.innerHTML = "Noleggio";
+        
+        divElement.appendChild(hElement);
+        
+        var prezzoIns = document.createElement("INS");
+        prezzoIns.setAttribute("style","color:red !important");
+        prezzoIns.innerHTML = prezzoANoleggio + "&euro; /mese";
+        
+        divElement.appendChild(prezzoIns);
+        document.getElementById("prezzoNoleggioARate").appendChild(divElement);
+    }
+    
+    if( aRate === '1'){
+        
+        var divElement = document.createElement("DIV");
+        divElement.setAttribute("class",bootstrapClassAttribute);
+        
+        var hElement = document.createElement("H2");
+        hElement.innerHTML = "A Rate";
+        
+        divElement.appendChild(hElement);
+        
+        var prezzoIns = document.createElement("INS");
+        prezzoIns.setAttribute("style","color:#34bf49 !important");
+        prezzoIns.innerHTML = prezzoARate;
+        
+        divElement.appendChild(prezzoIns);
+        document.getElementById("prezzoNoleggioARate").appendChild(divElement);
+    }
+    
+    
     
 }
 

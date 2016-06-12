@@ -34,7 +34,7 @@ if($_GET['query'] === 'gallery'){
 /***************************************************************/
 
 if($_GET['query'] === 'description'){
-    $rows = $db -> select("SELECT nome, promo, nuovo, prezzo, prezzoScontato, descrizione FROM device WHERE id = " . $id);
+    $rows = $db -> select("SELECT nome, promo, nuovo, noleggio, prezzoANoleggio, aRate, prezzoARate, prezzo, prezzoScontato, descrizione FROM device WHERE id = " . $id);
     //handle it
 
     if($rows != false){

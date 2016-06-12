@@ -56,6 +56,8 @@ $sql =
                             marca VARCHAR(100) NOT NULL,
                             prezzo DECIMAL(10,2) NOT NULL,
                             prezzoScontato DECIMAL(10,2) NOT NULL,
+                            prezzoARate VARCHAR(100) NOT NULL,
+                            prezzoANoleggio DECIMAL(10,2) NOT NULL,
                             descrizione TEXT NOT NULL
 )";
 
@@ -69,33 +71,33 @@ if($resultQuery === true){
 }
 
 
-$sqlInsert = "INSERT INTO device (id, nome, categoria, sottoCategoria, gridImagePath, promo, nuovo, piuVenduto, compraSubito, aRate, noleggio, marca, prezzo, prezzoScontato, descrizione) VALUES 
+$sqlInsert = "INSERT INTO device (id, nome, categoria, sottoCategoria, gridImagePath, promo, nuovo, piuVenduto, compraSubito, aRate, noleggio, marca, prezzo, prezzoScontato, prezzoARate, prezzoANoleggio, descrizione) VALUES 
 ('1', 'Iphone6s', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/iPhone6s1.png',
- '0', '0', '1', '1', '1', '0', 'Apple', '820.00', '800.00', 'iPhone 6s mantiene tutte le caratteristiche che hanno reso straordinaria la generazione precedente di iPhone, e le spingono a un livello ancora pi&ugrave; avanzato. Viene realizzato in alluminio serie 7000, la lega pi&ugrave; robusta mai utilizzata per un iPhone. Il suo display Retina HD &egrave; fatto del vetro pi&ugrave; resistente che uno smartphone abbia mai avuto.') ,
+ '0', '0', '1', '1', '1', '0', 'Apple', '820.00', '800.00', '35.00 &euro; 24/mesi', '35.00', 'iPhone 6s mantiene tutte le caratteristiche che hanno reso straordinaria la generazione precedente di iPhone, e le spingono a un livello ancora pi&ugrave; avanzato. Viene realizzato in alluminio serie 7000, la lega pi&ugrave; robusta mai utilizzata per un iPhone. Il suo display Retina HD &egrave; fatto del vetro pi&ugrave; resistente che uno smartphone abbia mai avuto.') ,
  ('2', 'Samsung Galaxy S7 Edge', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/samsungGalaxyS7Edge1.png',
- '0', '1', '0', '1', '1', '1', 'Samsung', '820.00', '800.00', 'Caratteristiche:') ,
+ '0', '1', '0', '1', '1', '0', 'Samsung', '820.00', '800.00', '35.00 &euro; 24/mesi', '35.00', 'Caratteristiche:') ,
  ('3', 'Huawei P9 Plus', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/huaweiP9Plus1.png',
- '1', '0', '0', '0', '1', '1', 'Huawei', '749.90', '650.00', 'Caratteristiche:'),
+ '1', '0', '0', '0', '1', '0', 'Huawei', '749.90', '650.00', '30.00 &euro; 24/mesi', '30.00', 'Caratteristiche:'),
  ('4', 'Cordless Facile Maxi', 'smartphone_telefoni', 'telefoni', 'images/grid200x276/cordlessFacileMaxi1.png',
- '0', '0', '0', '1', '1', '1', 'Tim', '35.90', '29.95', 'Caratteristiche:'),
+ '0', '0', '0', '1', '0', '0', 'Tim', '35.90', '29.95', '5.00 &euro; 24/mesi', '5.00', 'Caratteristiche:'),
  ('5', 'IPad Air 2', 'tablet_computer', 'tablet', 'images/grid200x276/ipadAir2_1.png',
- '0', '1', '1', '0', '1', '1', 'Apple', '520.00', '450.00', 'Caratteristiche:'),
+ '0', '1', '1', '0', '1', '0', 'Apple', '520.00', '450.00', '37.00 &euro; 24/mesi', '37.00', 'Caratteristiche:'),
  ('6', 'Decoder TIMvision', 'tv_smart_living', 'smart living', 'images/grid200x276/decoderTimVision.png',
- '0', '1', '1', '0', '1', '1', 'Tim', '49.00', '40.00', 'Con il decoder TIMvision hai a disposizione pi&ugrave; di 8.000 titoli tra cartoni, film, serie e documentari sempre on demand per creare il tuo palinsesto senza interruzioni pubblicitarie. Puoi goderti la visione anche su Smart TV, su timvision.it e su app TIMvision per Smartphone, Tablet e PC, utilizzando le credenziali scelte al momento della registrazione al servizio TIMvision.'),
+ '0', '1', '1', '0', '0', '1', 'Tim', '49.00', '40.00', '15.00 &euro; 24/mesi', '2.00', 'Con il decoder TIMvision hai a disposizione pi&ugrave; di 8.000 titoli tra cartoni, film, serie e documentari sempre on demand per creare il tuo palinsesto senza interruzioni pubblicitarie. Puoi goderti la visione anche su Smart TV, su timvision.it e su app TIMvision per Smartphone, Tablet e PC, utilizzando le credenziali scelte al momento della registrazione al servizio TIMvision.'),
  ('7', 'Samsung Smart TV 50', 'tv_smart_living', 'tv', 'images/grid200x276/samsungSmartTv.png',
- '0', '1', '1', '0', '1', '1', 'Samsung', '936.00', '850.00', 'Caratteristiche:'),
+ '0', '1', '1', '0', '1', '0', 'Samsung', '936.00', '850.00', '40.00 &euro; 24/mesi', '15.00', 'Caratteristiche:'),
  ('8', 'Samsung Galaxy TabPro S 12', 'tablet_computer', 'computer', 'images/grid200x276/samsungGalaxyTabProS12_1.png',
- '0', '1', '1', '0', '1', '1', 'Samsung', '1299.90', '850.00', 'Caratteristiche:'),
+ '0', '1', '1', '0', '1', '0', 'Samsung', '1299.90', '850.00', '35.00 &euro; 24/mesi', '35.00', 'Caratteristiche:'),
  ('9', 'Olivetti My Way', 'outlet', 'outlet', 'images/grid200x276/olivettiMyWay.png',
- '1', '0', '1', '0', '0', '0', 'Olivetti', '49.00', '19.00', 'Caratteristiche:'),
+ '1', '0', '1', '0', '0', '0', 'Olivetti', '49.00', '19.00', '15.00 &euro; 24/mesi', '2.00', 'Caratteristiche:'),
  ('10', 'Modem ADSL Wi-Fi', 'modem_networking', 'modem', 'images/grid200x276/modemAdsl.png',
- '0', '1', '1', '0', '0', '0', 'Tim', '69.00', '59.00', 'Caratteristiche:'),
+ '0', '1', '1', '0', '0', '1', 'Tim', '69.00', '59.00', '5.00 &euro; 24/mesi', '3.00', 'Caratteristiche:'),
  ('11', 'Polar Loop Activity Tracker', 'tv_smart_living', 'bracciali', 'images/grid200x276/polarLoop1.png',
- '0', '0', '1', '0', '0', '0', 'Polar', '99.90', '89.00', 'Caratteristiche:'),
+ '0', '0', '1', '0', '0', '0', 'Polar', '99.90', '89.00', '4.00 &euro; 24/mesi', '5.00', 'Caratteristiche:'),
  ('12', 'Sony Smart Band Fifa Edition', 'tv_smart_living', 'bracciali', 'images/grid200x276/smartBandSony1.png',
- '1', '0', '1', '0', '0', '0', 'Sony', '79.90', '49.00', 'Caratteristiche:'),
+ '1', '0', '1', '0', '0', '0', 'Sony', '79.90', '49.00', '3.50 &euro; 24/mesi', '3.00', 'Caratteristiche:'),
  ('13', 'Tim Tag', 'tv_smart_living', 'smart_living', 'images/grid200x276/timTag1.png',
- '1', '0', '1', '0', '0', '0', 'Tim', '129.90', '120.00', 'Caratteristiche:')";
+ '1', '0', '1', '0', '0', '0', 'Tim', '129.90', '120.00', '5.00 &euro; 24/mesi', '5.00', 'Caratteristiche:')";
 
 
 
@@ -365,7 +367,9 @@ id_assistance) VALUES
 ('1','1','11'),
 ('2','5','12'),
 ('3','2','13'),
-('4','3','13')";
+('4','3','13'),
+('5','6','14'),
+('6','6','15')";
 
 
 $resultQueryInsert1 = $db -> query($sqlInsert1);

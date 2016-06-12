@@ -555,6 +555,7 @@ function helperAddBuyMode(nome,numero){
 
 function setPageTitle(titleForThePage){
     document.getElementById("deviceByCategoryTitle").innerHTML = titleForThePage;
+    document.getElementById("page_title").innerHTML = titleForThePage;
 }
 
 
