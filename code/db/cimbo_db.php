@@ -73,7 +73,7 @@ if($resultQuery === true){
 
 $sqlInsert = "INSERT INTO device (id, nome, categoria, sottoCategoria, gridImagePath, promo, nuovo, piuVenduto, compraSubito, aRate, noleggio, marca, prezzo, prezzoScontato, prezzoARate, prezzoANoleggio, descrizione) VALUES 
 ('1', 'Iphone6s', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/iPhone6s1.png',
- '0', '0', '1', '1', '1', '0', 'Apple', '820.00', '800.00', '35.00 &euro; 24/mesi', '35.00', 'iPhone 6s mantiene tutte le caratteristiche che hanno reso straordinaria la generazione precedente di iPhone, e le spingono a un livello ancora pi&ugrave; avanzato. Viene realizzato in alluminio serie 7000, la lega pi&ugrave; robusta mai utilizzata per un iPhone. Il suo display Retina HD &egrave; fatto del vetro pi&ugrave; resistente che uno smartphone abbia mai avuto.') ,
+ '1', '0', '1', '1', '1', '1', 'Apple', '820.00', '800.00', '35.00 &euro; 24/mesi', '35.00', 'iPhone 6s mantiene tutte le caratteristiche che hanno reso straordinaria la generazione precedente di iPhone, e le spingono a un livello ancora pi&ugrave; avanzato. Viene realizzato in alluminio serie 7000, la lega pi&ugrave; robusta mai utilizzata per un iPhone. Il suo display Retina HD &egrave; fatto del vetro pi&ugrave; resistente che uno smartphone abbia mai avuto.') ,
  ('2', 'Samsung Galaxy S7 Edge', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/samsungGalaxyS7Edge1.png',
  '0', '1', '0', '1', '1', '0', 'Samsung', '820.00', '800.00', '35.00 &euro; 24/mesi', '35.00', 'Caratteristiche:') ,
  ('3', 'Huawei P9 Plus', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/huaweiP9Plus1.png',

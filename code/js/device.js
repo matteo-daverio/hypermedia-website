@@ -368,10 +368,10 @@ function buildPrezzo(prezzo, promo, prezzoScontato, noleggio, prezzoANoleggio, a
         bootstrapClassAttribute = 'product-price';
         break;
     case 2:
-        bootstrapClassAttribute = "product-price col-xs-12 col-sm-6 col-md-4";
+        bootstrapClassAttribute = "product-price col-xs-12 col-sm-4 col-md-4";
         break;
     case 3:
-        bootstrapClassAttribute = "product-price col-xs-12 col-sm-6 col-md-5";
+        bootstrapClassAttribute = "product-price col-xs-12 col-sm-7 col-md-5";
         break;
     } 
     
