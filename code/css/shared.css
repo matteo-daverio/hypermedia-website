@@ -8,12 +8,6 @@
 	border-top-color: rgba(0,0,0,0.2);
 }
 
-/* set style of main menu */
-
-/* here the css of the menu? or leave in the style.css */
-
-
-
 /* COMMENT TODO */
  .ei-title h2,
  .ei-title h3,
@@ -36,6 +30,34 @@ Dispositivi es Iphone 6s
 /* Device Description before the unordered list*/
 .device-desc p { 
     text-align: left;
+}
+
+/**** TO DEFINE , I THINK ARE USED IN ASSISTENCE TODO *****/
+
+.col_full {
+	clear: both;
+	float: none;
+	margin-right: 0;
+}
+
+.col_last {
+	margin-right: 0 !important;
+	clear: right;
+}
+
+.acc_content {  /** To accodate content with paddings **/
+	position: relative;
+	padding: 0 0 15px 20px;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    font-size: 0px;
+    height: 0px;
+    line-height: 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 
@@ -297,9 +319,7 @@ ul.tab-nav li a i {
 	border-bottom: 1px solid #EEE;
 }
 
-#page-title .container {
-    position: relative;
-}
+#page-title .container { position: relative; }
 
 #page-title h1 {
 	padding: 0;
@@ -309,9 +329,18 @@ ul.tab-nav li a i {
 	letter-spacing: 1px;
 	color: #333;
 	font-size: 28px;
+	/*text-transform: uppercase;*/
 }
 
-.dynamic-link {
+#page-title span {
+	display: block;
+	margin-top: 10px;
+	font-weight: 300;
+	color: #777;
+	font-size: 18px;
+}
+
+.breadcrumb {
 	position: absolute !important;
 	width: auto !important;
 	top: 50% !important;
@@ -321,13 +350,19 @@ ul.tab-nav li a i {
 	background-color: transparent !important;
 	padding: 0 !important;
 	font-size: auto;
-    list-style: none;
-    border-radius: 4px;
 }
 
-.dynamic-link a { color: #555; }
+body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 
-.dynamic-link a:hover { color: #0099E5; }
+#header.transparent-header + #page-title.page-title-parallax .breadcrumb { margin-top: 35px !important; }
+
+.breadcrumb a { color: #555; }
+
+.breadcrumb a:hover { color: #0099E5; }
+
+.breadcrumb i { width: auto !important; }
+
+/* More link style *** */
 
 .more-link {
 	display: inline-block;
@@ -337,26 +372,7 @@ ul.tab-nav li a i {
 	font-style: italic;
 }
 
-@media (max-width: 991px) {
-    
-    #page-title {
-        text-align: center;
-    }
-    
-    #page-title .dynamic-link {
-		position: relative !important;
-		top: 0 !important;
-		left: 0 !important;
-		right: 0 !important;
-		margin: 15px 0 0 !important;
-	}
-    
-    #page-title h1 {
-        line-height: 1.5;
-        font-size: 24px;
-    }
-}
-
+.more-link:hover { border-bottom-color: #555; }
 
 /* ----------------------------------------------------------------
 	Fancy Title (title with dotted image on borders)
@@ -654,3 +670,82 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
     font-size: 16px;
 
 }
+/* ----------------------------------------------------------------
+	Shop **
+-----------------------------------------------------------------*/
+
+.shop {
+	position: relative;
+	margin: 0 -20px -20px 0;
+}
+
+.product { position: relative; }
+
+.shop .product {
+	float: left;
+	padding: 0 20px 20px 0;
+	width: 25%;
+}
+
+.product-image {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.product-image > a,
+.product-image .slide a,
+.product-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* ----------------------------------------------------------------
+    Shop - 1 Column
+-----------------------------------------------------------------*/
+
+.shop.product-1 { margin: 0 0 -40px 0; }
+
+.product-1 .product {
+	float: none;
+	margin: 0 0 40px 0;
+	padding: 0;
+	width: 100%;
+}
+
+.product-1 .product-image {
+	float: left;
+	width: 650px;
+	height: 300px;
+	margin-right: 30px;
+}
+
+.product-1 .product.alt .product-image {
+	float: right;
+	margin: 0 0 0 30px;
+}
+
+.product-1 .product-desc {
+	padding: 0;
+	position: relative;
+	/*overflow: hidden; Nasconde il testo sulla destra con certe misure dello schermo*/
+    margin-top: 60px;
+}
+
+.product-1 .product-title h3 { 
+    font-size: 22px;
+    text-align: center;
+}
+
+.product-desc p { 
+    text-align: center;
+}
+
+.product-1 .product-desc .product-price { font-size: 20px; }
+
+.product-1 .product-desc .product-rating { margin-bottom: 15px; }
+
+/*.product-1 .product-desc button { margin-left: 100px; }*/
+
