@@ -578,3 +578,79 @@ body:not(.device-touch) #gotoTop {
 
 #gotoTop:hover { background-color: #0099E5; }
 
+/* --------------------------------------------------------------
+Heading Block - with Subtitle **
+-----------------------------------------------------------------*/
+
+.heading-block { margin-bottom: 50px; }
+
+.heading-block h1,
+.heading-block h2,
+.heading-block h3,
+.heading-block h4,
+.emphasis-title h1,
+.emphasis-title h2 {
+	margin-bottom: 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #EEE;
+}
+
+.heading-block h1 { font-size: 32px; }
+
+/* ----------------------------------------------------------------
+	Slider
+-----------------------------------------------------------------*/
+
+#slider {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.slider-parallax { position: relative; }
+
+.slider-parallax,
+.slider-parallax .swiper-container {
+	visibility: visible;
+	-webkit-backface-visibility: hidden;
+}
+
+.slider-parallax .slider-parallax-inner {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+body:not(.side-header) .slider-parallax .slider-parallax-inner { left: 0; }
+
+body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
+
+#header.transparent-header + .slider-parallax .slider-parallax-inner { top: 0; }
+
+.slider-parallax .slider-parallax-inner,
+.slider-parallax .slider-caption,
+.slider-parallax .ei-title {
+	will-change: transform;
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transition: transform 0s linear;
+	-webkit-backface-visibility: hidden;
+}
+
+.vertical-middle {
+	height: auto !important;
+	left: 0;
+}
+
+/* ----------------------------------------------------------------
+	Text Rotater
+-----------------------------------------------------------------*/
+
+.text-rotater {}
+
+.text-rotater > .t-rotate > .animated { 
+    display: inline-block;
+    font-size: 16px;
+
+}
