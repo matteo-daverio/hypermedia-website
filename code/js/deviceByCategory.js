@@ -922,13 +922,13 @@ function setDynamicGoBack(){
     var previous_url = document.referrer;
     //alert(previous_url);
     if(contains(previous_url,"sls.html") === true){
-        $("#dynamic_link").html("Vai allo Smart Life precedente");
+        $("#dynamic_link").html("Vai allo <b>Smart Life precedente</b>");
         $("#dynamic_link").attr("href","javascript:history.back()");
     }else if(contains(previous_url,"page.assistance.html") === true){
-        $("#dynamic_link").html("Vai al servizio di assistenza precedente");
+        $("#dynamic_link").html("Vai al <b>Servizio di assistenza precedente</b>");
         $("#dynamic_link").attr("href","javascript:history.back()");
     }else { //set default link if 
-        $("#dynamic_link").html("Vai a tutti i servizi");
+        $("#dynamic_link").html("Vai a <b>Tutti i servizi</b>");
         $("#dynamic_link").attr("href", "prodotti.html"); 
     }
 }
