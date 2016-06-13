@@ -45,6 +45,7 @@ $("document").ready(function(){
 setDynamicGoBack();
 function setDynamicGoBack(){
     var previous_url = document.referrer;
+    //alert(previous_url);
     if (contains(previous_url,"deviceByCategory.html?categoria=smartphone_telefoni") === true){
         $("#VaiALink").html("Vai a <b>Smartphone e Telefoni</b>");
         $("#VaiALink").attr("href", "javascript:history.back()");

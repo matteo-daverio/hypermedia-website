@@ -897,6 +897,12 @@ function loadCookieOneParameter(id, param, filter){
     
 }
 
+
+function emptyFilter(){
+    setCookie(categoria,'',1);
+    window.location.href = "deviceByCategory.html?categoria=" + categoria;
+}
+
 /*********************************************************************/
 /************************   DYNAMIC GO BACK   ************************/
 /*********************************************************************/
@@ -914,10 +920,11 @@ if(filter != undefined){
 
 function setDynamicGoBack(){
     var previous_url = document.referrer;
+    //alert(previous_url);
     if(contains(previous_url,"sls.html") === true){
         $("#dynamic_link").html("Vai allo Smart Life precedente");
         $("#dynamic_link").attr("href","javascript:history.back()");
-    }else if(contains(previous_url,"assistance_services.html") === true){
+    }else if(contains(previous_url,"page.assistance.html") === true){
         $("#dynamic_link").html("Vai al servizio di assistenza precedente");
         $("#dynamic_link").attr("href","javascript:history.back()");
     }else { //set default link if 
