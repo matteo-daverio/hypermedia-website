@@ -328,7 +328,7 @@ ul.tab-nav li a i {
 	font-weight: 600;
 	letter-spacing: 1px;
 	color: #333;
-	font-size: 28px;
+	font-size: 20px;
 	/*text-transform: uppercase;*/
 }
 
@@ -356,7 +356,10 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 
 #header.transparent-header + #page-title.page-title-parallax .breadcrumb { margin-top: 35px !important; }
 
-.breadcrumb a { color: #555; }
+.breadcrumb a { 
+    font-size: 12px;
+    color: #555; 
+}
 
 .breadcrumb a:hover { color: #0099E5; }
 
@@ -721,7 +724,8 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
 	float: left;
 	width: 650px;
 	height: 300px;
-	margin-right: 30px;
+	margin-right: 50px;
+	margin-bottom: 10px;
 }
 
 .product-1 .product.alt .product-image {
@@ -733,7 +737,7 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
 	padding: 0;
 	position: relative;
 	/*overflow: hidden; Nasconde il testo sulla destra con certe misure dello schermo*/
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .product-1 .product-title h3 { 

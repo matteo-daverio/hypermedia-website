@@ -1127,7 +1127,7 @@
 		width: 100%;
 		margin-right: 0;
 		float: none;
-		margin-bottom: 50px !important;
+		margin-bottom: 20px !important;
 	}
 
 	.sidebar.col_last { margin-bottom: 0 !important; }
@@ -1153,7 +1153,7 @@
 
 	#page-title h1 {
 		line-height: 1.5;
-		font-size: 24px;
+		font-size: 20px;
 	}
 
 	#page-title .breadcrumb {
