@@ -464,6 +464,7 @@ function buildDescription(descrizione){
 
 
 function reloadSlider(){
+    console.log("Slider Refresh");
     SEMICOLON.widget.loadFlexSlider();
 }
 

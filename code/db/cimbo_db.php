@@ -77,27 +77,29 @@ $sqlInsert = "INSERT INTO device (id, nome, categoria, sottoCategoria, gridImage
  ('2', 'Samsung Galaxy S7 Edge', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/samsungGalaxyS7Edge1.png',
  '0', '1', '0', '1', '1', '0', 'Samsung', '820.00', '800.00', '35.00 &euro; 24/mesi', '35.00', 'Caratteristiche:') ,
  ('3', 'Huawei P9 Plus', 'smartphone_telefoni', 'smartphone', 'images/grid200x276/huaweiP9Plus1.png',
- '1', '0', '0', '0', '1', '0', 'Huawei', '749.90', '650.00', '30.00 &euro; 24/mesi', '30.00', 'Caratteristiche:'),
+ '1', '0', '0', '1', '1', '0', 'Huawei', '749.90', '650.00', '30.00 &euro; 24/mesi', '30.00', 'Caratteristiche:'),
  ('4', 'Cordless Facile Maxi', 'smartphone_telefoni', 'telefoni', 'images/grid200x276/cordlessFacileMaxi1.png',
  '0', '0', '0', '1', '0', '0', 'Tim', '35.90', '29.95', '5.00 &euro; 24/mesi', '5.00', 'Caratteristiche:'),
  ('5', 'IPad Air 2', 'tablet_computer', 'tablet', 'images/grid200x276/ipadAir2_1.png',
- '0', '1', '1', '0', '1', '0', 'Apple', '520.00', '450.00', '37.00 &euro; 24/mesi', '37.00', 'Caratteristiche:'),
+ '0', '1', '1', '1', '1', '0', 'Apple', '520.00', '450.00', '37.00 &euro; 24/mesi', '37.00', 'Caratteristiche:'),
  ('6', 'Decoder TIMvision', 'tv_smart_living', 'smart living', 'images/grid200x276/decoderTimVision.png',
- '0', '1', '1', '0', '0', '1', 'Tim', '49.00', '40.00', '15.00 &euro; 24/mesi', '2.00', 'Con il decoder TIMvision hai a disposizione pi&ugrave; di 8.000 titoli tra cartoni, film, serie e documentari sempre on demand per creare il tuo palinsesto senza interruzioni pubblicitarie. Puoi goderti la visione anche su Smart TV, su timvision.it e su app TIMvision per Smartphone, Tablet e PC, utilizzando le credenziali scelte al momento della registrazione al servizio TIMvision.'),
+ '0', '1', '1', '1', '0', '1', 'Tim', '49.00', '40.00', '15.00 &euro; 24/mesi', '2.00', 'Con il decoder TIMvision hai a disposizione pi&ugrave; di 8.000 titoli tra cartoni, film, serie e documentari sempre on demand per creare il tuo palinsesto senza interruzioni pubblicitarie. Puoi goderti la visione anche su Smart TV, su timvision.it e su app TIMvision per Smartphone, Tablet e PC, utilizzando le credenziali scelte al momento della registrazione al servizio TIMvision.'),
  ('7', 'Samsung Smart TV 50', 'tv_smart_living', 'tv', 'images/grid200x276/samsungSmartTv.png',
- '0', '1', '1', '0', '1', '0', 'Samsung', '936.00', '850.00', '40.00 &euro; 24/mesi', '15.00', 'Caratteristiche:'),
+ '0', '1', '1', '1', '1', '0', 'Samsung', '936.00', '850.00', '40.00 &euro; 24/mesi', '15.00', 'Caratteristiche:'),
  ('8', 'Samsung Galaxy TabPro S 12', 'tablet_computer', 'computer', 'images/grid200x276/samsungGalaxyTabProS12_1.png',
- '0', '1', '1', '0', '1', '0', 'Samsung', '1299.90', '850.00', '35.00 &euro; 24/mesi', '35.00', 'Caratteristiche:'),
+ '0', '1', '1', '1', '1', '0', 'Samsung', '1299.90', '850.00', '35.00 &euro; 24/mesi', '35.00', 'Caratteristiche:'),
  ('9', 'Olivetti My Way', 'outlet', 'outlet', 'images/grid200x276/olivettiMyWay.png',
- '1', '0', '1', '0', '0', '0', 'Olivetti', '49.00', '19.00', '15.00 &euro; 24/mesi', '2.00', 'Caratteristiche:'),
+ '1', '0', '1', '1', '0', '0', 'Olivetti', '49.00', '19.00', '15.00 &euro; 24/mesi', '2.00', 'Caratteristiche:'),
  ('10', 'Modem ADSL Wi-Fi', 'modem_networking', 'modem', 'images/grid200x276/modemAdsl.png',
- '0', '1', '1', '0', '0', '1', 'Tim', '69.00', '59.00', '5.00 &euro; 24/mesi', '3.00', 'Caratteristiche:'),
+ '0', '1', '1', '1', '0', '1', 'Tim', '69.00', '59.00', '5.00 &euro; 24/mesi', '3.00', 'Caratteristiche:'),
  ('11', 'Polar Loop Activity Tracker', 'tv_smart_living', 'bracciali', 'images/grid200x276/polarLoop1.png',
- '0', '0', '1', '0', '0', '0', 'Polar', '99.90', '89.00', '4.00 &euro; 24/mesi', '5.00', 'Caratteristiche:'),
+ '0', '0', '1', '1', '0', '0', 'Polar', '99.90', '89.00', '4.00 &euro; 24/mesi', '5.00', 'Caratteristiche:'),
  ('12', 'Sony Smart Band Fifa Edition', 'tv_smart_living', 'bracciali', 'images/grid200x276/smartBandSony1.png',
- '1', '0', '1', '0', '0', '0', 'Sony', '79.90', '49.00', '3.50 &euro; 24/mesi', '3.00', 'Caratteristiche:'),
+ '1', '0', '1', '1', '0', '0', 'Sony', '79.90', '49.00', '3.50 &euro; 24/mesi', '3.00', 'Caratteristiche:'),
  ('13', 'Tim Tag', 'tv_smart_living', 'smart_living', 'images/grid200x276/timTag1.png',
- '1', '0', '1', '0', '0', '0', 'Tim', '129.90', '120.00', '5.00 &euro; 24/mesi', '5.00', 'Caratteristiche:')";
+ '1', '0', '1', '1', '0', '0', 'Tim', '129.90', '120.00', '5.00 &euro; 24/mesi', '5.00', 'Caratteristiche:'),
+ ('14', 'Ihealth HS5', 'tv_smart_living', 'smart_living', 'images/grid200x276/IhealthHS5.png',
+ '0', '0', '1', '1', '0', '0', 'iHealth', '119.90', '100.00', '5.00 &euro; 24/mesi', '5.00', 'Caratteristiche:')";
 
 
 
@@ -178,7 +180,9 @@ frontImagePath) VALUES(
 ('12','Sony Smart Band Fifa Edition',
 'images/dispositivi/smartBandSony1.png'),
 ('13','Tim Tag',
-'images/dispositivi/timTag1.png')";
+'images/dispositivi/timTag1.png'),
+('14','Ihealth HS5',
+'images/dispositivi/IhealthHS51.png')";
 
 $sqlInsert3 = 
 "INSERT INTO immaginiDevice 
@@ -277,7 +281,11 @@ $sqlInsert = "INSERT INTO specificheDevice (id, titolo, dettaglio) VALUES
 ('13', 'Resistente all’acqua', ''),
 ('13', 'Fornisce allarmi di movimento', ''),
 ('13', 'Batteria di lunga durata', ''),
-('13', 'Dimensioni:', ' 49 x 47 x 17 mm')
+('13', 'Dimensioni:', ' 49 x 47 x 17 mm'),
+('14', 'Bilancia digitale di alta qualit&agrave;', ''),
+('14', 'Compatibile con i dispositivi Apple iOS (versione iOS 5.0 o successiva)', ''),
+('14', 'Compatibile con i dispositivi Android (sistema operativo 3.0 o successivo)', ''), 
+('14', 'Comprende un servizio gratuito iHealth Cloud.', '')
 ";
 
          
