@@ -310,6 +310,7 @@ function buildSlide(nome, imagePath) {
 
     imgElement.setAttribute("src", imagePath);
     imgElement.setAttribute("alt", nome);
+    imgElement.setAttribute("onLoad", "javascript:reloadSlider();");
     
     aElement.appendChild(imgElement);
     
@@ -463,7 +464,6 @@ function buildDescription(descrizione){
 
 
 function reloadSlider(){
-    SEMICOLON.widget.loadFlexSlider();
     SEMICOLON.widget.loadFlexSlider();
 }
 
