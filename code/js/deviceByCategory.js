@@ -8,8 +8,19 @@ if(DEBUG){
     basePath = 'http://timhypermedia.altervista.org/'
 }
 
+//set the name and the url of the previous visited page
+var parametersMap = getParameters();
+    
+    filter = parametersMap['filter'];
+
 //select the right text in the menu
-$("document").ready(function(){ $('#menu_prodotti').addClass('current');});
+$("document").ready(function(){ 
+    if(parametersMap['categoria'] === 'all_devices' && parametersMap['filter'] === '[promo:1]'){
+        $('#menu_promozioni').addClass('current');
+    }else{
+        $('#menu_prodotti').addClass('current');
+    }
+});
 
 //Define the dynamic environment in which we are working
 var categoria;
@@ -20,11 +31,6 @@ var categoria;
 /************************   DYNAMIC GO BACK   ************************/
 /*********************************************************************/
 
-
-//set the name and the url of the previous visited page
-var parametersMap = getParameters();
-    
-    filter = parametersMap['filter'];
 
 //In this case the page has been called by the menu
 if(filter != undefined){
