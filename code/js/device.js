@@ -1,4 +1,15 @@
-var DEBUG = false;
+var DEBUG = true;
+
+//path for phonegap that needs the real path and not the relative
+
+var basePath;
+
+if(DEBUG){
+    basePath = '';
+}else{
+    basePath = 'http://timhypermedia.altervista.org/'
+}
+
 
 //// the following 3 rows are shared in the js of each page with different parameters
 //load the shared menu 
@@ -87,15 +98,6 @@ function contains(str,sub_str){
 /************************   AJAX REQUESTS   **************************/
 /*********************************************************************/
 
-//path for phonegap that needs the real path and not the relative
-
-var basePath;
-
-if(DEBUG){
-    basePath = '';
-}else{
-    basePath = 'http://timhypermedia.altervista.org/'
-}
 
 
 /************************   AJAX GALLERY REQUESTS   **************************/
@@ -123,6 +125,7 @@ function ajaxGallery(id){
             
             //SERVE AD RICARICARE LO SLIDER NEL MOMENTO IN CUI SI RIACCEDE AD UNA PAGINA GIA VISTA!
             SEMICOLON.widget.loadFlexSlider();
+            // TODO reload image
         },
         error: function(request,error)
         {

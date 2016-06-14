@@ -1,4 +1,4 @@
-var DEBUG = false;
+var DEBUG = true;
 
 //// the following 3 rows are shared in the js of each page with different parameters
 //load the shared menu 

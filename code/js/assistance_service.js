@@ -1,4 +1,16 @@
-var DEBUG = false;
+var DEBUG = true;
+
+//path for phonegap that needs the real path and not the relative
+
+var basePath;
+
+if(DEBUG){
+    basePath = '';
+}else{
+    basePath = 'http://timhypermedia.altervista.org/'
+}
+
+
 //// the following 3 rows are shared in the js of each page with different parameters
 //load the shared menu 
 $("#header").load("shared-menu.html");
@@ -55,15 +67,6 @@ function placeFooter() {
 /************************   AJAX REQUESTS   **************************/
 /*********************************************************************/
 
-//path for phonegap that needs the real path and not the relative
-
-var basePath;
-
-if(DEBUG){
-    basePath = '';
-}else{
-    basePath = 'http://timhypermedia.altervista.org/'
-}
 
 //async ajax request
 $("document").ready(function() {

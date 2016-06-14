@@ -1,4 +1,12 @@
-var DEBUG = false;
+var DEBUG = true;
+   
+var basePath = "";
+
+if(DEBUG){
+    basePath = "";
+}else{
+    basePath = 'http://timhypermedia.altervista.org/'
+}
 
 //// the following 3 rows are shared in the js of each page with different parameters
 //load the shared menu 
@@ -47,8 +55,8 @@ var categoria;
     }else{
         filter = getCookie(categoria);
     }
-    
-    
+
+
     
     
     setPageTitle(titleForThePage);
@@ -94,14 +102,6 @@ function helperOrderingNotSpecifiedIntoTheFilter(filter){
 }
 
 /*****************   AJAX GRID PRODUCT REQUESTS   ********************/
-
-var basePath;
-
-if(DEBUG){
-    basePath = '';
-}else{
-    basePath = 'http://timhypermedia.altervista.org/'
-}
 
 
 function ajaxGridProduct(phpFile, categoria, filter){
