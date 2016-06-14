@@ -11,14 +11,6 @@ if(DEBUG){
 }
 
 
-//// the following 3 rows are shared in the js of each page with different parameters
-//load the shared menu 
-$("#header").load("shared-menu.html");
-//load the shared footer
-$("#footer").load("shared-footer.html");
-
-
-
 
 //set the name and the url of the previous visited page
 setDynamicGoBack();
@@ -38,6 +30,9 @@ function setDynamicGoBack(){
         $("#ass_goto").attr("href","javascript:history.back()");
     }else if(contains(previous_url,"device.html") === true){
         $("#ass_goto").html("Vai al device precedente");
+        $("#ass_goto").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"menu.highlights.html") === true){
+        $("#ass_goto").html("Vai a <b>Highlights</b>");
         $("#ass_goto").attr("href","javascript:history.back()");
     }else { //set default link if 
         $("#ass_goto").html("Vai a <b>Servizi di Assistenza</b>");
