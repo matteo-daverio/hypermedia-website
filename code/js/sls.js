@@ -48,20 +48,20 @@ $(selector).on('click', function(){
 /*********************************************************************/
 
 //path for phonegap that needs the real path and not the relative
-
 var basePath;
-
 if(DEBUG){
     basePath = '';
 }else{
     basePath = 'http://timhypermedia.altervista.org/'
 }
 
-//async ajax request
+var parametersMap = getParameters();
+var id = parametersMap['id'];
+
+//async ajax requests
 $("document").ready(function(){
     //retrive the html par
-    var parametersMap = getParameters();
-    var id = parametersMap['id'];
+    
     //exit if no par
     if(id === null || id === ""){
         console.log("sls: no id!");
@@ -86,22 +86,7 @@ $("document").ready(function(){
             console.log(request+":"+error);
         }
     });
-    //get the list of devices for the activation
-    $.ajax({
-        method: "GET",
-        //dataType: "json", //type of data
-        crossDomain: true,
-        url: basePath + "db/sql_sls.php", //Relative or absolute path to file.php file
-        data: {id:id , devices:true},
-        success: function(response) {
-            //parse the json and get an array
-            var arrayRes = $.parseJSON(response);
-            generateLinksForDevices(arrayRes);
-        },
-        error: function(request,error){
-            console.log(request+":"+error);
-        }
-    });
+
     //get the faq about the services
     $.ajax({
         method: "GET",
@@ -121,6 +106,28 @@ $("document").ready(function(){
         }
     });
 });
+
+
+//retrive the possible correlated device
+function getTheDeviceForActivation(){
+    //get the list of devices for the activation
+    $.ajax({
+        method: "GET",
+        //dataType: "json", //type of data
+        crossDomain: true,
+        url: basePath + "db/sql_sls.php", //Relative or absolute path to file.php file
+        data: {id:id , devices:true},
+        success: function(response) {
+            //parse the json and get an array
+            var arrayRes = $.parseJSON(response);
+            generateLinksForDevices(arrayRes);
+        },
+        error: function(request,error){
+            console.log(request+":"+error);
+        }
+    });
+}
+
 
 function fillPage(titolo,categoria,pathImg){
     //load the shared js with common function
@@ -163,6 +170,10 @@ function setLinkDeviceWithIntermediatePage(act_device_correlati_nome,act_device_
         linkIntemedio.setAttribute("href",act_device_correlati_link);
         linkIntemedio.innerHTML = act_device_correlati_nome;
          $("#sls_list_devices").append(linkIntemedio);
+    }
+    else{
+        //only if there is no an intermediate link i must do this call and retrive the possible correlated device
+        getTheDeviceForActivation();
     }
 }
 
