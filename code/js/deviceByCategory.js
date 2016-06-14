@@ -11,12 +11,53 @@ if(DEBUG){
 //select the right text in the menu
 $("document").ready(function(){ $('#menu_prodotti').addClass('current');});
 
-
 //Define the dynamic environment in which we are working
 var categoria;
 
 //when the filter is created at each activable row is added an incremental id to haldle the retrive fase
 
+/*********************************************************************/
+/************************   DYNAMIC GO BACK   ************************/
+/*********************************************************************/
+
+
+//set the name and the url of the previous visited page
+var parametersMap = getParameters();
+    
+    filter = parametersMap['filter'];
+
+//In this case the page has been called by the menu
+if(filter != undefined){
+     setDynamicGoBackAndDynamicSelectionMenu();
+}
+
+function setDynamicGoBackAndDynamicSelectionMenu(){
+    var previous_url = document.referrer;
+    //alert(previous_url);
+    if(contains(previous_url,"sls.html") === true){
+        $("#dynamic_link").html("Vai allo <b>Smart Life precedente</b>");
+        $("#dynamic_link").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"page.assistance.html") === true){
+        $("#dynamic_link").html("Vai al <b>Servizio di assistenza precedente</b>");
+        $("#dynamic_link").attr("href","javascript:history.back()");
+    }else if(contains(previous_url,"promozioni.html") === true){
+        $("#dynamic_link").html("Vai alle <b>Promozioni</b>");
+        $("#dynamic_link").attr("href","javascript:history.back()");
+        //change the selected menu
+        $("document").ready(function(){ 
+            $('#menu_prodotti').removeClass('current');
+            $('#menu_promozioni').addClass('current');
+        });
+    }else { //set default link if 
+        $("#dynamic_link").html("Vai a <b>Tutti i servizi</b>");
+        $("#dynamic_link").attr("href", "prodotti.html"); 
+    }
+}
+
+//check if str contain sub_str
+function contains(str,sub_str){
+   return (str.indexOf(sub_str) > -1);
+}
 
 
 /*********************************************************************/
@@ -907,40 +948,6 @@ function emptyFilter(){
     window.location.href = "deviceByCategory.html?categoria=" + categoria;
 }
 
-/*********************************************************************/
-/************************   DYNAMIC GO BACK   ************************/
-/*********************************************************************/
-
-
-//set the name and the url of the previous visited page
-var parametersMap = getParameters();
-    
-    filter = parametersMap['filter'];
-
-//In this case the page has been called by the menu
-if(filter != undefined){
-    setDynamicGoBack();
-}
-
-function setDynamicGoBack(){
-    var previous_url = document.referrer;
-    //alert(previous_url);
-    if(contains(previous_url,"sls.html") === true){
-        $("#dynamic_link").html("Vai allo <b>Smart Life precedente</b>");
-        $("#dynamic_link").attr("href","javascript:history.back()");
-    }else if(contains(previous_url,"page.assistance.html") === true){
-        $("#dynamic_link").html("Vai al <b>Servizio di assistenza precedente</b>");
-        $("#dynamic_link").attr("href","javascript:history.back()");
-    }else { //set default link if 
-        $("#dynamic_link").html("Vai a <b>Tutti i servizi</b>");
-        $("#dynamic_link").attr("href", "prodotti.html"); 
-    }
-}
-
-//check if str contain sub_str
-function contains(str,sub_str){
-   return (str.indexOf(sub_str) > -1);
-}
 
 
 /*********************************************************************/
