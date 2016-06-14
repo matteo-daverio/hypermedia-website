@@ -108,6 +108,7 @@ function ajaxGallery(id){
                                              resultArray[0].sideImagePath, 
                                              resultArray[0].backImagePath); 
             
+            $("#blank_gallery").remove(); 
             $("#deviceGallery").append(galleryImages);
             
             //SERVE AD RICARICARE LO SLIDER NEL MOMENTO IN CUI SI RIACCEDE AD UNA PAGINA GIA VISTA!
