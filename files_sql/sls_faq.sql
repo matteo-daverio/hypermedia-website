@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 09, 2016 at 06:17 PM
+-- Generation Time: Jun 14, 2016 at 11:20 PM
 -- Server version: 5.7.12-0ubuntu1
 -- PHP Version: 7.0.4-7ubuntu2.1
 
@@ -46,8 +46,10 @@ INSERT INTO `sls_faq` (`id`, `id_sls`, `faq_title`, `faq_content`) VALUES
 (3, 0, 'Quale garanzia hanno i prodotti presenti Pack TIM Tag?', 'I prodotti commercializzati da TIM sono assistiti, per il periodo di vigenza della garanzia, direttamente dai costruttori tramite i loro Centri di Assistenza. Le condizioni di garanzia sono contenute all\'interno della confezione contenente il Modem Internet.\r\n'),
 (4, 2, 'Quanto dura la garanzia?', ' La garanzia per vizi e/o difetti e/o malfunzionamenti decorre dalla consegna del Prodotto, \r\nha una validità di 2 (due) anni e \r\nviene \r\nassicurata da TIM\r\n, anche avvalendosi di \r\nsoggetti  terzi  da  essa  inca\r\nricati,  nell’ambito  del  territorio  italiano. '),
 (5, 2, 'È possibile dismettere il servizio?', ' Il Cliente, in conformità alle disposizioni normative in materia di contratti a distanza e di contratti negoziati \r\nfuori dai locali commerciali, può esercitare anche il diritto di \r\nrecesso  nelle  forme  e  modalità  prev\r\niste  dagli\r\n  articoli  52  e  seguenti  del  D.Lgs  206/2005.'),
-(6, 1, 'TODO', 'TODO'),
-(7, 1, 'TODO', 'TODO');
+(6, 1, 'Quali sono le condizioni per disattivare il servizio?', 'Il servizio è disattivabile a partire dal primo mese di utilizzo.\r\nI costi per la disattivazione sono quelli previsti dal contratto specifico.'),
+(7, 1, 'In caso di danneggiamento del prodotto il servizio decade?', 'Se la casistica rientra nelle condizioni di garanzia del prodotti automaticamente decade anche il servizio.<br>\r\nEsso sarà poi riattivabile gratuitamente entro 1 anno.'),
+(8, 3, 'Quanto è sicuro?', 'Avendo sempre accesso allo storico delle firme e ricevendo una notifica per ogniuna di esse , siamo in grado di garantire una pronta risposta per ogni problema.'),
+(9, 3, 'Dopo quanto decade il servizio?', 'Il servizio si rinnoverà automaticamente ogni mese, fino a disattivazione.');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
