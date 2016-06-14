@@ -62,13 +62,13 @@ function setDynamicGoBack(){
         $("#VaiALink").html("Vai a <b>Outlet</b>");
         $("#VaiALink").attr("href","javascript:history.back()");
     }else if(contains(previous_url,"sls.html") === true){
-        $("#VaiALink").html("Vai allo Smart Life precedente");
+        $("#VaiALink").html("Vai allo <b>Smart Life precedente</b>");
         $("#VaiALink").attr("href","javascript:history.back()");
     }else if(contains(previous_url,"page.assistance.html") === true){
-        $("#VaiALink").html("Vai al Servizio di Assistenza precedente");
+        $("#VaiALink").html("Vai al <b>Servizio di Assistenza precedente</b>");
         $("#VaiALink").attr("href","javascript:history.back()");
     }else { //set default link if 
-        $("#VaiALink").html("Vai a tutti i Prodotti");
+        $("#VaiALink").html("Vai a <b>Tutti i Prodotti</b>");
         $("#VaiALink").attr("href", "prodotti.html"); 
     }
 }
