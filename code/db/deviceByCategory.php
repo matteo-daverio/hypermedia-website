@@ -1,4 +1,5 @@
  <?php
+header('Access-Control-Allow-Origin: *');
 //set the include php class
 include "secure_db.php";
 //create the obj

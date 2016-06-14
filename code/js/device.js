@@ -1,4 +1,4 @@
-var DEBUG = true;
+var DEBUG = false;
 
 //path for phonegap that needs the real path and not the relative
 
@@ -21,8 +21,6 @@ $("document").ready(function(){
     var id = parametersMap['id'];
     
     var categoria = parametersMap['categoria'];
-    
-    console.log(categoria);
     
     if(id === null || id === '' || categoria ===null || categoria === ''){
         console.log("id nulo!");
@@ -117,8 +115,8 @@ function ajaxGallery(id){
             $("#deviceGallery").append(galleryImages);
             
             //SERVE AD RICARICARE LO SLIDER NEL MOMENTO IN CUI SI RIACCEDE AD UNA PAGINA GIA VISTA!
-            SEMICOLON.widget.loadFlexSlider();
-            // TODO reload image
+            
+            reloadSlider();
         },
         error: function(request,error)
         {
@@ -276,10 +274,6 @@ function buildGallery(alt, frontImagePath, sideImagePath, backImagePath){
                                                     
     divElement.setAttribute("class", "slider-wrap");
     divElement.setAttribute("data-lightbox", "gallery");
-    
-    console.log(frontImagePath);
-    console.log(sideImagePath);
-    console.log(backImagePath);
     
     var Slider1 = buildSlide(alt, frontImagePath);
     divElement.appendChild(Slider1);
@@ -468,6 +462,11 @@ function buildDescription(descrizione){
 }
 
 
+function reloadSlider(){
+    SEMICOLON.widget.loadFlexSlider();
+    SEMICOLON.widget.loadFlexSlider();
+}
+
 
 //for each device correlated to this service generate a link in the activation section
 function generateLinksForDevices(arrayRes, idNoService, idDiv, page){
@@ -484,6 +483,10 @@ function generateLinksForDevices(arrayRes, idNoService, idDiv, page){
 
 //for each device correlated to this service generate a link in the activation section MATTEO DB NAME TITLE
 function generateLinksForDevices2(arrayRes, idNoService, idDiv, page){
+    if(arrayRes === null){
+        return;
+    }
+    
     if ( arrayRes.length > 0){
         //hide the default message
         $(idNoService).hide();
@@ -539,8 +542,6 @@ function getParameters(){
         
         parametersMap[pair[0]] = pair[1];
     }
-    
-    console.log(parametersMap);
     
     return parametersMap;
 }
