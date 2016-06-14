@@ -1,3 +1,4 @@
+var DEBUG = false;
 //// the following 3 rows are shared in the js of each page with different parameters
 //load the shared menu 
 $("#header").load("shared-menu.html");
@@ -50,7 +51,19 @@ function placeFooter() {
     $("document").ready(function(){ $('#menu_assistenza').addClass('current');}); 
 }
 
+/*********************************************************************/
+/************************   AJAX REQUESTS   **************************/
+/*********************************************************************/
 
+//path for phonegap that needs the real path and not the relative
+
+var basePath;
+
+if(DEBUG){
+    basePath = '';
+}else{
+    basePath = 'http://timhypermedia.altervista.org/'
+}
 
 //async ajax request
 $("document").ready(function() {
@@ -59,7 +72,7 @@ $("document").ready(function() {
         method: "GET",
         //dataType: "text", //type of data
         crossDomain: true,
-        url: "db/sql_page_assistance.php", //Relative or absolute path to file.php file
+        url: basePath + "db/sql_page_assistance.php", //Relative or absolute path to file.php file
         data: {Id: id},
         success: function (response) { 
             //parse the json and get an array where the index is the row and the .User is the name of the column

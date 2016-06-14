@@ -1,6 +1,7 @@
 /**
 *  shared function for all the page of smart life services
 */
+var DEBUG = false;
 
 
 //get the title of the page base on the category 
@@ -23,6 +24,19 @@ function getTitlePageFromCategory(categ,long){
     return tit;
 }
 
+/*********************************************************************/
+/************************   AJAX REQUESTS   **************************/
+/*********************************************************************/
+
+//path for phonegap that needs the real path and not the relative
+
+var basePath;
+
+if(DEBUG){
+    basePath = '';
+}else{
+    basePath = 'http://timhypermedia.altervista.org/'
+}
 
 //receive the parameter from the caller and do an asyn ajax get request with par type
 function asyncAjaxRequestSls(categ){
@@ -32,7 +46,7 @@ function asyncAjaxRequestSls(categ){
             method: "GET",
             //dataType: "json", //type of data
             crossDomain: true,
-            url: "db/sql_sls.php", //Relative or absolute path to file.php file
+            url: basePath + "db/sql_sls.php", //Relative or absolute path to file.php file
             data: {categoria:categ},
             success: function(response) {
                 //parse the json and get an array
@@ -55,7 +69,7 @@ function asyncAjaxRequestSlsPromotion(){
             method: "GET",
             //dataType: "json", //type of data
             crossDomain: true,
-            url: "db/sql_sls.php", //Relative or absolute path to file.php file
+            url: basePath + "db/sql_sls.php", //Relative or absolute path to file.php file
             data: {prom:true},
             success: function(response) {
                 //parse the json and get an array

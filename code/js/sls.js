@@ -1,3 +1,4 @@
+var DEBUG = false;
 
 //// the following 3 rows are shared in the js of each page with different parameters
 //load the shared menu 
@@ -47,6 +48,19 @@ $(selector).on('click', function(){
     $(this).addClass('active');
 });
 
+/*********************************************************************/
+/************************   AJAX REQUESTS   **************************/
+/*********************************************************************/
+
+//path for phonegap that needs the real path and not the relative
+
+var basePath;
+
+if(DEBUG){
+    basePath = '';
+}else{
+    basePath = 'http://timhypermedia.altervista.org/'
+}
 
 //async ajax request
 $("document").ready(function(){
@@ -63,7 +77,7 @@ $("document").ready(function(){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: "db/sql_sls.php", //Relative or absolute path to file.php file
+        url: basePath + "db/sql_sls.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
             //parse the json and get an array
@@ -82,7 +96,7 @@ $("document").ready(function(){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: "db/sql_sls.php", //Relative or absolute path to file.php file
+        url: basePath + "db/sql_sls.php", //Relative or absolute path to file.php file
         data: {id:id , devices:true},
         success: function(response) {
             //parse the json and get an array
@@ -98,7 +112,7 @@ $("document").ready(function(){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: "db/sql_sls.php", //Relative or absolute path to file.php file
+        url: basePath + "db/sql_sls.php", //Relative or absolute path to file.php file
         data: {id:id , faq:true},
         success: function(response) {
             //parse the json and get an array

@@ -1,10 +1,10 @@
+var DEBUG = false;
 
 //// the following 3 rows are shared in the js of each page with different parameters
 //load the shared menu 
 $("#header").load("shared-menu.html");
 //load the shared footer
 $("#footer").load("shared-footer.html");
-
 
 //async ajax request
 $("document").ready(function(){
@@ -87,6 +87,16 @@ function contains(str,sub_str){
 /************************   AJAX REQUESTS   **************************/
 /*********************************************************************/
 
+//path for phonegap that needs the real path and not the relative
+
+var basePath;
+
+if(DEBUG){
+    basePath = '';
+}else{
+    basePath = 'http://timhypermedia.altervista.org/'
+}
+
 
 /************************   AJAX GALLERY REQUESTS   **************************/
 
@@ -96,7 +106,7 @@ function ajaxGallery(id){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: "db/sql_device.php", //Relative or absolute path to file.php file
+        url: basePath + "db/sql_device.php", //Relative or absolute path to file.php file
         data: {id: id, query:'gallery'},
         success: function(response) { 
             
@@ -132,7 +142,7 @@ function ajaxDescription(id){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: "db/sql_device.php", //Relative or absolute path to file.php file
+        url: basePath + "db/sql_device.php", //Relative or absolute path to file.php file
         data: {id: id, query:'description'},
         success: function(response) { 
             
@@ -179,7 +189,7 @@ function ajaxSpecificationsList(id){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: "db/sql_device.php", //Relative or absolute path to file.php file
+        url: basePath + "db/sql_device.php", //Relative or absolute path to file.php file
         data: {id: id, query:'specification'},
         success: function(response) { 
             
@@ -210,7 +220,7 @@ function ajaxSmartLifeServices(id){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: "db/sql_device.php", //Relative or absolute path to file.php file
+        url: basePath + "db/sql_device.php", //Relative or absolute path to file.php file
         data: {id: id, query:'sls'},
         success: function(response) { 
             
@@ -235,7 +245,7 @@ function ajaxAssistanceServices(id){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: "db/sql_device.php", //Relative or absolute path to file.php file
+        url: basePath + "db/sql_device.php", //Relative or absolute path to file.php file
         data: {id: id, query:'assistance'},
         success: function(response) { 
             

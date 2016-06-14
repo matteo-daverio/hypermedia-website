@@ -1,3 +1,5 @@
+var DEBUG = false;
+
 //// the following 3 rows are shared in the js of each page with different parameters
 //load the shared menu 
 $("#header").load("shared-menu.html");
@@ -93,6 +95,15 @@ function helperOrderingNotSpecifiedIntoTheFilter(filter){
 
 /*****************   AJAX GRID PRODUCT REQUESTS   ********************/
 
+var basePath;
+
+if(DEBUG){
+    basePath = '';
+}else{
+    basePath = 'http://timhypermedia.altervista.org/'
+}
+
+
 function ajaxGridProduct(phpFile, categoria, filter){
     
     filter = helperOrderingNotSpecifiedIntoTheFilter(filter);
@@ -101,7 +112,7 @@ function ajaxGridProduct(phpFile, categoria, filter){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: phpFile, //Relative or absolute path to file.php file
+        url: basePath + phpFile, //Relative or absolute path to file.php file
         data: {query: 'gridProducts', categoria: categoria, filter: filter},
         success: function(response) { 
             
@@ -134,7 +145,7 @@ function ajaxBrandFilter(phpFile, categoria, filter){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: phpFile, //Relative or absolute path to file.php file
+        url: basePath + phpFile, //Relative or absolute path to file.php file
         data: {query: "brands", categoria: categoria},
         success: function(response) { 
             
@@ -166,7 +177,7 @@ function ajaxBuyModeFilter(phpFile, categoria, filter){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: phpFile, //Relative or absolute path to file.php file
+        url: basePath + phpFile, //Relative or absolute path to file.php file
         data: {query: "buyMode", categoria: categoria},
         success: function(response) { 
             
@@ -195,7 +206,7 @@ function ajaxShowOnlyFilter(phpFile, categoria, filter){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: phpFile, //Relative or absolute path to file.php file
+        url: basePath + phpFile, //Relative or absolute path to file.php file
         data: {query: "showMode", categoria: categoria},
         success: function(response) { 
             
@@ -221,7 +232,7 @@ function ajaxCategoryFilter(phpFile, categoria, filter){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: phpFile, //Relative or absolute path to file.php file
+        url: basePath + phpFile, //Relative or absolute path to file.php file
         data: {query: "specificCategory", categoria: categoria },
         success: function(response) { 
             
@@ -258,7 +269,7 @@ function ajaxMaxPriceFilter(phpFile, categoria, filter){
         method: "GET",
         //dataType: "json", //type of data
         crossDomain: true,
-        url: phpFile, //Relative or absolute path to file.php file
+        url: basePath + phpFile, //Relative or absolute path to file.php file
         data: {query: "maxPrice", categoria: categoria },
         success: function(response) { 
             
