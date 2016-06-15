@@ -115,8 +115,8 @@ function ajaxGallery(id){
             $("#deviceGallery").append(galleryImages);
             
             //SERVE AD RICARICARE LO SLIDER NEL MOMENTO IN CUI SI RIACCEDE AD UNA PAGINA GIA VISTA!
-            
-            reloadSlider();
+            SEMICOLON.initialize.imagePreload( '.portfolio-item:not(:has(.fslider)) img' );
+          
         },
         error: function(request,error)
         {
@@ -310,7 +310,7 @@ function buildSlide(nome, imagePath) {
 
     imgElement.setAttribute("src", imagePath);
     imgElement.setAttribute("alt", nome);
-    imgElement.setAttribute("onLoad", "javascript:reloadSlider();");
+    imgElement.setAttribute("onload", "javascript:reloadSlider();");
     
     aElement.appendChild(imgElement);
     
@@ -464,13 +464,15 @@ function buildDescription(descrizione){
 
 
 function reloadSlider(){
-    console.log("Slider Refresh");
     SEMICOLON.widget.loadFlexSlider();
 }
 
 
 //for each device correlated to this service generate a link in the activation section
 function generateLinksForDevices(arrayRes, idNoService, idDiv, page){
+	if(arrayRes === null){
+        return;
+    }
     if ( arrayRes.length > 0){
         //hide the default message
         $(idNoService).hide();
