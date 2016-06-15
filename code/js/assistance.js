@@ -1,4 +1,4 @@
-var DEBUG = true;
+var DEBUG = false;
 var windowHeight = $(window).height();
 var windowWidth = $(window).width();
 var epsilon = 0.1;
