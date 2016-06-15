@@ -55,10 +55,11 @@ class SecureDB {
         public function query($query) {
             // Connect to the database
             $connection = $this -> connect();
-
             // Query the database
             $result = $connection -> query($query);
-
+ 
+            //we must set this header to allow to retrive data cross domain (otherwise it doesn't work with phonegap)
+            header('Access-Control-Allow-Origin: *');
             return $result;
         }
 
