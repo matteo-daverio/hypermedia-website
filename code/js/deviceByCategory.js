@@ -495,7 +495,11 @@ function buildDivProductImage(id, nome, gridImagePath, categoria) {
     
     aElement.setAttribute("href", "page.device.html?id=" + id);
     imgElement.setAttribute("src", gridImagePath);
-    imgElement.setAttribute("height", "270");
+    imgElement.setAttribute("display", "block");
+    imgElement.setAttribute("max-width", "200px");
+    imgElement.setAttribute("max-height", "270px");
+    imgElement.setAttribute("width", "auto");
+    imgElement.setAttribute("height", "auto");
     imgElement.setAttribute("alt", nome);
     
     aElement.appendChild(imgElement);

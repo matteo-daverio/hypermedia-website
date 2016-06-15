@@ -1,3 +1,5 @@
+var windowHeight = $(window).height();
+var windowWidth = $(window).width();
 var DEBUG = false;
 
 //path for phonegap that needs the real path and not the relative
@@ -16,6 +18,8 @@ $("document").ready(function(){
     //select the right text in the menu
     $('#menu_prodotti').addClass('current');
    
+    placeFooter();
+    
     var parametersMap = getParameters();
     
     var id = parametersMap['id'];
@@ -35,6 +39,32 @@ $("document").ready(function(){
     ajaxAssistanceServices(id);
     
     
+});
+
+/*********************************************************************/
+/*****************   RESIZE FOOTER POSITION   ************************/
+/*********************************************************************/
+
+jQuery(window).resize(function () {
+    
+    console.log("Resize");
+    
+    if( 
+        (Math.abs( (windowHeight - $(window).height()) / (windowHeight + $(window).height())) < epsilon &&
+        Math.abs( (windowWidth - $(window).width()) / (windowWidth + $(window).width())) < epsilon ) && 
+        Math.abs( (windowHeight - $(window).height()) / (windowHeight + $(window).height())) !== 0 &&
+        Math.abs( (windowWidth - $(window).width()) / (windowWidth + $(window).width())) !== 0 
+        ){
+        return;
+    }
+    
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+       && windowWidth === $(window).width()){
+        return;
+    }else{
+        windowWidth = $(window).width();
+    }
+    placeFooter();
 });
 
 
@@ -117,6 +147,7 @@ function ajaxGallery(id){
             //SERVE AD RICARICARE LO SLIDER NEL MOMENTO IN CUI SI RIACCEDE AD UNA PAGINA GIA VISTA!
             SEMICOLON.initialize.imagePreload( '.portfolio-item:not(:has(.fslider)) img' );
           
+            placeFooter();
         },
         error: function(request,error)
         {
@@ -160,7 +191,7 @@ function ajaxDescription(id){
             //Device Description
             var deviceDesc = buildDescription(resultArray[0].descrizione);
             $("#deviceDescription").append(deviceDesc);
-            
+            placeFooter();
             
             
         },
@@ -198,6 +229,7 @@ function ajaxSpecificationsList(id){
                 document.getElementById("specificationsList").appendChild(specList);
             }
             
+            placeFooter();
         },
         error: function(request,error)
         {
@@ -221,7 +253,9 @@ function ajaxSmartLifeServices(id){
             //parse the json and get an array where the index is the row and the .User is the name of the column
             var resultArray = $.parseJSON(response);
             
-           generateLinksForDevices(resultArray, "#device-no-sls", "#slsListDiv", "sls.html?id=");
+            generateLinksForDevices(resultArray, "#device-no-sls", "#slsListDiv", "sls.html?id=");
+        
+            placeFooter();
             
         },
         error: function(request,error)
@@ -248,6 +282,7 @@ function ajaxAssistanceServices(id){
             
             generateLinksForDevices2(resultArray, "#device-no-assistance", "#serviziAssistenzaListDiv", "page.assistance.html?Id=");
 
+            placeFooter();
             
         },
         error: function(request,error)
@@ -547,4 +582,23 @@ function getParameters(){
     }
     
     return parametersMap;
+}
+
+/*********************************************************************/
+/**************  FOOTER POSITION HELPER FUNCTION   *****************/
+/*********************************************************************/
+
+// position the footer in the end of the page
+function placeFooter() {
+    $('#footer').css({ 'margin-top': 0 });
+    windowHeight = $(window).height();
+    windowWidth = $(window).width();
+    var windowH = $(window).height();
+    var wrapperH = $('#header').height() + $('#page_title').height() + $('#content').height();
+    console.log(windowH);
+    console.log(wrapperH);
+    if( windowH > wrapperH ) {
+        
+        $('#footer').css({ 'margin-top': ( windowH - wrapperH ) });        
+    }
 }
