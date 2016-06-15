@@ -27,7 +27,7 @@ jQuery(window).resize(function () {
     placeFooter();
 });
 
-// position the footer in the end of the page
+// calculate the position of the footer
 function placeFooter() {
     $('#footer').css({ 'margin-top': 0 });
     windowHeight = $(window).height();
@@ -38,5 +38,5 @@ function placeFooter() {
         $('#footer').css({ 'margin-top': ( windowH - wrapperH ) });        
     }
     //when page is complete select the current item of the menu
-    $("document").ready(function(){ $('#menu_highlights').addClass('current');}); 
+    $("document").ready(function(){ $('#menu_assistenza').addClass('current');}); 
 }
