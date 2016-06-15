@@ -1,7 +1,7 @@
 /**
 *  shared function for all the page of smart life services
 */
-var DEBUG = true;
+var DEBUG = false;
 
 //path for phonegap that needs the real path and not the relative
 
