@@ -1,3 +1,7 @@
+/*
+* Functions to handle the effect in the promozione_sls.html
+*/
+
 //when page is complete select the current item of the menu
 $("document").ready(function(){ $('#menu_promozioni').addClass('current');}); 
 

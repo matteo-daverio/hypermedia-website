@@ -1,10 +1,11 @@
 /**
-*  shared function for all the page of smart life services
+*  Shared function for all the page of smart life services  (sls_list.html and promozione_sls.html)
 */
+
+//debug var to test with local or remote php call 
 var DEBUG = false;
 
 //path for phonegap that needs the real path and not the relative
-
 var basePath;
 
 if(DEBUG){
@@ -54,6 +55,8 @@ function asyncAjaxRequestSls(categ){
                 //parse the json and get an array
                 var arrayRes = $.parseJSON(response);
                 handleResult(arrayRes);
+                //after the page is filled call the function to set the position of the footer              
+                placeFooter();
             },
             error: function(request,error)
             {
@@ -77,6 +80,9 @@ function asyncAjaxRequestSlsPromotion(){
                 //parse the json and get an array
                 var arrayRes = $.parseJSON(response);
                 handleResult(arrayRes);
+                
+                //after the page is filled call the function to set the position of the footer   
+                placeFooter();
             },
             error: function(request,error)
             {
@@ -169,8 +175,6 @@ function addDivProduct(id,title,attivabile,desciption){
     return divElement;
 }
 
-
-
 /*
 EXAMPLE of the built item
 
@@ -189,4 +193,39 @@ EXAMPLE of the built item
 </div>
 
 */
-       
+
+
+
+
+//when the window change the event is called and the footer is re-placed
+jQuery(window).resize(function () {
+    if( 
+        (Math.abs( (windowHeight - $(window).height()) / (windowHeight + $(window).height())) < epsilon &&
+        Math.abs( (windowWidth - $(window).width()) / (windowWidth + $(window).width())) < epsilon ) && 
+        Math.abs( (windowHeight - $(window).height()) / (windowHeight + $(window).height())) !== 0 &&
+        Math.abs( (windowWidth - $(window).width()) / (windowWidth + $(window).width())) !== 0 
+        ){
+        return;
+    }
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+       && windowWidth === $(window).width()){
+        return;
+    }else{
+        windowWidth = $(window).width();
+    }
+    placeFooter();
+});
+
+
+// calculate and set the position of the footer
+function placeFooter() {
+    $('#footer').css({ 'margin-top': 0 });
+    windowHeight = $(window).height();
+    windowWidth = $(window).width();
+    var windowH = $(window).height();
+    var wrapperH = $('#header').height() + $('#page_title').height() + $('#content').height();
+    if( windowH > wrapperH ) {
+        $('#footer').css({ 'margin-top': ( windowH - wrapperH ) });        
+    }
+}

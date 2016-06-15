@@ -1,4 +1,8 @@
 <?php
+/*
+* Shared class to handle in a secure way the connection and the query to the db with php
+*/
+
 class SecureDB {
         // The database connection
         protected static $connection;

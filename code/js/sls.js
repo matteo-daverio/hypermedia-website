@@ -1,3 +1,8 @@
+/*
+* Functions to handle the effect in the sls.html 
+*/
+
+//debug var to test with local or remote php call 
 var DEBUG = false;
 
 //when page is complete select the current item of the menu
