@@ -423,11 +423,11 @@ function buildPrezzo(prezzo, promo, prezzoScontato, noleggio, prezzoANoleggio, a
         divElement.appendChild(hElement);
         
         var delElement = document.createElement("DEL");
-        delElement.innerHTML = prezzo + "&euro;" + "&nbsp; " + "&nbsp;";
+        delElement.innerHTML = prezzo + "&euro;";
         divElement.appendChild(delElement);
         
         var prezzoIns = document.createElement("INS");
-        prezzoIns.innerHTML = prezzoScontato + "&euro;";
+        prezzoIns.innerHTML = "&nbsp;" + prezzoScontato + "&euro;";
     
         divElement.appendChild(prezzoIns);
         
