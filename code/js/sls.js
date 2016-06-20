@@ -46,6 +46,8 @@ var selector = '.nav li';
 $(selector).on('click', function(){
     $(selector).removeClass('active');
     $(this).addClass('active');
+    //recalculate the position of the footer
+    placeFooter();
 });
 
 /*********************************************************************/
@@ -277,4 +279,44 @@ function getParameters(){
         parametersMap[pair[0]] = pair[1];
     }
     return parametersMap;
+}
+
+
+/*********************************************************************/
+/**************  SET THE POSITION OF THE FOOTER      *****************/
+/*********************************************************************/
+
+
+
+//when the window change the event is called and the footer is re-placed
+jQuery(window).resize(function () {
+    if( 
+        (Math.abs( (windowHeight - $(window).height()) / (windowHeight + $(window).height())) < epsilon &&
+        Math.abs( (windowWidth - $(window).width()) / (windowWidth + $(window).width())) < epsilon ) && 
+        Math.abs( (windowHeight - $(window).height()) / (windowHeight + $(window).height())) !== 0 &&
+        Math.abs( (windowWidth - $(window).width()) / (windowWidth + $(window).width())) !== 0 
+        ){
+        return;
+    }
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+       && windowWidth === $(window).width()){
+        return;
+    }else{
+        windowWidth = $(window).width();
+    }
+    placeFooter();
+});
+
+
+// calculate and set the position of the footer
+function placeFooter() {
+    $('#footer').css({ 'margin-top': 0 });
+    windowHeight = $(window).height();
+    windowWidth = $(window).width();
+    var windowH = $(window).height();
+    var wrapperH = $('#header').height() + $('#page_title').height() + $('#content').height();
+    if( windowH > wrapperH ) {
+        $('#footer').css({ 'margin-top': ( windowH - wrapperH ) });        
+    }
 }
