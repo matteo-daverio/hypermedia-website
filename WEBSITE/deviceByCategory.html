@@ -1,0 +1,327 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title id="page_title"></title>
+        <meta name="author" content="Alessandro Cimbelli" />
+        
+        <!-- Stylesheets
+        ============================================= -->
+        <link rel="stylesheet" href="css/header.css" type="text/css" />
+        <link rel="stylesheet" href="css/shared.css" type="text/css" />
+
+        <link rel="stylesheet" href="css/libraries/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/libraries/filter-style.css">
+        <link rel="stylesheet" href="css/libraries/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="css/libraries/font-icons.css" type="text/css" />
+        <link rel="stylesheet" href="css/libraries/animate.css" type="text/css" />
+        <link rel="stylesheet" href="css/libraries/responsive.css" type="text/css" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+    </head>
+    <body class="stretched">
+        
+        <!-- Document Wrapper
+	   ============================================= -->
+	   <div id="wrapper" class="clearfix">
+
+            <!-- Header
+            ============================================= -->
+            <header id="header" class="full-header">
+                <div id="header-wrap">
+                    <div id="includedContent2" class="container clearfix">
+                        <div id="primary-menu-trigger"> <i class="icon-reorder"></i></div>
+
+                        <!-- Logo
+                        ============================================= -->
+                        <div id="logo">
+                            <a href="index.html" class="standard-logo" data-dark-logo="images/logo-tim.png"><img src="images/logo-tim.png" alt="Tim"></a>
+                            <a href="index.html" class="retina-logo" data-dark-logo="images/logo-tim.png"><img src="images/logo-tim.png" alt="Tim Logo"></a>
+                        </div>
+                        <!-- #logo end -->
+
+                        <!-- Primary Navigation
+                        ============================================= -->
+                        <nav id="primary-menu">
+                            <ul>
+                                <!-- class="current" to select the li -->
+                                <li id="menu_index">
+                                    <a href="index.html"> <div>Home</div></a>
+                                </li>
+                                <li id="menu_chisiamo">
+                                    <a href="menu.chisiamo.html"><div>Chi siamo</div></a>
+                                </li>
+                                <li id="menu_highlights">
+                                    <a href="menu.highlights.html"><div>Highlights</div></a>
+                                </li>
+                                <li id="menu_assistenza">
+                                    <a href="menu.assistenza.html"><div>Servizi di Assistenza &#x25BE;</div> </a>
+                                    <ul>
+                                        <li><a href="assistance_services.html?Id=1"><div>Gestione Linea e Servizi</div></a></li>
+                                        <li><a href="assistance_services.html?Id=2"><div>Controllo Costi e Pagamenti</div></a></li>
+                                        <li><a href="assistance_services.html?Id=3"><div>Supporto Tecnico e Configurazione</div></a></li>
+                                        <li><a href="assistance_services.html?Id=4"><div>Contenuti e Smart Life</div></a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu_prodotti">
+                                    <a href="prodotti.html"><div>Prodotti &#x25BE;</div></a>
+                                    <ul>
+                                        <li><a href="deviceByCategory.html?categoria=smartphone_telefoni"><div>Smartphone e Telefoni</div></a></li>
+                                        <li><a href="deviceByCategory.html?categoria=tablet_computer"><div>Tablet e Computer</div></a></li>
+                                        <li><a href="deviceByCategory.html?categoria=modem_networking"><div>Modem e Networking</div></a></li>
+                                        <li><a href="deviceByCategory.html?categoria=tv_smart_living"><div>TV e Smart Living</div></a></li>
+                                        <li><a href="deviceByCategory.html?categoria=outlet"><div>Outlet</div></a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu_promozioni">
+                                    <a href="promozioni.html"><div>Promozioni &#x25BE;</div></a>
+                                    <ul>
+                                        <li><a href="deviceByCategory.html?categoria=all_devices&filter=[promo:1]"><div>Dispositivi</div></a></li>
+                                        <li><a href="promozione_sls.html"><div>Smart Life Services</div></a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu_smartlife">
+                                    <a href="menu.sls.html"><div>Smart Life Services &#x25BE;</div></a>
+                                    <ul>
+                                        <li><a href="sls_list.html?categoria=tv_entertainment"><div>TV &amp; Entertainment</div></a></li>
+                                        <li><a href="sls_list.html?categoria=salute_benessere"><div>Salute e benessere</div></a></li>
+                                        <li><a href="sls_list.html?categoria=casa_famiglia"><div>Casa e Famiglia</div></a></li>
+                                        <li><a href="sls_list.html?categoria=servizi_persona"><div>Servizi alla persona</div></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- #primary-menu end -->
+                    </div>
+                </div>
+            </header><!-- #header end -->
+
+           
+        
+        <section id="page-title">
+
+			<div class="container clearfix">
+				<h1 id="deviceByCategoryTitle"></h1>
+                <ol class="breadcrumb">
+                    <a id="dynamic_link" href="prodotti.html" class="more-link">
+                        Vai a <b>Tutti i Prodotti</b>
+                    </a>
+				</ol>
+			</div>
+
+		</section><!-- #page-title end -->
+        
+           <!-- Content
+		============================================= -->
+		  <section class="pages products-page section-padding-top">
+			 <div class="container">
+                 <div class="row">
+                   <!-- filter start -->  
+					<div class="col-xs-12 col-sm-4 col-md-3 text-center">
+						<div id="fatherFilterElements" class="sidebar left-sidebar">
+							<div class="s-side-text">
+								<div class="sidebar-title">
+									<h4>Filtro</h4>
+								</div>
+                                <div class="range-slider text-bg">
+								    <form action="javascript:submitQueryWithFilterOptions()" method="get">
+										<input class="submit" type="submit" value="Filtra" style="margin-bottom: 0;">
+									</form>
+                                    <form action="javascript:emptyFilter()" method="get">
+										<input class="submit" type="submit" value="Svuota Filtro" style="color: #55acee !important; background: #fff; margin: 0;">
+									</form>
+								</div>
+							</div>
+							<div class="s-side-text">
+								<div class="sidebar-title">
+									<h4>prezzo</h4>
+								</div>
+								<div class="range-slider text-bg clearfix">
+									<form action="javascript:submitQueryWithFilterOptions()" method="get">
+										<label><input type="text" id="amount" readonly /></label>
+										<div id="slider-range"></div>
+									</form>
+								</div>
+							</div>
+                            <div class="s-side-text">
+								<div class="sidebar-title">
+									<h4>Marca</h4>
+								</div>
+								<div class="facturer text-bg">
+									<ul id="marca">
+									<!--	<li><a href="#">Apple <span class="floatright">12</span></a></li>
+										<li><a href="#">Samsung <span class="floatright">25</span></a></li>
+										<li><a href="#">Microsoft <span class="floatright">65</span></a></li>
+										<li><a href="#">LG<span class="floatright">89</span></a></li>
+										<li><a href="#">Sony<span class="floatright">65</span></a></li>
+                                        <li><a href="#">Asus<span class="floatright">65</span></a></li> Dynamic now!-->
+									</ul>
+								</div>
+							</div>
+                            <div id="specificCategoryDiv" class="s-side-text">
+								<div class="sidebar-title">
+									<h4>Categoria</h4>
+								</div>
+								<div  class="facturer text-bg">
+									<ul id="sottoCategoria">
+									<!--	<li><a href="#">Tablet</a></li>
+										<li><a href="#">Computer</a></li>  Dynamic now!-->
+									</ul>  
+								</div>
+							</div>
+							<div class="s-side-text">
+								<div class="sidebar-title">
+									<h4>Acquisto</h4>
+								</div>
+								<div class="facturer text-bg">
+									<ul id="buyMode">
+									<!--	<li><a href="#">Compralo subito</a></li>
+										<li><a href="#">A rate</a></li>
+                                        <li><a href="#">Noleggio</a></li>  -->
+									</ul>
+								</div>
+							</div>
+							<div class="s-side-text">
+								<div class="sidebar-title">
+									<h4>Mostra Solo</h4>
+								</div>
+								<div class="facturer category text-bg">
+									<ul id="showMode">
+									<!--	<li><a href="#">Novità <span class="floatright">12</span></a></li>
+										<li><a href="#">Promo<span class="floatright">25</span></a></li>
+										<li><a href="#">Disponibile<span class="floatright">65</span></a></li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div><!-- filter end -->
+                    <!-- right grid products container start -->  
+					<div class="col-xs-12 col-sm-8 col-md-9">
+						<div class="right-products">
+                            <!-- ordering preferences start  -->
+							<div class="row"> 
+								<div class="col-xs-12">
+									<div class="section-title clearfix">
+										<ul>
+											<li class="sort-by">
+												<h5>ordinati per :</h5>
+											</li>
+											<li class="sort-by">
+												<form onChange="javascript:validateOrderingForm(this)" method="get">
+													<div class="custom-select">
+														<select id="orderingForm" class="form-control">
+															<option> Nuovi Prodotti</option>
+                                                            <option> Prodotti in Promozione</option>
+															<option> I più venduti </option>
+														</select>
+													</div>
+												</form>
+											</li>
+										</ul>
+									</div>
+								</div> 
+							</div><!--ordering preferences end -->
+                            <!-- products start -->
+                            <div class="row">
+                                <div id="grid" class="right-products"></div>      
+                            </div><!-- products ends -->
+                            <!--<div class="row">
+								<div class="col-xs-12">
+									<div class="blog-pagination">
+										<nav>
+											<ul class="pagination">
+												<li>
+													<a href="#" aria-label="Previous">
+														<span aria-hidden="true">prev</span>
+													</a>
+												</li>
+												<li class="active"><a href="#">1</a></li>
+												<li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li>
+													<a href="#" aria-label="Next">
+														<span aria-hidden="true">next</span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>-->
+						</div>
+					</div><!-- right grid products container end -->
+                 </div>
+			</div>
+              
+              
+              <div class="content-wrap-small"></div>
+		  </section>
+            
+        <!-- Footer
+		============================================= -->
+		<footer id="footer">
+			 <div class="container">
+                <div class="center row ">
+                    <div class="col-md-4 col-sm-6 col-xs-12 vertical-align">
+                        <strong>By Tim :</strong>Grazie di aver visitato il nostro sito
+                    </div>
+                    <div class="col-md-6 col-sm-4 col-xs-0">
+                    </div>
+                    <div class=" col-md-2 col-sm-2 col-xs-12">
+                        <img src="images/logo-tim.png" alt="Tim Logo">
+                    </div>
+                </div>
+            </div>
+		</footer> <!-- #footer end -->
+        
+        </div><!-- #wrapper end -->
+     
+    
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+        
+         <!-- External JavaScripts
+	============================================= -->
+    <!-- jquery latest version -->
+    <script src="js/Libraries/jquery.js"></script> <!-- Utilizzato dallo slider del prezzo -->
+    <!-- bootstrap js -->
+    <script src="js/Libraries/bootstrap.min.js"></script> <!-- Utilizzato dallo slider del prezzo -->
+    <!-- owl.carousel js -->
+    <script src="js/Libraries/owl.carousel.min.js"></script><!-- Serve per lo slider del prezzo quindi necessario -->
+    <!-- meanmenu js -->
+    <script src="js/Libraries/jquery.meanmenu.js"></script> <!-- Serve per lo slider e sembra avere a che fare con il resizing della pagina -->
+    <!-- countdown JS -->
+    <!-- <script src="js/countdown.js"></script>
+    <!-- nivo.slider JS -->
+    <script src="js/Libraries/jquery.nivo.slider.pack.js"></script><!-- Serve per lo slider del prezzo quindi necessario -->
+    <!-- simpleLens JS -->
+    <script src="js/Libraries/jquery.simpleLens.min.js"></script> <!-- è utilizzato dallo slider...che usa una funzione nel mai (l'ultima)-->
+    <!-- jquery-ui js -->
+    <script src="js/Libraries/jquery-ui.min.js"></script> <!-- Serve per lo slider del prezzo (per il range in cui deve variare) quindi necessario -->
+    <!-- sticky js -->
+    <!-- <script src="js/sticky.js"></script> Serve per far attaccare il menu in alto quando scrolliamo verso il basso -->
+    <!-- main js -->
+    <script src="js/Libraries/plugin.gallery.js"></script> <!-- TODO pulire è utilizzato dalla galleria sotto il reticolato, dallo sliderdel prezzo, dal menu -->
+    <!-- modernizr js -->
+    <script src="js/Libraries/modernizr-2.8.3.min.js"></script>
+        
+	<!--<script type="text/javascript" src="js/Libraries/jquery.js"></script> NON AGGIUNGERE ALTRIMENTI CONFLITTO -->
+	<script type="text/javascript" src="js/Libraries/plugins.js"></script>
+             
+    <!-- Page Javascripts
+	============================================= -->
+	<script type="text/javascript" src="js/deviceByCategory.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/Libraries/functions.js"></script> <!-- Se lo attivi il footer va a caso sotto -->
+    </body>
+</html>
