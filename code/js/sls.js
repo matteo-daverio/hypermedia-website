@@ -31,8 +31,8 @@ function setDynamicGoBack(){
         $("#sls_goto").html("Vai al <b>device precedente</b>");
         $("#sls_goto").attr("href","javascript:history.back()");
     }else { //set default link if 
-        $("#sls_goto").html("Vai a <b>Tutti i servizi</b>");
-        $("#sls_goto").attr("href", "menu.sls.html"); 
+        $("#sls_goto").html("Vai alla <b>Pagina precedente</b>");
+        $("#sls_goto").attr("href", "javascript:history.back()"); 
     }
 }
 

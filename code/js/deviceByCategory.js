@@ -55,8 +55,8 @@ function setDynamicGoBackAndDynamicSelectionMenu(){
             $('#menu_promozioni').addClass('current');
         });
     }else { //set default link if 
-        $("#dynamic_link").html("Vai a <b>Tutti i servizi</b>");
-        $("#dynamic_link").attr("href", "prodotti.html"); 
+        $("#dynamic_link").html("Vai alla <b>Pagina precedente</b>");
+        $("#dynamic_link").attr("href", "javascript:history.back()"); 
     }
 }
 

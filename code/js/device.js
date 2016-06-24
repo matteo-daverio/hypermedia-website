@@ -100,8 +100,8 @@ function setDynamicGoBack(){
         $("#VaiALink").html("Vai al <b>Servizio di Assistenza precedente</b>");
         $("#VaiALink").attr("href","javascript:history.back()");
     }else { //set default link if 
-        $("#VaiALink").html("Vai a <b>Tutti i Prodotti</b>");
-        $("#VaiALink").attr("href", "prodotti.html"); 
+        $("#VaiALink").html("Vai alla <b>Pagina precedente</b>");
+        $("#VaiALink").attr("href", "javascript:history.back()"); 
     }
 }
 

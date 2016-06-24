@@ -38,8 +38,8 @@ function setDynamicGoBack(){
         $("#ass_goto").html("Vai a <b>Highlights</b>");
         $("#ass_goto").attr("href","javascript:history.back()");
     }else { //set default link if 
-        $("#ass_goto").html("Vai a <b>Servizi di Assistenza</b>");
-        $("#ass_goto").attr("href", "menu.assistenza.html"); 
+        $("#ass_goto").html("Vai alla <b>Pagina precedente</b>");
+        $("#ass_goto").attr("href", "javascript:history.back()"); 
     }
 }
 
