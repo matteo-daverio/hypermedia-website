@@ -93,17 +93,7 @@ function contains(str,sub_str){
     if( parametersMap['filter'] !== undefined){
         filter = decodeURI(parametersMap['filter']);
     }else{
-        
-        //To dedect if I'm in mobile environment
-        var wl = window.location.href;
-        var mobile = (wl.indexOf("android")>0);
-    
-        if(mobile){
-            //Android phonegap
-            filter = window.localStorage.getItem(categoria);
-        }else{
-            filter = getCookie(categoria);
-        }    
+        filter = getCookie(categoria);  
     }
 
 
@@ -709,17 +699,10 @@ function selectFilterRow(element){
     if (element.getAttribute("class") === 'active'){
         element.removeAttribute("class");
         setCookie(categoria, createFilterStringFromTheStateOfTheFilter(), 1);
-        
-        //Android Phonegap
-        window.localStorage.setItem(categoria, createFilterStringFromTheStateOfTheFilter());
-        
         return;
     }
     element.setAttribute("class","active");
     setCookie(categoria, createFilterStringFromTheStateOfTheFilter(), 1);
-    
-    //Android Phonegap
-    window.localStorage.setItem(categoria, createFilterStringFromTheStateOfTheFilter());
 }
 
 function createFilterStringFromTheStateOfTheFilter(){
@@ -758,8 +741,6 @@ function submitQueryWithFilterOptions(){
     var query = createFilterStringFromTheStateOfTheFilter();
     
     setCookie(categoria,query,1);
-    //Android Phonegap
-    window.localStorage.setItem(categoria, query);
     
     window.location.href = "deviceByCategory.html?categoria=" + categoria;
 }
@@ -866,19 +847,7 @@ function getCookie(cname) {
 } 
 
 function getActiveIndexInCookieForThisFatherId(fatherId){
-    
-    //To dedect if I'm in mobile environment
-    var wl = window.location.href;
-    var mobile = (wl.indexOf("android")>0);
-    
-    var currentCookie;
-    
-    if(mobile){
-        //Android phonegap
-        currentCookie = window.localStorage.getItem(categoria);
-    }else{
-        currentCookie = getCookie(categoria);
-    }
+    var currentCookie = getCookie(categoria);
 
     var activeIndexArray = [];
     
@@ -921,18 +890,7 @@ function addSafeOrderingPreferencesToCookies(element){
     var formElement = document.getElementById("orderingForm");
     var selectedOption = formElement.selectedIndex;
     
-    //To dedect if I'm in mobile environment
-    var wl = window.location.href;
-    var mobile = (wl.indexOf("android")>0);
-    
-    var cookie;
-    
-    if(mobile){
-        //Android phonegap
-        cookie = window.localStorage.getItem(categoria);
-    }else{
-        cookie = getCookie(categoria);
-    }
+    var cookie = getCookie(categoria);
     
     if(cookie.indexOf("orderingPreference") > -1){
         var substring = "[orderingPreference:" + cookie.split("[orderingPreference:")[1].split("]")[0] + "]";
@@ -944,19 +902,7 @@ function addSafeOrderingPreferencesToCookies(element){
 
 function loadCookieInfoOrderingPreferences(idOrderingForm){
     
-    //To dedect if I'm in mobile environment
-    var wl = window.location.href;
-    var mobile = (wl.indexOf("android")>0);
-    
-    var cookie;
-    
-    if(mobile){
-        //Android phonegap
-        cookie = window.localStorage.getItem(categoria);
-    }else{
-        cookie = getCookie(categoria);
-    }
-    
+    var cookie = getCookie(categoria);
     var selectedIndex = 0;
     
     if (cookie.indexOf("orderingPreference") > -1){
@@ -1009,10 +955,6 @@ function loadCookieOneParameter(id, param, filter){
 
 function emptyFilter(){
     setCookie(categoria,'',1);
-    
-    //Phonegap Android
-    window.localStorage.setItem(categoria, '');
-    
     window.location.href = "deviceByCategory.html?categoria=" + categoria;
 }
 
