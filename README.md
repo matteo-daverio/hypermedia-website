@@ -12,3 +12,17 @@ Ciò che noi abbiamo realizzato è:
 
 Tutte le librerie utilizzate sia per il js che per il css sono rispettivamente all'interno delle cartelle denominate Libraries.
 Le librerie esterne utilizzate sono: bootstrap, jquery e tutti quei file del template che servono agli effetti implementati.
+
+Nella cartella DB abbiamo inserito un pdf in cui è abbozzata la struttura del nostro database.
+
+Opzionali implementati:
+<ul>
+<li>Form per la richiesta generale di informazioni: è presente un bottone "contattaci" nelle 4 pagine degli assistance services che mostra questo form.</li>
+<li>Il filtro per i prodotti (Gestito con il supporto dei cookies).</li>
+</ul>
+
+Bug noti:
+<ul>
+<li>Phonegap per la sola versione android non supporta la lettura dei cookies non permettendo un funzionamento corretto del filtro.</li>
+<li>Phonegap non rendeva disponibie la funzione document.referrer rendendo impossibile un funzionamento completo del nostro "Vai a". (Il quale fuzniona correttamente se utilizzato da browser)</li>
+</ul>
