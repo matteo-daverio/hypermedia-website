@@ -1,7 +1,7 @@
 # Hypermedia project
 <h4>Intro</h4>
 
-Per il costo di Hypermedia applications (web and multimedia) abbiamo realizzato un sito web che, seguendo le seguenti specifiche [specifiche](https://github.com/mkcn/hypermedia-project/tree/master/cimbelli-conti-daverio-16-05-2016/Specification_part2.pdf), contituisce un sottoinsieme del sito [tim.it](http://tim.it)
+Per il corso di Hypermedia applications (web and multimedia) abbiamo realizzato un sito web che, seguendo le seguenti specifiche [specifiche](https://github.com/mkcn/hypermedia-project/tree/master/cimbelli-conti-daverio-16-05-2016/Specification_part2.pdf), contituisce un sottoinsieme del sito [tim.it](http://tim.it)
 
 I linguaggi utilizzati sono: 
 
@@ -19,12 +19,12 @@ In caso di dispositivi mobile il sito web è accessibile:
 * dal link precendete (con grafica dedicata per schermi di ogni dimensione) 
 * in formato applicazione , disponibile per dispositivi Android al sequente link [TIM.apk](https://github.com/mkcn/hypermedia-project/raw/master/Phonegap/Tim.apk).
 
-L'applicazione è stata generato utilizzando la versione online di [Phonegap](https://build.phonegap.com/apps). 
+L'applicazione è stata generata utilizzando la versione online di [Phonegap](https://build.phonegap.com/apps). 
 
 
 <h4>Struttura codice</h4>
 
-Il progetto è struttura nel sequente ordine:
+Il progetto è strutturato nel sequente ordine:
 
 * le pagine HTML si trovano nella directory principale [WEBSITE](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE)
 * i file CSS in [WEBSITE/css](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE/css)
@@ -58,5 +58,5 @@ Le librerie e funzione esterne sono posizionate rispettivamente nella cartella "
 
 Dai test effettuati nell'applicazione non tutti i dispositivi mobile supportano la lettura dei cookies, non permettendo quindi il funzionamento corretto del filtro.
 
-Inoltre Phonegap non rende disponibie la funzione "document.referrer" abbiamo quindi optato, a differenza della modalità browser, un link "Vai a" che garantisse il giusto funzionamento ma è non contestualizzato. 
+Inoltre Phonegap non rende disponibie la funzione "document.referrer" abbiamo quindi optato per, a differenza della modalità browser, un link "Vai a" che garantisse il giusto funzionamento ma non contestualizzato. 
 
