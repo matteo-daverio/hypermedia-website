@@ -1,29 +1,62 @@
 # Hypermedia project
-Per costruire il nostro sito abbiamo preso spunto da un template online, il quale ci ha fornito una base per l'aspetto grafico. Infatti, di questo template, abbiamo utilizzato parte dei css per delineare l'aspetto grafico generale del sito e delle funzioni javascript per ottenere degli effetti grafici complessi (Il menu a tendina e lo slider dei prodotti in primis).
+<h4>Intro</h4>
 
-<h4>Ciò che noi abbiamo realizzato è:</h4>
-<ul>
-<li>Tutto l'html.</li>
-<li>Tutto il php.</li>
-<li>Tutto il db.</li>
-<li>Tutti i file js associati ad ogni pagina del sito. (Quelli nella cartella js che costituiscono la logica lato client del sito).</li>
-<li>Parti di css più specifiche alle nostre esigenze.</li>
-</ul>
+Per il costo di Hypermedia applications (web and multimedia) abbiamo realizzato un sito web che, seguendo le seguenti specifiche [specifiche](https://github.com/mkcn/hypermedia-project/tree/master/cimbelli-conti-daverio-16-05-2016/Specification_part2.pdf), contituisce un sottoinsieme del sito [tim.it](http://tim.it)
 
-Tutte le librerie utilizzate sia per il js che per il css sono rispettivamente all'interno delle cartelle denominate Libraries.
-Le librerie esterne utilizzate sono: bootstrap, jquery e tutti quei file del template che servono agli effetti implementati.
+I linguaggi utilizzati sono: 
 
-Nella cartella DB abbiamo inserito un pdf in cui è abbozzata la struttura del nostro database.
+* HTML 
+* JS 
+* SQL
+* PHP (per gestire il contenuto dinamico)
+* Ajax (per  gestire le chiamate asincrone a pagine PHP)
 
-<h4>Opzionali implementati:</h4>
+Il sito web è accessibile da tutti i principali browser all'indirizzo [http://timhypermedia.altervista.org/](http://timhypermedia.altervista.org/).
+
+<h4>Version mobile</h4>
+In caso di dispositivi mobile il sito web è accessibile:
+
+* dal link precendete (con grafica dedicata per schermi di ogni dimensione) 
+* in formato applicazione , disponibile per dispositivi Android al sequente link [TIM.apk](https://github.com/mkcn/hypermedia-project/raw/master/Phonegap/Tim.apk).
+
+L'applicazione è stata generato utilizzando la versione online di [Phonegap](https://build.phonegap.com/apps). 
+
+
+<h4>Struttura codice</h4>
+
+Il progetto è struttura nel sequente ordine:
+
+* le pagine HTML si trovano nella directory principale [WEBSITE](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE)
+* i file CSS in [WEBSITE/css](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE/css)
+* i file JS in [WEBSITE/js](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE/js)
+* tutte le imagini in [WEBSITE/images](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE/images)
+* i file PHP in [WEBSITE/db](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE/db)
+
+
+* i file del database in formato .sql nella cartella [DB](https://github.com/mkcn/hypermedia-project/tree/master/DB). In particolare il file [DB.sql](https://github.com/mkcn/hypermedia-project/raw/master/DB/DB.sql) contiene l'intero db e il file [DB-Schema.pdf](https://github.com/mkcn/hypermedia-project/raw/master/DB/DB-Schema.pdf) contiene lo schema della struttura del database. 
+
+
+* i file di Phonegap con l'applicazione sono nella cartella [Phonegap](https://github.com/mkcn/hypermedia-project/tree/master/Phonegap)
+
+
+* file di [documentazione e mockup](https://github.com/mkcn/hypermedia-project/tree/master/cimbelli-conti-daverio-16-05-2016)
+
+Per costruire il nostro sito abbiamo preso spunto da un template online, il quale ci ha fornito una base per l'aspetto grafico. Abbiamo utilizzato parte dei css e delle funzioni javascript basati su Boostrap e Jquery.
+
+Le librerie e funzione esterne sono posizionate rispettivamente nella cartella "libraries":
+
+* [WEBSITE/css/libraries](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE/css/libraries)  per delineare l'aspetto grafico generale del sito 
+* [WEBSITE/js/libraries](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE/js/Libraries) per ottenere degli effetti grafici complessi, come per esempio il menu a tendina e lo slider dei prodotti.
+
+<h4>Funzionalità opzionali implementate:</h4>
 <ul>
 <li>Form per la richiesta generale di informazioni: è presente un bottone "contattaci" nelle 4 pagine degli assistance services che mostra questo form.</li>
-<li>Il filtro per i prodotti (gestito con il supporto dei cookies).</li>
-<li>Abbiamo riposto attenzione nell'evitare che il nostro sito fosse vulnerabile a un attacco di tipo SQL Injection, filtrando attraverso escaping tutti gli input provenienti dall'esterno.</li>
+<li>Il filtro per i prodotti (gestito usando i cookies o in alcuni casi specifici usando il paramentro "filter" passato col il metodo GET). Esso permette di filtrare dinamicamente basandosi sul tag degli oggetti nella lista. </li>
 </ul>
 
-<h4>Bug noti:</h4>
-<ul>
-<li>Phonegap per la sola versione android non supporta la lettura dei cookies non permettendo un funzionamento corretto del filtro.</li>
-<li>Phonegap non rendeva disponibie la funzione document.referrer rendendo impossibile un funzionamento completo del nostro "Vai a" (il quale funziona correttamente se utilizzato da browser).</li>
-</ul>
+<h4>Problemi di incompatibilità con Phonegap</h4>
+
+Dai test effettuati nell'applicazione non tutti i dispositivi mobile supportano la lettura dei cookies, non permettendo quindi il funzionamento corretto del filtro.
+
+Inoltre Phonegap non rende disponibie la funzione "document.referrer" abbiamo quindi optato, a differenza della modalità browser, un link "Vai a" che garantisse il giusto funzionamento ma è non contestualizzato. 
+
