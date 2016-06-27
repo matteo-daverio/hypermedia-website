@@ -6,9 +6,9 @@ Ciò che noi abbiamo realizzato è:
 <li>Tutto l'html.</li>
 <li>Tutto il php.</li>
 <li>Tutto il db.</li>
-<li>Tutti i file js associati ad ogni pagina del sito. (Quelli nella cartella js, costituiscono la logica lato client del sito).</li>
+<li>Tutti i file js associati ad ogni pagina del sito. (Quelli nella cartella js che costituiscono la logica lato client del sito).</li>
 <li>Parti di css più specifiche alle nostre esigenze.</li>
 </ul>
 
-Tutte le librerie utilizzate sia per il js che per il css sono rispettivamente all'interno della cartelle denomite Libraries.
-Le librerie esterne utilizzate sono: bootstrap jquery e tutti quei file del template che servono agli effetti implementati.
+Tutte le librerie utilizzate sia per il js che per il css sono rispettivamente all'interno delle cartelle denominate Libraries.
+Le librerie esterne utilizzate sono: bootstrap, jquery e tutti quei file del template che servono agli effetti implementati.
