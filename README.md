@@ -19,7 +19,7 @@ Nella cartella DB abbiamo inserito un pdf in cui è abbozzata la struttura del n
 <ul>
 <li>Form per la richiesta generale di informazioni: è presente un bottone "contattaci" nelle 4 pagine degli assistance services che mostra questo form.</li>
 <li>Il filtro per i prodotti (gestito con il supporto dei cookies).</li>
-<li>Abbiamo riposto attenzione nell'evitare che il nostro sito fosse vulnerabile a un attacco di tipo SQL Injection, filtrando attraverso escaping tutti gli input provenienti dall'esterno. Abbiamo modificato i permessi dei file più sensibili, impedendo di essere reperibili dall'esterno.</li>
+<li>Abbiamo riposto attenzione nell'evitare che il nostro sito fosse vulnerabile a un attacco di tipo SQL Injection, filtrando attraverso escaping tutti gli input provenienti dall'esterno.</li>
 </ul>
 
 <h5>Bug noti:</h5>
