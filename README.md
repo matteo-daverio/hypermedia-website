@@ -49,10 +49,12 @@ Le librerie e funzione esterne sono posizionate rispettivamente nella cartella "
 * [WEBSITE/js/libraries](https://github.com/mkcn/hypermedia-project/tree/master/WEBSITE/js/Libraries) per ottenere degli effetti grafici complessi, come per esempio il menu a tendina e lo slider dei prodotti.
 
 <h4>Funzionalità opzionali implementate:</h4>
-<ul>
-<li>Form per la richiesta generale di informazioni: è presente un bottone "contattaci" nelle 4 pagine degli assistance services che mostra questo form.</li>
-<li>Il filtro per i prodotti (gestito usando i cookies o in alcuni casi specifici usando il paramentro "filter" passato col il metodo GET). Esso permette di filtrare dinamicamente basandosi sul tag degli oggetti nella lista. </li>
-</ul>
+
+* Form per la richiesta generale di informazioni: è presente un bottone "contattaci" nelle 4 pagine degli assistance services che mostra questo form.
+* Il filtro per i prodotti (gestito usando i cookies o in alcuni casi specifici usando il paramentro "filter" passato col il metodo GET). Esso permette di filtrare dinamicamente basandosi sul tag degli oggetti nella lista.
+* Particolare attenzione è stata data anche a possibili attacchi SQL, abbiamo quindi filtrato ogni parametro.
+
+
 
 <h4>Problemi di incompatibilità con Phonegap</h4>
 
